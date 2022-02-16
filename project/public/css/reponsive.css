@@ -1,0 +1,144 @@
+@media (min-width: 1200px) {
+  .container:not(.menu-main .container) {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-xl-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+}
+
+.col-24 {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.col-96 {
+  flex: 0 0 auto;
+  width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .padding-60 {
+    padding: 48px 0;
+  }
+  .banner,
+  .banner-item {
+    height: 430px;
+  }
+  .product-highlight .card-image {
+    height: 320px;
+  }
+
+  .product-highlight .card-content {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 80%;
+  }
+  header .nav-item > a {
+    /* font-size: 16px; */
+    padding: 0px 14px;
+    letter-spacing: 0px;
+  }
+
+  header .nav-item i {
+    height: 16px;
+  }
+
+  /* BANNER */
+  .banner,
+  .banner-item {
+    height: 400px;
+  }
+
+  /* card */
+
+  .h2-heading {
+    font-size: 38px;
+  }
+
+  .product-highlight .card-content {
+    padding: 12px 18px;
+  }
+
+  .product-highlight .card-image {
+    height: 250px;
+  }
+
+  .card-name {
+    font-size: 1.5rem;
+  }
+
+  .card-like {
+    font-size: 1.25rem;
+  }
+
+  .price-after {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .bars-icon i {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-inner {
+    padding: 0 8px;
+    height: 60px;
+  }
+
+  header .logo {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  header .bars-icon {
+    width: 99px;
+  }
+
+  .nav-list {
+    position: absolute;
+    z-index: 11;
+    background-color: var(--pri-1-color);
+    padding: 0;
+
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all linear 0.35s;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-item {
+    width: 540px;
+    margin: 0 auto;
+  }
+
+  header .sub-nav {
+    box-shadow: unset;
+    padding: 0 0 0 16px;
+    position: unset;
+  }
+
+  header .nav-item.show {
+    height: 200px;
+  }
+}
