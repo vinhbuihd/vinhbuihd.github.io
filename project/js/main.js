@@ -76,3 +76,37 @@ loginSinginBtn.addEventListener('click', function() {
     loginStatusEle.classList.remove('light')
 
 })
+
+// header scroll
+
+const headerEle = document.querySelector('header')
+
+// window.addEventListener('scroll', function() {
+//     if (document.documentElement.scrollTop > 50) {
+//     console.log(123);
+//     } else {
+//         console.log(456)
+//     }
+// })
+
+var lastScrollTop = 0;
+
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", function(){ 
+   var st = window.pageYOffset || document.documentElement.scrollTop;
+   console.log(st);
+   if (st > lastScrollTop){
+    headerEle.style.display = 'none'
+   }else {
+    headerEle.style.display = 'flex'
+    headerEle.classList.add('scroll-top')
+   }
+   lastScrollTop = st > 0 ? st : 0;
+
+   if (st == 0) {
+    headerEle.classList.add('bg-transparent')
+    headerEle.classList.remove('scroll-top')
+   } else {
+    headerEle.classList.remove('bg-transparent')
+   }
+}, false);

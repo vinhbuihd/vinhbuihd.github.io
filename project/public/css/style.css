@@ -73,8 +73,7 @@ a {
 /* header */
 
 header {
-  background-color: var(--pri-1-color);
-  height: 60px;
+  height: 70px;
   font-family: "Roboto", sans-serif;
   position: fixed;
 
@@ -82,8 +81,30 @@ header {
   left: 0;
   right: 0;
   z-index: 5;
+}
 
-  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+header.bg-transparent {
+  background-color: transparent;
+}
+
+header.scroll-top {
+  background-color: var(--pri-4-color);
+}
+
+header.scroll-top .nav-item > a {
+  color: #fff
+  text-shadow: none;
+}
+
+header.scroll-top .nav-item.active > a {
+  color: var(--pri-2-color);
+}
+
+header.scroll-top .login .cart:hover .cart-quantity,
+header.scroll-top .login .cart:hover > i,
+header.scroll-top .login .user-icon:hover {
+  color: var(--pri-2-color);
+  border-color: var(--pri-2-color);
 }
 
 header .bars-icon i {
@@ -133,13 +154,13 @@ header .nav-item {
 }
 
 header .nav-item.active > a {
-  color: var(--pri-4-color);
+  color: var(--pri-2-color);
 }
 
 header .nav-item > a {
-  color: var(--pri-2-color);
+  color: #fff;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0px 16px;
 
   text-transform: uppercase;
@@ -149,10 +170,12 @@ header .nav-item > a {
 
   letter-spacing: 1px;
   transition: linear 0.5s;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 header .nav-item > a:hover {
-  color: var(--pri-4-color);
+  color: var(--pri-2-color);
 }
 
 header .nav-item i {
@@ -170,14 +193,14 @@ header .nav-item i {
   margin: 0 8px;
   font-size: 1.375rem;
   transition: linear 0.5s;
-  color: var(--pri-2-color);
+  color: var(--pri-4-color);
 }
 
 .login .user-icon,
 .login .cart > i {
   cursor: pointer;
   transition: linear 0.5s;
-  color: var(--pri-2-color);
+  color: #fff;
 }
 
 .login .cart > i {
@@ -203,7 +226,7 @@ header .nav-item i {
   border-radius: 28%;
 
   transition: linear 0.5s;
-  border: 1px solid var(--pri-2-color);
+  border: 1px solid var(--pri-4-color);
 }
 
 /* cart-drop */
@@ -385,26 +408,25 @@ header .sub-nav a:hover {
   width: 100%;
   height: 528px;
   position: relative;
-  margin-top: 60px;
 }
 
 .banner-item {
   width: 100%;
-  height: 528px;
+  height: 700px;
 }
 
 .banner-1 {
-  background: url(../images/3.jpg) no-repeat center;
+  background: url(../images/home-1-slider.jpg) no-repeat center;
   background-size: cover;
 }
 
 .banner-2 {
-  background: url(../images/bg-111.jpeg) no-repeat center;
+  background: url(../images/home-1-slider-4.jpg) no-repeat center;
   background-size: cover;
 }
 
 .banner-3 {
-  background: url(../images/cf-4.png) no-repeat center;
+  background: url(../images/home-1-slider-img-2.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -414,6 +436,31 @@ header .sub-nav a:hover {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.banner-icon {
+  width: 194px;
+  height: 163px;
+  margin: 0 auto;
+}
+
+.banner-item .content {
+  color: #fff;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-heading {
+  
+  font-family: 'Caveat', cursive;
+  font-size: 7rem;
+}
+
+.banner-subheading {
+  margin: 16px 24px;
+}
+
+.banner-item
 
 /* sản phẩm nổi bật */
 
