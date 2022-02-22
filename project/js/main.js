@@ -22,14 +22,24 @@ barBtn.addEventListener('click', function() {
 // click cart icon drop cart
 
 const cartEle = document.querySelector('.cart')
-const cartDropEle = document.querySelector('.cart-drop')
+const cartSideEle = document.querySelector('.cart-side')
+const cartSideCloseBtn = document.querySelector('.cart-side .btn-close')
 
-window.addEventListener('click', function(e) {
-    if (cartEle.contains(e.target)){
-        cartDropEle.classList.add('dropdown')
-    } else{
-        cartDropEle.classList.remove('dropdown')
-    }
+const overlay = document.querySelector('.overlay')
+
+cartEle.addEventListener('click', function(e) {
+    cartSideEle.classList.add('open')
+    overlay.style.display = 'block'
+})
+
+cartSideCloseBtn.addEventListener('click', function() {
+    cartSideEle.classList.remove('open')
+    overlay.style.display = 'none'
+})
+
+overlay.addEventListener('click', function() {
+    cartSideEle.classList.remove('open')
+    overlay.style.display = 'none'
 })
 
 // click header user-icon hiện ra trang đăng nhập đăng ký
@@ -96,9 +106,9 @@ window.addEventListener("scroll", function(){
    var st = window.pageYOffset || document.documentElement.scrollTop;
    console.log(st);
    if (st > lastScrollTop){
-    headerEle.style.display = 'none'
+    headerEle.style.transform = 'translateY(-100%)'
    }else {
-    headerEle.style.display = 'flex'
+    headerEle.style.transform = 'translateY(0)'
     headerEle.classList.add('scroll-top')
    }
    lastScrollTop = st > 0 ? st : 0;
