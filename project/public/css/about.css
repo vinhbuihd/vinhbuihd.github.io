@@ -1,6 +1,7 @@
 .banner {
   background: url(../images/bg-113.jpg) no-repeat center;
   background-size: cover;
+  height: 400px;
 }
 
 .box {

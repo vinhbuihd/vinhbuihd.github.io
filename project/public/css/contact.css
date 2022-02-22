@@ -1,6 +1,7 @@
 .banner {
   background: url(../images/bg-lh-1.jpeg) no-repeat center;
   background-size: cover;
+  height: 400px;
 }
 
 /* main */

@@ -1,4 +1,5 @@
 .banner {
+  height: 400px;
   background: url(../images/tintuc-bn-3.jpeg) no-repeat top;
   background-size: cover;
 }

@@ -27,12 +27,21 @@
 }
 
 @media (max-width: 1200px) {
+  .col-lg-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-lg-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
   .padding-60 {
     padding: 48px 0;
   }
   .banner,
   .banner-item {
-    height: 430px;
+    height: 630px;
   }
   .product-highlight .card-image {
     height: 320px;

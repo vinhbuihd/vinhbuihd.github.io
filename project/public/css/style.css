@@ -23,6 +23,10 @@
   --border-color: #e2e2e2;
 }
 
+html {
+  color: var(--primary-color);
+}
+
 /* button */
 
 .btn {
@@ -40,6 +44,8 @@
   transition: ease-in-out 0.5s;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 18px;
+
+  text-transform: uppercase;
 }
 
 .btn:focus {
@@ -53,7 +59,7 @@
 
 .btn:active,
 .btn:hover {
-  color: var(--pri-4-color);
+  color: var(--pri-5-color);
   outline: none;
   border-color: var(--pri-5-color);
   background-color: #fff;
@@ -105,7 +111,6 @@ a {
 
 .pagination a {
   color: var(--pri-4-color);
-  background-color: var(--pri-1-color);
 }
 
 .pagination .page-item {
@@ -114,14 +119,14 @@ a {
 
 .page-item.active .page-link {
   color: #fff;
-  background-color: var(--pri-4-color);
-  border-color: var(--pri-4-color);
+  background-color: var(--pri-5-color);
+  border-color: var(--pri-5-color);
 }
 
 .page-link:hover {
   color: #fff;
-  background-color: var(--pri-3-color);
-  border-color: var(--pri-3-color);
+  background-color: var(--pri-1-color);
+  border-color: var(--pri-1-color);
 }
 
 .page-link:focus {
@@ -548,13 +553,13 @@ header .sub-nav a:hover {
 
 .banner-btn.btn {
   background-color: #fff;
-  color: var(--pri-4-color);
+  color: var(--pri-5-color);
   text-transform: uppercase;
 }
 
 .banner-btn.btn:hover {
   color: #fff;
-  background-color: var(--pri-4-color);
+  background-color: var(--pri-5-color);
 }
 /* intro */
 
@@ -576,12 +581,12 @@ header .sub-nav a:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.item-content {
+.intro-item .item-content {
   position: relative;
   z-index: 1;
 }
 
-.item-image {
+.intro-item .item-image {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -636,15 +641,15 @@ header .sub-nav a:hover {
 
 .product-filter .btn {
   background-color: #fff;
-  color: var(--pri-4-color);
+  color: var(--pri-5-color);
   margin: 4px 8px;
 }
 
 .product-filter .btn:hover,
 .product-filter .btn.active {
-  background-color: var(--pri-4-color);
+  background-color: var(--pri-5-color);
   color: #fff;
-  border: var(--pri-4-color);
+  border: var(--pri-5-color);
 }
 
 .card {
@@ -660,7 +665,7 @@ header .sub-nav a:hover {
   transform: translateY(-8px);
 }
 
-.product-highlight .card-content {
+.card-content {
   padding: 16px;
   background: conic-gradient(
     from 145.81deg at 41.39% 0%,
@@ -672,12 +677,12 @@ header .sub-nav a:hover {
   border-bottom-right-radius: 4px;
 }
 
-.product-highlight .card-image {
+.card-image {
   height: 280px;
   width: 100%;
 }
 
-.product-highlight .card-image img {
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -685,18 +690,22 @@ header .sub-nav a:hover {
   border-top-right-radius: 4px;
 }
 
-.product-highlight .card-name {
+.card-name {
   font-weight: 500;
   font-size: 16px;
   text-transform: capitalize;
-  color: #682c0e;
+  color: var(--pri-4-color);
   margin: 0;
+}
+
+.card-name:hover {
+  cursor: pointer;
+  color: var(--pri-3-color);
 }
 
 .card-like {
   display: flex;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 13px;
   color: var(--pri-2-color);
 }
 
@@ -726,6 +735,58 @@ header .sub-nav a:hover {
   color: var(--pri-4-color);
 }
 
+.highlight-product {
+  position: relative;
+}
+
+.highlight-product .owl-prev span {
+  position: absolute;
+  left: 18px;
+  transform: translateY(-80%);
+  top: 50%;
+
+  color: #fff;
+  font-size: 48px;
+}
+
+.highlight-product .owl-prev span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -4px;
+  width: 52px;
+  height: 52px;
+
+  background: var(--pri-5-color);
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-26%, -45%);
+}
+
+.highlight-product .owl-next span {
+  position: absolute;
+  right: 18px;
+  transform: translateY(-80%);
+  top: 50%;
+
+  color: #fff;
+  font-size: 48px;
+}
+
+.highlight-product .owl-next span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -4px;
+  width: 52px;
+  height: 52px;
+
+  background-color: var(--pri-5-color);
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(26%, -45%);
+}
+
 /* menu */
 
 .menu {
@@ -734,7 +795,7 @@ header .sub-nav a:hover {
 
 .scard-image {
   height: 305px;
-  background: url(../images/cf-11.jpg) no-repeat center;
+  background: url(../images/tintuc-1.jpg) no-repeat center;
   background-size: cover;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -773,7 +834,7 @@ header .sub-nav a:hover {
 /* tintuc-news */
 
 .news {
-  background-color: var(--pri-1-color);
+  background-color: var(--pri-01-color);
 }
 
 .news .wrap {
@@ -858,6 +919,10 @@ header .sub-nav a:hover {
 }
 
 /* about */
+
+.about {
+  background-color: var(--pri-01-color);
+}
 
 .about .item {
   margin-top: 32px;
