@@ -14,8 +14,8 @@
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/style.css">
@@ -30,8 +30,13 @@
         <div class="cart-side">
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="title text-center">Giỏ hàng của tôi</div>
+            
             <div class="content">
-                <div class="cart-item d-flex">
+                <h3 class ='text-center'>Giỏ hàng trống</h3>
+                <div class="text-center">
+                    <a href='../page/menu.html' class='btn'>Tiếp tục mua hàng</a>
+                </div>
+                <!-- <div class="cart-item d-flex">
                     <div class="cart-item-image">
                         <img src="./public/images/sp-14-tradao.jpg" alt="caphe">
                     </div>
@@ -41,14 +46,19 @@
                         <div class="price">45.000 đ x 2</div>
                     </div>
                     
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="d-flex align-items-center flex-column" >
+                        <div class="cart-item-button d-flex align-items-center">
+                            <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
+                            <div class="cart-item-quantity">2</div>
+                            <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
+                        </div>
+                        <div class="cart-item-sub-price">
+                            <span>80.000</span> đ
+                        </div>
                     </div>
 
                     <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
+                        <div class="edit"><i class="fa-solid fa-pen"></i></div>  
                     </div>
                 </div>
                 <div class="cart-item d-flex">
@@ -68,30 +78,33 @@
                     </div>
 
                     <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
+                        <div class="edit"><i class="fa-solid fa-pen"></i></div>  
                     </div>
+                </div> -->
+
+                <!-- <a href="./page/menu.html">Thêm món</a>
+                <div class="sub-total d-flex align-items-center justify-content-between">
+                    Tổng cộng <span>180.000 đ</span>
                 </div>
+                <div class="cart-side-btn text-center mt-3">
+                    <a href="./page/cart.html"class="btn">Thanh toán</a>
+                </div> -->
             </div>
-            <div class="sub-total d-flex align-items-center justify-content-between">
-                Tạm tính <span>180.000 đ</span>
-            </div>
-            <div class="cart-side-btn text-center mt-3">
-                <div class="btn">Xem giỏ hàng</div>
-            </div>
+            
         </div>
 
         <!-- đăng nhập đăng ký -->
-        <div class="login-status d-flex align-items-center">
+        <div class="login-status d-flex">
             <div class="login-main d-flex">
                     
-                <div class="login-sign-btn d-flex align-items-center justify-content-around">
-                    <div class="d-flex flex-column justify-content-between">
-                        <p>Bạn đã có tài khoản</p>
-                        <div class="btn login-signin-btn">Đăng nhập</div>
+                <div class="login-sign-btn d-flex align-items-center">
+                    <div class="d-flex flex-column justify-content-between align-items-center">
+                        <span>Bạn đã có tài khoản</span>
+                        <button class="btn white login-signin-btn">Đăng nhập</button>
                     </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <p>Bạn chưa có tài khoản</p>
-                        <div class="btn login-signup-btn">Đăng ký</div>
+                    <div class="d-flex flex-column justify-content-between align-items-center">
+                        <span>Bạn chưa có tài khoản</span>
+                        <button class="btn login-signup-btn">Đăng ký</button>
                     </div>
                 </div>
                 <div class="login-runback">
@@ -101,12 +114,12 @@
                         <form action="">
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-user"></i></div>
-                                <input type="text" name="" id="user" placeholder="Tên đăng nhập" required>
+                                <input type="text" name=""  placeholder="Tên đăng nhập" required>
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
-                                <input type="password" name="" id="password" placeholder="Mật khẩu" required    >
+                                <input type="password" name="" placeholder="Mật khẩu" required    >
                             </div>
         
                             <div class=" text-center mt-4">
@@ -124,17 +137,17 @@
                         <form action="">
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-envelope"></i></div>
-                                <input type="text" name="" id="user" required placeholder="Email của bạn">
+                                <input type="text" name=""  required placeholder="Email của bạn">
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
-                                <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
-                                <input type="password" name="" id="password" required placeholder="Mật khẩu">
+                                <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
+                                <input type="password" name="" required placeholder="Mật khẩu">
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-rotate-left"></i></div>
-                                <input type="password" name="" id="password" required placeholder="Nhập lại mật khẩu">
+                                <input type="password" name="" required placeholder="Nhập lại mật khẩu">
                             </div>
         
                             
@@ -148,6 +161,13 @@
             </div>
         </div>
 
+        <!-- popup-product -->
+
+        <div class="product-popup">
+            
+        </div>
+
+        <!-- header -->
         <header>
             <div class="container">
                 <div class="header-inner d-flex align-items-center">
@@ -184,7 +204,7 @@
                     <div class="login d-flex">
                         <div class="cart">
                             <i class="fa-solid fa-basket-shopping"></i>
-                            <div class="cart-quantity">2</div>
+                            <div class="cart-quantity"></div>
                         </div>
                         <div class="user-icon">
                             <i class="fas fa-user"></i>
@@ -206,7 +226,7 @@
                         <h1 class="banner-heading go-to-top" style="--order: 2">Coffee Cup</h1>
                         <h4 class="banner-subheading go-to-top" style="--order: 3">Cà phê - Trà - Bánh ngọt</h4>
 
-                        <a href="./page/menu.html" class="btn banner-btn go-to-top" style="--order: 4">Khám phá Menu</a>
+                        <a href="./page/menu.html" class="btn white banner-btn go-to-top" style="--order: 4">Khám phá Menu</a>
                     </div>
                 </div>
                 <div class="banner-2 banner-item d-flex justify-content-between align-items-center">
@@ -217,7 +237,7 @@
                         <h1 class="banner-heading go-to-top" style="--order: 2">Coffee Cup</h1>
                         <h4 class="banner-subheading go-to-top" style="--order: 3">Khuyến mãi đầu xuân Nhâm Dần lên tới 20%</h4>
 
-                        <button class="btn banner-btn go-to-top" style="--order: 4">Đăng ký ngay</button>
+                        <button class="btn white banner-btn go-to-top" style="--order: 4">Đăng ký ngay</button>
                     </div>
                 </div>
                 <div class="banner-3 banner-item d-flex justify-content-between align-items-center">
@@ -228,7 +248,7 @@
                         <h1 class="banner-heading go-to-top" style="--order: 2">Coffee Cup</h1>
                         <h4 class="banner-subheading go-to-top" style="--order: 3">Đặt hàng dễ dàng hơn với ứng dụng di dộng</h4>
 
-                        <button class="btn banner-btn go-to-top" style="--order: 4">Tải app ngay</button>
+                        <button class="btn white banner-btn go-to-top" style="--order: 4">Tải app ngay</button>
                     </div>
                 </div>
             </div>
@@ -290,12 +310,11 @@
                     <button class="btn-primary btn">Bán chạy</button>
                     <button class="btn-primary btn">Đặc biệt</button>
                 </div>
-                <div class="highlight-product owl-carousel owl-theme">
-                   
-                    
-                    <div class="card">
+                
+                <div class="highlight-product owl-carousel owl-theme">                
+                    <!-- <div class="card">
                         <div class="card-image">
-                            <img src="./public/images/sp-12.jpg" alt="coffee">
+                            <img src="./public/images/sp-15-freeze-matcha.jpg" alt="coffee">
                         </div>
                         <div class="card-content">
                             <div class="card-content-left d-flex align-items-center justify-content-between">
@@ -315,12 +334,12 @@
                                 
                             </div>
                             <div class="card-content-right d-flex align-items-center justify-content-between">
-                                <h3 class="card-name">latte sữa</h3>
+                                <h3 class="card-name">freeze matcha</h3>
                                 
                                 <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="card">
                         <div class="card-image">
                             <img src="./public/images/sp-15-freeze-matcha.jpg" alt="coffee">
@@ -348,10 +367,10 @@
                                 <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="card">
                         <div class="card-image">
-                            <img src="./public/images/sp-23-trachanh.jpg" alt="coffee">
+                            <img src="./public/images/sp-15-freeze-matcha.jpg" alt="coffee">
                         </div>
                         <div class="card-content">
                             <div class="card-content-left d-flex align-items-center justify-content-between">
@@ -371,72 +390,16 @@
                                 
                             </div>
                             <div class="card-content-right d-flex align-items-center justify-content-between">
-                                <h3 class="card-name">Trà chanh</h3>
+                                <h3 class="card-name">freeze matcha</h3>
                                 
                                 <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./public/images/sp-18-freeze-socola.jpg" alt="coffee">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-left d-flex align-items-center justify-content-between">
-                                
-                                <div class="card-like">
-                                    <div class="like-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <div class="card-price d-flex align-items-center">
-                                    <div class="price"><span>40.000</span> đ</div>
-                                </div>
-                                
-                            </div>
-                            <div class="card-content-right d-flex align-items-center justify-content-between">
-                                <h3 class="card-name">freeze socola</h3>
-                                
-                                <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./public/images/sp-20.jpg" alt="coffee">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-left d-flex align-items-center justify-content-between">
-                                
-                                <div class="card-like">
-                                    <div class="like-icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <div class="card-price d-flex align-items-center">
-                                    <div class="price"><span>40.000</span> đ</div>
-                                </div>
-                                
-                            </div>
-                            <div class="card-content-right d-flex align-items-center justify-content-between">
-                                <h3 class="card-name">Freeze caramen</h3>
-                                
-                                <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </div>  -->
                 </div>
+
                 <div class="text-center mt-3">
-                    <button class="btn">Xem tất cả menu</button>
+                    <a href="./page/menu.html"class="btn">Xem tất cả menu</a>
                 </div>
 
             </div>
@@ -454,6 +417,7 @@
             </div>
         </section>
 
+        <!-- about -->
         <section class="about padding-60">
             <div class="container">
                 <h2 class="h2-heading">Về chúng tôi</h2>
@@ -499,236 +463,7 @@
             </div>
         </section>
 
-        <!-- <section class="menu padding-60">
-            <div class="container">
-                <h2 class="h2-heading">Menu</h2>
-                <div class="line text-center">
-                    <img src="./public/images/line-under-heading.png" alt="line">
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                            <div class="scard-image"></div>
-                            <div class="scard-content d-flex align-items-center justify-content-between">
-                                <div class="scard-left">
-                                    <div class="scard-name">Cà phê say đá</div>
-                                
-                                    <div class="scard-price d-flex align-items-center">
-                                        <div class="price-after"><span>35.000</span> đ</div>
-                                        <div class="price-before"><span>45.000</span> đ</div>
-                                    </div>
-                                </div>
-                                <div class="scard-right">
-                                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="btn big-btn">Xem tất cả sản phẩm</div>
-                </div>
-            </div>
-        </section> -->
-
+        <!-- news -->
         <section class="news padding-60">
             <div class="container">
                 <h2 class="h2-heading">Tin tức khuyến mãi</h2>
@@ -738,7 +473,7 @@
                 
                 <div class="wrap">
                     <div class="tintuc-carousel owl-carousel owl-theme d-flex flex-wrap">
-                        <div class="card">
+                        <a href="./page/tintuc-1.html"class="card">
                             <div class="scard-image"></div>
                             <div class="scard-content d-flex flex-column">
                                 <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
@@ -751,8 +486,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
+                        </a>
+                        <a href="./page/tintuc-1.html"class="card">
                             <div class="scard-image"></div>
                             <div class="scard-content d-flex flex-column">
                                 <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
@@ -765,9 +500,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="card">
+                        <a href="./page/tintuc-1.html"class="card">
                             <div class="scard-image"></div>
                             <div class="scard-content d-flex flex-column">
                                 <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
@@ -780,8 +515,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
+                        </a>
+                        <a href="./page/tintuc-1.html"class="card">
                             <div class="scard-image"></div>
                             <div class="scard-content d-flex flex-column">
                                 <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
@@ -794,27 +529,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             
                 <div class="row">
-                    <div class="btn big-btn">Xem thêm nhiều tin khác</div>
+                    <a href="./page/tintuc.html"class="btn big-btn">Xem thêm nhiều tin khác</a>
                 </div>
             </div>
         </section>
 
-       
-
-        
-
         <footer>
             <div class="row">
-                <div class="item col-12 col-lg-3 col-md-3 col-sm-6 text-center">
+                <div class="item col-12 col-lg-3 col-md-6 col-sm-6 text-center">
                     <div class="logo-image"></div>
                     <div class="logo-name">Cup Coffee</div>
                 </div>
-                <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+                <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                     <p class="footer-title">Thông tin liên hệ</p>
                     <p class="footer-link">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</p>
                     <p class="footer-link"><a href="tel:0987654321">Điện thoại : 0987654321</a></p>
@@ -825,7 +556,7 @@
                         <a href="#"class="footer-icon"><i class="fab fa-twitter-square"></i></a>
                     </div>
                 </div>
-                <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+                <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                     <p class="footer-title">Chính sách và quy định</p>
                     <p class="footer-link"><a href="#">Chính sách & Quy định chung</a></p>
                     <p class="footer-link"><a href="#">Phương thức thanh toán</a></p>
@@ -833,7 +564,7 @@
                     <p class="footer-link"><a href="#">Chính sách bảo mật thông tin cá nhân</a></p>
                     <p class="footer-link"><a href="#">Khiếu nại, phản hồi</a></p>
                 </div>
-                <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+                <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                     <p class="footer-title">dịch vụ khách hàng</p>
                     <p class="footer-link"><a href="#">Giao hàng tận nơi</a></p>
                     <p class="footer-link"><a href="#">Thanh toán qua ví MoMo</a></p>
@@ -849,11 +580,11 @@
     </div>
 
 
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+
     <script>
         $(document).ready(function(){
 
@@ -867,31 +598,6 @@
                 animateIn: 'animate__flip',
             });
 
-            $(".highlight-product").owlCarousel({
-                items:4,
-                margin:16,
-                autoplayHoverPause: true,
-                loop:true,
-                autoplay:true,
-                dots: true,
-                nav: true,
-                autoplayTimeout:5000,
-                animateIn: 'animate__zoomOut',
-                responsive:{
-                    0:{
-                        items:2
-                    },
-                    600:{
-                        items:2
-                    },
-                    1000:{
-                        items:3
-                    },
-                    1200:{
-                        items:4
-                    }
-                }
-            });
 
             $(".tintuc-carousel").owlCarousel({
                 items:3,
@@ -904,7 +610,6 @@
                 autoplayHoverPause: true,
                 loop:true,
                 dots: true,
-                nav: true,
                 center: true,
                 responsive:{
                     0:{
@@ -924,6 +629,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/highlight-product.js"></script>
+    <script type="module" src="./js/main.js"></script>
+
 </body>
 </html>

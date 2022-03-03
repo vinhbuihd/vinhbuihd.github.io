@@ -12,13 +12,13 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/reponsive.css">
     <link rel="stylesheet" href="../public/css/contact.css">
+    <link rel="stylesheet" href="../public/css/reponsive.css">
+    <link rel="stylesheet" href="../public/css/contact-reposive.css">
 </head>
 <body>
     <div class="overlay"></div>
@@ -72,22 +72,22 @@
             Tạm tính <span>180.000 đ</span>
         </div>
         <div class="cart-side-btn text-center mt-3">
-            <div class="btn">Xem giỏ hàng</div>
+            <a href="./cart.html" class="btn">Xem giỏ hàng</a>
         </div>
     </div>
 
     <!-- đăng nhập đăng ký -->
-    <div class="login-status d-flex align-items-center">
+    <div class="login-status d-flex">
         <div class="login-main d-flex">
                 
-            <div class="login-sign-btn d-flex align-items-center justify-content-around">
-                <div class="d-flex flex-column justify-content-between">
-                    <p>Bạn đã có tài khoản</p>
-                    <div class="btn login-signin-btn">Đăng nhập</div>
+            <div class="login-sign-btn d-flex align-items-center">
+                <div class="d-flex flex-column justify-content-between align-items-center">
+                    <span>Bạn đã có tài khoản</span>
+                    <button class="btn white login-signin-btn">Đăng nhập</button>
                 </div>
-                <div class="d-flex flex-column justify-content-between">
-                    <p>Bạn chưa có tài khoản</p>
-                    <div class="btn login-signup-btn">Đăng ký</div>
+                <div class="d-flex flex-column justify-content-between align-items-center">
+                    <span>Bạn chưa có tài khoản</span>
+                    <button class="btn login-signup-btn">Đăng ký</button>
                 </div>
             </div>
             <div class="login-runback">
@@ -124,7 +124,7 @@
                         </div>
     
                         <div class="d-flex align-items-end mt-4">
-                            <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
+                            <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
                             <input type="password" name="" id="password" required placeholder="Mật khẩu">
                         </div>
     
@@ -147,7 +147,7 @@
         <div class="container">
             <div class="header-inner d-flex align-items-center">
                 <div class="bars-icon"><i class="fa-solid fa-bars"></i></div>
-                <a href="" class="logo">
+                <a href="../index.html" class="logo">
                     <img src="../public/images/logo-2.png" alt="logo">
                     <!-- <span>CupCoffee</span> --> 
                 </a>
@@ -250,22 +250,22 @@
 
     <footer>
         <div class="row">
-            <div class="item col-12 col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="item col-12 col-lg-3 col-md-6 col-sm-6 text-center">
                 <div class="logo-image"></div>
                 <div class="logo-name">Cup Coffee</div>
             </div>
-            <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+            <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                 <p class="footer-title">Thông tin liên hệ</p>
-                <p class="footer-link">Địa chỉ: 123 Khâm Thiên, Đống Đa, Hà Nội</p>
-                <p class="footer-link"><a href="tel:0987654321">Điện thoại: 0987654321</a></p>
-                <p class="footer-link"><a href="mailto: abc@example.com">Email: coffeecup@gmail.com</a></p>
+                <p class="footer-link">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</p>
+                <p class="footer-link"><a href="tel:0987654321">Điện thoại : 0987654321</a></p>
+                <p class="footer-link"><a href="mailto: abc@example.com">Email : coffeecup@gmail.com</a></p>
                 <div class="footer-link d-flex align-items-center">
                     <a href="#"class="footer-icon"><i class="fab fa-facebook-square"></i></a>
                     <a href="#"class="footer-icon"><i class="fab fa-instagram-square"></i></a>
                     <a href="#"class="footer-icon"><i class="fab fa-twitter-square"></i></a>
                 </div>
             </div>
-            <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+            <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                 <p class="footer-title">Chính sách và quy định</p>
                 <p class="footer-link"><a href="#">Chính sách & Quy định chung</a></p>
                 <p class="footer-link"><a href="#">Phương thức thanh toán</a></p>
@@ -273,7 +273,7 @@
                 <p class="footer-link"><a href="#">Chính sách bảo mật thông tin cá nhân</a></p>
                 <p class="footer-link"><a href="#">Khiếu nại, phản hồi</a></p>
             </div>
-            <div class="item col-12 col-lg-3 col-md-3 col-sm-6">
+            <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                 <p class="footer-title">dịch vụ khách hàng</p>
                 <p class="footer-link"><a href="#">Giao hàng tận nơi</a></p>
                 <p class="footer-link"><a href="#">Thanh toán qua ví MoMo</a></p>

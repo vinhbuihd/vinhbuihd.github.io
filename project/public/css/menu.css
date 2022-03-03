@@ -63,6 +63,11 @@
 .filter-name {
   font-size: 16px;
   font-weight: 500;
+  color: var(--primary-color);
+}
+
+.filter-name:hover {
+  color: var(--pri-5-color);
 }
 
 .filter-content-2 {

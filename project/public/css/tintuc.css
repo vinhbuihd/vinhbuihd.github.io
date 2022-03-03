@@ -77,8 +77,11 @@
 
 .main-content .info-name {
   color: var(--pri-4-color);
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+
+  font-size: 24px;
 }
 
 .info-name:hover {
@@ -88,6 +91,7 @@
 .main-content .info-date {
   color: var(--pri-3-color);
   font-weight: 500;
+  font-weight: 14px;
 }
 
 p.info-content {
@@ -95,4 +99,49 @@ p.info-content {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 16px;
+}
+
+/* tintuc-1 */
+
+.h3-heading {
+  color: var(--pri-4-color);
+  font-size: 24px;
+}
+
+h4 {
+  color: var(--pri-3-color);
+}
+
+.tintuc-img-1 {
+  object-fit: cover;
+  width: 100%;
+  max-height: 300px;
+}
+
+.tintuc-img-2 {
+  width: 70%;
+}
+
+.share span {
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+.share .footer-icon {
+  font-size: 20px;
+  margin: 0 4px;
+}
+
+.line .next-page a:hover,
+.share .footer-icon:hover {
+  color: var(--pri-4-color);
+}
+
+.line .next-page a {
+  color: var(--pri-3-color);
+}
+
+.line {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(104, 44, 14, 0.7);
 }
