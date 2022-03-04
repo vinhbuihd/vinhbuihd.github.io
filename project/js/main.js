@@ -199,7 +199,7 @@ function cartSideRender(list) {
     if (list.length == 0) {
         cardSideElement.innerHTML = `
             <h3>Giỏ hàng trống</h3>
-            <a href='../page/menu.html' class='btn'>Tiếp tục mua hàng</a>
+            <a href='./menu.html' class='btn'>Tiếp tục mua hàng</a>
         `
 
         cardIconQuantity.innerHTML = 0
@@ -246,7 +246,7 @@ function cartSideRender(list) {
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./page/cart.html"class="btn">Thanh toán</a>
+                <a href="./cart.html"class="btn">Thanh toán</a>
             </div>
         `
 

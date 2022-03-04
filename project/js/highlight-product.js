@@ -6,7 +6,7 @@ export const products = [
         id: 1,
         name: 'Freeze Matcha',
         alt: 'freeze-matcha',
-        image: '../project/public/images/sp-15-freeze-matcha.jpg',
+        image: '../public/images/sp-15-freeze-matcha.jpg',
         price: {
             S: 30000,
             M: 35000,
@@ -19,7 +19,7 @@ export const products = [
         id: 2,
         name: 'Trà Đào',
         alt:'tra-dao',
-        image: '../project/public/images/sp-14-tradao.jpg',
+        image: '../public/images/sp-14-tradao.jpg',
         price: {
             S: 25000,
             M: 30000,
@@ -32,7 +32,7 @@ export const products = [
         id: 3,
         name: 'Trà Chanh',
         alt:'tra-chanh',
-        image: '../project/public/images/sp-23-trachanh.jpg',
+        image: '../public/images/sp-23-trachanh.jpg',
         price: {
             S: 25000,
             M: 30000,
@@ -45,7 +45,7 @@ export const products = [
         id: 4,
         name: 'Latte Sữa',
         alt:'latte-sua',
-        image: '../project/public/images/sp-12.jpg',
+        image: '../public/images/sp-12.jpg',
         price: {
             S: 40000,
             M: 45000,
@@ -58,7 +58,7 @@ export const products = [
         id: 5,
         name: 'Freeze Socola',
         alt:'freeze-socola',
-        image: '../project/public/images/sp-18-freeze-socola.jpg',
+        image: '../public/images/sp-18-freeze-socola.jpg',
         price: {
             S: 50000,
             M: 55000,
