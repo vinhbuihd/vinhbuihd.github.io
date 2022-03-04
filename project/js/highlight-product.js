@@ -19,7 +19,7 @@ export const products = [
         id: 2,
         name: 'Trà Đào',
         alt:'tra-dao',
-        image: '../public/images/sp-14-tradao.jpg',
+        image: '../project/public/images/sp-14-tradao.jpg',
         price: {
             S: 25000,
             M: 30000,
@@ -32,7 +32,7 @@ export const products = [
         id: 3,
         name: 'Trà Chanh',
         alt:'tra-chanh',
-        image: '../public/images/sp-23-trachanh.jpg',
+        image: '../project/public/images/sp-23-trachanh.jpg',
         price: {
             S: 25000,
             M: 30000,
@@ -45,7 +45,7 @@ export const products = [
         id: 4,
         name: 'Latte Sữa',
         alt:'latte-sua',
-        image: '../public/images/sp-12.jpg',
+        image: '../project/public/images/sp-12.jpg',
         price: {
             S: 40000,
             M: 45000,
@@ -58,7 +58,7 @@ export const products = [
         id: 5,
         name: 'Freeze Socola',
         alt:'freeze-socola',
-        image: '../public/images/sp-18-freeze-socola.jpg',
+        image: '../project/public/images/sp-18-freeze-socola.jpg',
         price: {
             S: 50000,
             M: 55000,
