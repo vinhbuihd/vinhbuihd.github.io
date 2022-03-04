@@ -6,7 +6,7 @@ export const products = [
         id: 1,
         name: 'Freeze Matcha',
         alt: 'freeze-matcha',
-        image: '../public/images/sp-15-freeze-matcha.jpg',
+        image: '../project/public/images/sp-15-freeze-matcha.jpg',
         price: {
             S: 30000,
             M: 35000,
@@ -72,6 +72,7 @@ export const products = [
 
 const highlightproducts = document.querySelector('.highlight-product')
 
+// render sản phẩm
 if (highlightproducts) {
     highlightproducts.innerHTML = ''
     products.forEach(product => {
@@ -108,8 +109,6 @@ if (highlightproducts) {
     })
 }
 
-
-// render sản phẩm
 
 
 
