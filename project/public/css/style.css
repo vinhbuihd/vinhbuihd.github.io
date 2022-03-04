@@ -561,6 +561,15 @@ header .nav-item i {
 .cart-item-info .size span {
   font-size: 16px;
   font-weight: 500;
+  margin: 0 4px;
+}
+
+.cart-item-info .size .edit i {
+  font-size: 16px;
+  opacity: 0.7;
+  color: var(--pri-4-color);
+  margin-left: 6px;
+  cursor: pointer;
 }
 
 .cart-item-info .note {
@@ -577,19 +586,20 @@ header .nav-item i {
   text-shadow: 0px 2px 4px rgba(104, 44, 14, 0.3);
 }
 
-.edit i {
-  opacity: 0.7;
-  font-size: 16px;
-  color: var(--pri-4-color);
-  margin-left: 8px;
-  cursor: pointer;
-}
-
 .cart-item-quantity {
   font-size: 18px;
   width: 12px;
   text-align: center;
   color: var(--pri-4-color);
+}
+
+.delete-product {
+  color: var(--pri-4-color);
+  font-size: 16px;
+  opacity: 0.7;
+  margin-left: 8px;
+
+  cursor: pointer;
 }
 
 .cart-side-btn .btn {

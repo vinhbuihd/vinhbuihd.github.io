@@ -31,54 +31,14 @@
         <div class="cart-side">
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="title text-center">Giỏ hàng của tôi</div>
+            
             <div class="content">
-                <div class="cart-item d-flex">
-                    <div class="cart-item-image">
-                        <img src="../public/images/sp-14-tradao.jpg" alt="caphe">
-                    </div>
-                    <div class="cart-item-info">
-                        <div class="name">Trà đào</div>
-                        <div class="size">Size M</div>
-                        <div class="price">45.000 đ x 2</div>
-                    </div>
-                    
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                    </div>
-
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
-                    </div>
-                </div>
-                <div class="cart-item d-flex">
-                    <div class="cart-item-image">
-                        <img src="../public/images/sp-13-bacxiu.jpg" alt="caphe">
-                    </div>
-                    <div class="cart-item-info">
-                        <div class="name">Capuchino</div>
-                        <div class="size">Size M</div>
-                        <div class="price">45.000 đ x 2</div>
-                    </div>
-                    
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                    </div>
-
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
-                    </div>
+                <h3 class ='text-center'>Giỏ hàng trống</h3>
+                <div class="text-center">
+                    <a href='../page/menu.html' class='btn'>Tiếp tục mua hàng</a>
                 </div>
             </div>
-            <div class="sub-total d-flex align-items-center justify-content-between">
-                Tạm tính <span>180.000 đ</span>
-            </div>
-            <div class="cart-side-btn text-center mt-3">
-                <a href="#"class="btn">Xem giỏ hàng</a>
-            </div>
+            
         </div>
 
         <!-- đăng nhập đăng ký -->
@@ -125,17 +85,17 @@
                         <form action="">
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-envelope"></i></div>
-                                <input type="text" name="" id="user" required placeholder="Email của bạn">
+                                <input type="text" name="" required placeholder="Email của bạn">
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
-                                <input type="password" name="" id="password" required placeholder="Mật khẩu">
+                                <input type="password" name="" required placeholder="Mật khẩu">
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-rotate-left"></i></div>
-                                <input type="password" name="" id="password" required placeholder="Nhập lại mật khẩu">
+                                <input type="password" name="" required placeholder="Nhập lại mật khẩu">
                             </div>
         
                             
@@ -160,15 +120,15 @@
                         <li class="nav-item">
                             <a href="../index.html">Trang chủ</a>
                         </li>
-                        <li class="nav-item drop-item active">
+                        <li class="nav-item drop-item">
                             <a class='d-flex' href="#">Menu
                                 <i class="fas fa-sort-down"></i>
                             </a>
                             <ul class="sub-nav">
-                                <li><a href="#">Cà phê</a></li>
-                                <li><a href="#">Trà</a></li>
-                                <li><a href="#">Freeze</a></li>
-                                <li><a href="#">Khác</a></li>
+                                <li><a href="./menu.html">Cà phê</a></li>
+                                <li><a href="./menu.html">Trà</a></li>
+                                <li><a href="./menu.html">Freeze</a></li>
+                                <li><a href="./menu.html">Khác</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -202,7 +162,7 @@
         <div class="main padding-60">
             <h2 class="h2-heading">Thanh toán</h2>
             <div class="container">
-                <div class="product-box d-flex align-items-center">
+                <div class="product-box d-flex">
                     <div class="col-6">
                         <form action="" class="profile">
                             <div class="profile-item">
@@ -221,14 +181,23 @@
                             </div>
     
                             <div class="profile-item">
-                                <label for="name">Email :</label>
-                                <input type="text" placeholder="Họ và tên" value="vinhhd94@gmail.com">
+                                <label for="">Phương thức thanh toán :</label>
+                                <div class="d-flex align-items-center mt-3">
+                                    <div>
+                                        <input type="radio" name="thanhtoan" id="tienmat" value="Tiền mặt">
+                                        <label class="option" for="tienmat">Tiền mặt</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="thanhtoan" id="taikhoan" value="Thẻ ngân hàng">
+                                        <label class="option" for="taikhoan">Thẻ ngân hàng</label>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-6">
-                        <div class="product d-flex align-items-center justify-content-between mt-3 mb-3">
-                            <div class="product-info d-flex align-items-center col-4">
+                    <div class="col-6 product-list">
+                        <!-- <div class="product d-flex align-items-center mt-3 mb-3">
+                            <div class="product-info d-flex align-items-center">
                                 <div class="product-image">
                                     <img src="../public/images/sp-15-freeze-matcha.jpg" alt="matcha">
                                 </div>
@@ -238,40 +207,19 @@
                                     <div class="note">100% đá</div>
                                 </div>
                             </div>
-                            <!-- <div class="product-price col-2 text-center"><span>45.000</span> đ</div> -->
-                            <div class="cart-item-button d-flex align-items-center col-2 justify-content-center">
+
+                            <div class="cart-item-button d-flex align-items-center justify-content-center">
                                 <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
                                 <div class="cart-item-quantity">2</div>
                                 <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
                             </div>
-                            <div class="product-money col-2 text-center">90.000đ</div>
-                            <div class="close-btn col-2 text-center">
+                            <div class="product-money text-center">90.000đ</div>
+                            <div class="close-btn text-center">
                                 <button type="button" class="btn-close" aria-label="Close"></button>
                             </div>
-                        </div>
+                        </div> -->
     
-                        <div class="product d-flex align-items-center justify-content-between mt-3 mb-3">
-                            <div class="product-info d-flex align-items-center col-4">
-                                <div class="product-image">
-                                    <img src="../public/images/sp-14-tradao.jpg" alt="matcha">
-                                </div>
-                                <div class="product-text">
-                                    <div class="name">Trà đào</div>
-                                    <div class="size">Size <span>M</span></div>
-                                    <div class="note"></div>
-                                </div>
-                            </div>
-                            <!-- <div class="product-price col-2 text-center"><span>145.000</span> đ</div> -->
-                            <div class="cart-item-button d-flex align-items-center col-2 justify-content-center">
-                                <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                                <div class="cart-item-quantity">2</div>
-                                <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                            </div>
-                            <div class="product-money col-2 text-center">290.000đ</div>
-                            <div class="close-btn col-2 text-center">
-                                <button type="button" class="btn-close" aria-label="Close"></button>
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <div class="calculator d-flex col-12">
@@ -283,18 +231,6 @@
                         </div>
                         <div class="col-6">
                             <div class="price-box">
-                                <div class="subtotal d-flex align-items-center justify-content-between">
-                                    <p>Tạm tính</p>
-                                    <p>210.000 đ</p>
-                                </div>
-                                <div class="subtotal d-flex align-items-center justify-content-between">
-                                    <p>Giảm giá</p>
-                                    <p>0 đ</p>
-                                </div>
-                                <div class="total d-flex align-items-center justify-content-between">
-                                    <p>Tổng cộng </p>
-                                    <p>210.000 đ</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -485,10 +421,69 @@
             
     </script>
 
+    <script>
+        let cartList = JSON.parse(localStorage.getItem('cartList')) || []
+        const productList = document.querySelector('.product-list')
+        const priceBox = document.querySelector('.price-box')
+
+        if (cartList.length == 0) {
+            productList.innerHTML = `<h3>Giỏ hàng trống</h3>`
+        } else {
+            productList.innerHTML = ''
+            let totalPrice = 0
+            let totalQuantity = 0
+            cartList.forEach(product => {
+                totalPrice += product.quantity * product.sizePrice
+                totalQuantity += product.quantity
+
+                productList.innerHTML += `
+                    <div class="product d-flex align-items-center mt-3 mb-3">
+                        <div class="product-info d-flex align-items-center">
+                            <div class="product-image">
+                                <img src=${product.image} alt=${product.alt}>
+                            </div>
+                            <div class="product-text">
+                                <div class="name">${product.name}</div>
+                                <div class="size">Size <span>${product.size}</span></div>
+                                <div class="note">${product.note}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-item-button d-flex align-items-center justify-content-center">
+                            <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
+                            <div class="cart-item-quantity">${product.quantity}</div>
+                            <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
+                        </div>
+
+                        <div class="product-money text-center">${(product.quantity * product.sizePrice).toLocaleString()} đ</div>
+                        <div class="delete-product text-center">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                `
+            })
+
+            priceBox.innerHTML = `
+                <div class="subtotal d-flex align-items-center justify-content-between">
+                    <p>Tạm tính</p>
+                    <p>${totalPrice.toLocaleString()} đ</p>
+                </div>
+                <div class="subtotal d-flex align-items-center justify-content-between">
+                    <p>Giảm giá</p>
+                    <p>0 đ</p>
+                </div>
+                <div class="total d-flex align-items-center justify-content-between">
+                    <p>Tổng cộng </p>
+                    <p>${totalPrice.toLocaleString()} đ</p>
+                </div>
+            `
+        }
+
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/cart.js"></script>
+    <script type="module" src="../js/main.js"></script>
     
 </body>
 </html>
