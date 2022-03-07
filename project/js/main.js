@@ -123,20 +123,12 @@ const popup = document.querySelector('.product-popup')
 let cartList = JSON.parse(localStorage.getItem('cartList')) || []
 
 
-
-function deleteItem() {
-    console.log(212)
-}
-
-function editItem() {
-    console.log(456)
-}
-
 // render popup
 function popupRender(product) {
+    popup.style.display = 'block'
     if (product) {
         popup.innerHTML = `
-            <div class="popup-box">
+        <div class="popup-box">
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="popup-item d-flex align-items-center">
                 <div class="popup-image">
@@ -191,11 +183,10 @@ function popupRender(product) {
 
 }
 
-// render product in cartside
 function cartSideRender(list) {
     const cardSideElement = document.querySelector('.cart-side .content')
     const cardIconQuantity = document.querySelector('.cart .cart-quantity')
-    
+
     if (list.length == 0) {
         cardSideElement.innerHTML = `
             <h3>Giỏ hàng trống</h3>
@@ -209,7 +200,6 @@ function cartSideRender(list) {
         let totalQuantity = 0
         let totalPrice = 0
         
-        
         list.forEach((product) => {
             totalPrice += product.quantity * product.sizePrice
             totalQuantity += product.quantity
@@ -222,7 +212,7 @@ function cartSideRender(list) {
                     <div class="cart-item-info">
                         <div class="name">${product.name}</div> 
                         <div class="size d-flex align-items-center">Size ${product.size}<span>x ${product.quantity}</span>
-                            <div class="edit" onclick='editItem()'><i class="fa-solid fa-pen"></i></div>
+                            <div class="edit" onclick='editItem(${product.code})'><i class="fa-solid fa-pen"></i></div>
                         </div>
                         <div class="note">${product.note}</div>
                     </div>
@@ -233,7 +223,7 @@ function cartSideRender(list) {
                         </div>
                     </div>
 
-                    <div class="delete-product d-flex align-items-center" onclick='deleteItem()'>
+                    <div class="delete-product d-flex align-items-center" onclick='deleteItem(${product.code})'>
                         <i class="fa-solid fa-trash-can"></i>
                     </div>
                 </div>
@@ -249,15 +239,103 @@ function cartSideRender(list) {
                 <a href="./cart.html"class="btn">Thanh toán</a>
             </div>
         `
-
+        
         cardIconQuantity.innerHTML = totalQuantity
     }
 }
+
+
+function addToCart(product) {
+    
+    const addToCart = document.querySelector('.popup-bottom .btn')
+    const popupNote = document.querySelector('.popup-input')
+    const radios = document.querySelectorAll('.form-check-input')
+
+    const minus = document.querySelector('.popup-bottom .minus')
+    const plus = document.querySelector('.popup-bottom .plus')
+    const popupQuantity = popup.querySelector('.popup-bottom .cart-item-quantity')
+    const popupBottomPrice = popup.querySelector('.popup-bottom .btn span')
+
+    product.quantity = 1
+
+    radios.forEach(radio => {
+        radio.onchange = function () {
+            popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
+        }
+    })
+
+    minus.addEventListener('click', function () {
+        let radio = Array.from(radios).find(radio => radio.checked)
+
+        if (product.quantity <=1 ) return
+
+        product.quantity--
+        popupQuantity.innerHTML = product.quantity
+        popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
+    })
+
+    plus.addEventListener('click', function () {
+        let radio = Array.from(radios).find(radio => radio.checked)
+
+        product.quantity++
+        popupQuantity.innerHTML = product.quantity
+        popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
+    })
+
+
+    const closeCartBtn = document.querySelector('.popup-box .btn-close')
+    
+    closeCartBtn.addEventListener('click', function () {
+        popup.style.display = 'none'
+        
+        // overlay.style.display = 'none'
+    })
+
+    addToCart.addEventListener('click', function () {
+        let radio = Array.from(radios).find(radio => radio.checked)
+        
+        let newItem = {
+            ...product,
+            size: radio.value,
+            sizePrice: product.price[radio.value],
+            note: popupNote.value,
+            code: new Date().valueOf()
+        }
+        
+
+        // so sánh newItem đã có trong cartList hay chưa
+
+        if (cartList.length == 0) {
+            cartList.push(newItem)
+            localStorage.setItem('cartList', JSON.stringify(cartList));
+        } else {
+            let isEqual = cartList.find(product => (newItem.id == product.id && newItem.note == product.note && newItem.size == product.size))
+
+            if (isEqual == undefined) {
+                console.log('no isEqual')
+                cartList.push(newItem)
+                localStorage.setItem('cartList', JSON.stringify(cartList));
+            } else {
+                console.log(isEqual)
+                isEqual.quantity += newItem.quantity
+                localStorage.setItem('cartList', JSON.stringify(cartList));
+            }
+        }
+        
+        cartSideRender(JSON.parse(localStorage.getItem('cartList')))
+
+        
+        popup.style.display = 'none'
+        // overlay.style.display = 'none'
+    })
+}
+
 
 cartSideRender(cartList)
 
 // Xử lý khi nhấn mua hàng
 buyBtns.forEach(buyBtn => {
+    
     buyBtn.addEventListener('click', function (e) {
         let card = e.target.closest('.card')
         
@@ -266,88 +344,15 @@ buyBtns.forEach(buyBtn => {
         let product = products.filter(product => product.id == cardId)[0]
         
         // render sp trong popup
-        popup.style.display = 'block'
+        product.quantity = 1
 
         popupRender(product)
-
-        const minus = document.querySelector('.popup-bottom .minus')
-        const plus = document.querySelector('.popup-bottom .plus')
-        const popupQuantity = popup.querySelector('.popup-bottom .cart-item-quantity')
-        const popupBottomPrice = popup.querySelector('.popup-bottom .btn span')
-        const radios = document.querySelectorAll('.form-check-input')
-
-        radios.forEach(radio => {
-            radio.onchange = function () {
-                popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
-            }
-        })
-
-        minus.addEventListener('click', function () {
-            let radio = Array.from(radios).find(radio => radio.checked)
-
-            if (product.quantity <=1 ) return
-            product.quantity--
-            popupQuantity.innerHTML = product.quantity
-            popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
-        })
-
-        plus.addEventListener('click', function () {
-            let radio = Array.from(radios).find(radio => radio.checked)
-
-            product.quantity++
-            popupQuantity.innerHTML = product.quantity
-            popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
-        })
-
-
-        const addToCart = document.querySelector('.popup-bottom .btn')
-        const closeCartBtn = document.querySelector('.popup-box .btn-close')
-        const popupNote = document.querySelector('.popup-input')
-    
-        addToCart.addEventListener('click', function () {
-            let radio = Array.from(radios).find(radio => radio.checked)
-            let newItem = {
-                ...product,
-                size: radio.value,
-                sizePrice: product.price[radio.value],
-                note: popupNote.value,
-                code: new Date().valueOf()
-            }
-            
-
-            // so sánh newItem đã có trong cartList hay chưa
-
-            if (cartList.length == 0) {
-                cartList.push(newItem)
-                localStorage.setItem('cartList', JSON.stringify(cartList));
-            } else {
-                let isEqual = cartList.find(product => (newItem.id == product.id && newItem.note == product.note && newItem.size == product.size))
-
-                if (isEqual == undefined) {
-                    console.log('no isEqual')
-                    cartList.push(newItem)
-                    localStorage.setItem('cartList', JSON.stringify(cartList));
-                } else {
-                    console.log(isEqual)
-                    isEqual.quantity += newItem.quantity
-                    localStorage.setItem('cartList', JSON.stringify(cartList));
-                }
-            }
-            
-            cartSideRender(JSON.parse(localStorage.getItem('cartList')))
-
-            product.quantity = 1
-            popup.style.display = 'none'
-            // overlay.style.display = 'none'
-        })
-        
-        closeCartBtn.addEventListener('click', function () {
-            popup.style.display = 'none'
-            product.quantity = 1
-            // overlay.style.display = 'none'
-        })
+        addToCart(product)
     })
 })
+
+
+
 
 
 

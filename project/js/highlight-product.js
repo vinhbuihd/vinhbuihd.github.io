@@ -36,7 +36,7 @@ export const products = [
         price: {
             S: 25000,
             M: 30000,
-            L: 45000,
+            L: 35000,
         },
         type: 'Trà',
         quantity: 1,

@@ -576,6 +576,7 @@ header .nav-item i {
   font-size: 13px;
   font-weight: 300;
   color: var(--primary-color);
+  width: 140px;
 }
 
 .cart-item-button i {

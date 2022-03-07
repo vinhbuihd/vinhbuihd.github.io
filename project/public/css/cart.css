@@ -39,6 +39,7 @@
 .product-text {
   margin-left: 16px;
   min-width: 130px;
+  max-width: 140px;
 }
 
 .product-title {
@@ -61,6 +62,10 @@
 .product .size {
   color: var(--pri-3-color);
   font-size: 14px;
+}
+
+.product .size span {
+  margin: 0 8px;
 }
 
 .product .note {

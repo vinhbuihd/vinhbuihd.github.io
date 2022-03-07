@@ -108,6 +108,9 @@
                 </div>
             </div>
         </div>
+
+        <div class="product-popup"></div>
+
         <header>
             <div class="container">
                 <div class="header-inner d-flex align-items-center">
@@ -172,12 +175,12 @@
     
                             <div class="profile-item">
                                 <label for="name">Điện thoại :</label>
-                                <input type="text" placeholder="Họ và tên" value="0355246686">
+                                <input type="text" placeholder="Điện thoại" value="0355246686">
                             </div>
     
                             <div class="profile-item">
                                 <label for="name">Địa chỉ :</label>
-                                <input type="text" placeholder="Họ và tên" value="69 Khâm Thiên, Đống Đa, Hà Nội">
+                                <input type="text" placeholder="Địa chỉ" value="69 Khâm Thiên, Đống Đa, Hà Nội">
                             </div>
     
                             <div class="profile-item">
@@ -392,7 +395,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
+    <!-- thư viện owl -->
     <script>
         $(document).ready(function(){
             $(".related-list").owlCarousel({
@@ -421,66 +424,10 @@
             
     </script>
 
-    <script>
-        let cartList = JSON.parse(localStorage.getItem('cartList')) || []
-        const productList = document.querySelector('.product-list')
-        const priceBox = document.querySelector('.price-box')
+    <script src="../js/thanhtoan.js"></script>
 
-        if (cartList.length == 0) {
-            productList.innerHTML = `<h3>Giỏ hàng trống</h3>`
-        } else {
-            productList.innerHTML = ''
-            let totalPrice = 0
-            let totalQuantity = 0
-            cartList.forEach(product => {
-                totalPrice += product.quantity * product.sizePrice
-                totalQuantity += product.quantity
-
-                productList.innerHTML += `
-                    <div class="product d-flex align-items-center mt-3 mb-3">
-                        <div class="product-info d-flex align-items-center">
-                            <div class="product-image">
-                                <img src=${product.image} alt=${product.alt}>
-                            </div>
-                            <div class="product-text">
-                                <div class="name">${product.name}</div>
-                                <div class="size">Size <span>${product.size}</span></div>
-                                <div class="note">${product.note}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="cart-item-button d-flex align-items-center justify-content-center">
-                            <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                            <div class="cart-item-quantity">${product.quantity}</div>
-                            <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                        </div>
-
-                        <div class="product-money text-center">${(product.quantity * product.sizePrice).toLocaleString()} đ</div>
-                        <div class="delete-product text-center">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-                `
-            })
-
-            priceBox.innerHTML = `
-                <div class="subtotal d-flex align-items-center justify-content-between">
-                    <p>Tạm tính</p>
-                    <p>${totalPrice.toLocaleString()} đ</p>
-                </div>
-                <div class="subtotal d-flex align-items-center justify-content-between">
-                    <p>Giảm giá</p>
-                    <p>0 đ</p>
-                </div>
-                <div class="total d-flex align-items-center justify-content-between">
-                    <p>Tổng cộng </p>
-                    <p>${totalPrice.toLocaleString()} đ</p>
-                </div>
-            `
-        }
-
-    </script>
-
+    <script src="../js/edit-item.js"></script>
+    <script src="../js/delete-item.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
