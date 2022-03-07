@@ -179,7 +179,7 @@ function cartSideRender(list) {
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./cart.html"class="btn">Thanh toán</a>
+                <a href="./thanhtoan.html"class="btn">Thanh toán</a>
             </div>
         `
 

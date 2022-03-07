@@ -27,113 +27,24 @@
 
     <div class="wrapper">
         <div class="overlay"></div>
+
         <!-- cart-side -->
         <div class="cart-side">
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="title text-center">Giỏ hàng của tôi</div>
+            
             <div class="content">
-                <div class="cart-item d-flex">
-                    <div class="cart-item-image">
-                        <img src="./public/images/cf-11.jpg" alt="caphe">
-                    </div>
-                    <div class="cart-item-info">
-                        <div class="name">Capuchino</div>
-                        <div class="size">Size M</div>
-                        <div class="price">45.000 đ x 2</div>
-                    </div>
-                    
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                    </div>
-
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
-                    </div>
-                </div>
-                <div class="cart-item d-flex">
-                    <div class="cart-item-image">
-                        <img src="./public/images/cf-11.jpg" alt="caphe">
-                    </div>
-                    <div class="cart-item-info">
-                        <div class="name">Capuchino</div>
-                        <div class="size">Size M</div>
-                        <div class="price">45.000 đ x 2</div>
-                    </div>
-                    
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                    </div>
-
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="delete"><i class="fas fa-times"></i></div>  
-                    </div>
+                <h3 class ='text-center'>Giỏ hàng trống</h3>
+                <div class="text-center">
+                    <a href='./menu.html' class='btn'>Tiếp tục mua hàng</a>
                 </div>
             </div>
-            <div class="sub-total d-flex align-items-center justify-content-between">
-                Tạm tính <span>180.000 đ</span>
-            </div>
-            <div class="cart-side-btn text-center mt-3">
-                <a href="./cart.html" class="btn">Xem giỏ hàng</a>
-            </div>
+            
         </div>
 
         <!-- popup-product -->
 
-        <div class="product-popup">
-            <div class="popup-box">
-                <div class="popup-item d-flex align-items-center">
-                    <div class="popup-image">
-                        <img src="./public/images/sp-15-freeze-matcha.jpg" alt="sp">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <div class="popup-name">Freeze matcha</div>
-                        <div class="popup-price">40.000 đ</div>
-                    </div>
-                </div>
-                <div class="popup-picksize">
-                    <div class="popup-title">Chọn size *</div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="size-s" checked>
-                            <label class="form-check-label" for="size-s">
-                            Size S
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="size-m">
-                            <label class="form-check-label" for="size-m">
-                            Size M + 5.000đ
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="size-l">
-                            <label class="form-check-label" for="size-l">
-                            Size L + 10.000đ
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="popup-note">
-                    <div class="popup-title">Ghi chú <span>(nếu có)</span>
-                    </div>
-                    <input class="popup-input" type="text" placeholder="Ghi chú cho quán">
-                </div>
-            
-                <div class="popup-bottom mt-16 d-flex align-items-center justify-content-center flex-column">
-                    <div class="cart-item-button d-flex align-items-center">
-                        <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                        <div class="cart-item-quantity">2</div>
-                        <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                    </div>
-                    <button class="btn">Thêm vào giỏ hàng - 80.000 đ</button>
-                </div>
-            </div>
-        </div>
+        <div class="product-popup"></div>
 
         <!-- đăng nhập đăng ký -->
         <div class="login-status d-flex">
@@ -289,18 +200,18 @@
                                 </div>
                                 <div class="checkbox-group">
                                     <div class="item d-flex align-items-center">
-                                        <input type="checkbox" name="new" id="new">
+                                        <input type="checkbox" value="new" id="new">
                                         <label for="new">Mới nhất</label>
                                     </div>
         
                                     <div class="item d-flex align-items-center">
-                                        <input type="checkbox" name="selling" id="selling">
+                                        <input type="checkbox" value="selling" id="selling">
                                         <label for="selling">Bán chạy</label>
                                     </div>
         
                                     <div class="item d-flex align-items-center">
-                                        <input type="checkbox" name="sale" id="sale">
-                                        <label for="sale">Giảm giá</label>
+                                        <input type="checkbox" value="selling" id="sale">
+                                        <label for="sale">Đặc biệt</label>
                                     </div>
                                 </div>
                                 
@@ -358,7 +269,7 @@
                                 </a>
                                 <a href="#"class="item d-flex align-items-center">
                                     <div class="filter-item-image">
-                                        <img src="../public/images/sp-23-trachanh.jpg" alt="trachanh">
+                                        <img src="../public/images/sp-2-cafe-mocha-nong.jpg" alt="caramel-latte">
                                     </div>
                                     <div class="filter-item-info">
 
@@ -384,181 +295,34 @@
                         </div>
                     </div>
                     <div class="col-xl-96 col-lg-9 col-md-8 col-sm-12">
-                        <div class="row mb-3">
-                            <div class="col-12">
-                                <div class="item-quantity-bar">Hiển thị <span>16</span> sản phẩm</div>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="../public/images/sp-4.jpg" alt="coffee">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-content-left d-flex align-items-center justify-content-between">
-                                            
-                                            <div class="card-like">
-                                                <div class="like-icon">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="card-price d-flex align-items-center">
-                                                <div class="price"><span>40.000</span> đ</div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-content-right d-flex align-items-center justify-content-between">
-                                            <h3 class="card-name">latte sữa</h3>
-                                            
-                                            <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                                        </div>
-                                    </div>
+                        <div class="products">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="item-quantity-bar">Hiển thị <span></span> sản phẩm</div>
                                 </div>
                             </div>
-                            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="../public/images/sp-5.jpg" alt="coffee">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-content-left d-flex align-items-center justify-content-between">
-                                            
-                                            <div class="card-like">
-                                                <div class="like-icon">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="card-price d-flex align-items-center">
-                                                <div class="price"><span>40.000</span> đ</div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-content-right d-flex align-items-center justify-content-between">
-                                            <h3 class="card-name">bạc xỉu</h3>
-                                            
-                                            <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                            <div class="row g-3 product-list">
                             </div>
-                            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="../public/images/sp-6.jpg" alt="coffee">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-content-left d-flex align-items-center justify-content-between">
-                                            
-                                            <div class="card-like">
-                                                <div class="like-icon">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="card-price d-flex align-items-center">
-                                                <div class="price"><span>40.000</span> đ</div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-content-right d-flex align-items-center justify-content-between">
-                                            <h3 class="card-name">trà đào</h3>
-                                            
-                                            <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="../public/images/sp-7.jpg" alt="coffee">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-content-left d-flex align-items-center justify-content-between">
-                                            
-                                            <div class="card-like">
-                                                <div class="like-icon">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="card-price d-flex align-items-center">
-                                                <div class="price"><span>40.000</span> đ</div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-content-right d-flex align-items-center justify-content-between">
-                                            <h3 class="card-name">freeze matcha</h3>
-                                            
-                                            <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="../public/images/sp-16-denda.jpg" alt="coffee">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-content-left d-flex align-items-center justify-content-between">
-                                            
-                                            <div class="card-like">
-                                                <div class="like-icon">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="card-price d-flex align-items-center">
-                                                <div class="price"><span>40.000</span> đ</div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="card-content-right d-flex align-items-center justify-content-between">
-                                            <h3 class="card-name">đen đá</h3>
-                                            
-                                            <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <nav>
-                                <ul class="pagination justify-content-center">
-                                  <li class="page-item disabled">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                      <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                  </li>
-                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                      <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                            </nav>
+                            <!-- <div class="row">
+                                <nav>
+                                    <ul class="pagination justify-content-center">
+                                      <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </nav>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -610,33 +374,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-    <!-- <script>
-        $(document).ready(function(){
+    <!-- edit, delete item -->
+    <script src="../js/edit-item.js"></script>
+    <script src="../js/delete-item.js"></script>
 
-            window.onresize = () => {
-                if (window.innerWidth <= 768) {
-                    $('.filter-content').owlCarousel({
-                        items: 4,
-                        margin: 0,
-                        autoplay:false,
-                        dots: true,
-                        responsive:{
-                            0:{
-                                items: 3
-                            },
-                            400:{
-                                items:4
-                            }
-                        }
-                    })
-                }
 
-            
-            }
-            
-        })
-    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="module" src="../js/menu.js"></script>
     <script type="module" src="../js/main.js"></script>
     
 </body>

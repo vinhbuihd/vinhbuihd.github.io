@@ -1,5 +1,5 @@
 
-import { products } from "./highlight-product.js";
+import { products } from "./productAll.js";
 
 
 // click header nav-item drop subnav
@@ -231,12 +231,12 @@ function cartSideRender(list) {
         })
         
         cardSideElement.innerHTML += `
-            <a href="./page/menu.html">Thêm món</a>
+            <a href="../page/menu.html">Thêm món</a>
             <div class="sub-total d-flex align-items-center justify-content-between">
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./cart.html"class="btn">Thanh toán</a>
+                <a href="./thanhtoan.html"class="btn">Thanh toán</a>
             </div>
         `
         
