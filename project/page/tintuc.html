@@ -66,7 +66,7 @@
                         </div>
     
                         <div class=" text-center mt-4">
-                            <button class="btn" type="submit">Đăng nhập</button>
+                            <button class="btn signin" type="submit">Đăng nhập</button>
                         </div>
                         <div class="d-flex align-items-center justify-content-center font-small mt-4">
                             <div class="form-icon d-flex"><i class="fa-solid fa-question"></i></div>
@@ -78,27 +78,36 @@
                     <div class="login-close"><i class="fa-solid fa-xmark"></i></div>
                     <h2>Đăng ký</h2>
                     <form action="">
-                        <div class="d-flex align-items-end mt-4">
-                            <div class="form-icon d-flex"><i class="fa-solid fa-envelope"></i></div>
-                            <input type="text" name=""  required placeholder="Email của bạn">
+                        <div class="input-box">
+                            <div class="d-flex align-items-end">
+                                <div class="form-icon d-flex"><i class="fa-solid fa-envelope"></i></div>
+                                <input class="email" type="email" required placeholder="Email của bạn">
+                            </div>
+                            <span class="error"></span>
                         </div>
     
-                        <div class="d-flex align-items-end mt-4">
-                            <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
-                            <input type="password" name="" required placeholder="Mật khẩu">
+                        <div class="input-box">
+                            <div class="d-flex align-items-end">
+                                <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
+                                <input class="password" type="password" required placeholder="Mật khẩu">
+                            </div>
+                            <span class="error"></span>
                         </div>
-    
-                        <div class="d-flex align-items-end mt-4">
-                            <div class="form-icon d-flex"><i class="fa-solid fa-rotate-left"></i></div>
-                            <input type="password" name="" required placeholder="Nhập lại mật khẩu">
+
+                        <div class="input-box">
+                            <div class="d-flex align-items-end">
+                                <div class="form-icon d-flex " style='margin-right: 13px'><i class="fa-solid fa-lock"></i></div>
+                                <input class="repeat-password" type="password" required placeholder="Nhập lại mật khẩu">
+                            </div>
+                            <span class="error"></span>
                         </div>
-    
-                        
+
                         <div class=" text-center mt-4">
-                            <button class="btn" type="submit">Đăng ký</button>
+                            <button class="btn signup" type="submit">Đăng ký</button>
                         </div>
                         
                     </form>
+                    
                 </div>
             </div>
         </div>
