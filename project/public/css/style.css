@@ -977,10 +977,26 @@ header .sub-nav a:hover {
 
 .scard-image {
   height: 305px;
-  background: url(../images/tintuc-1.jpg) no-repeat center;
-  background-size: cover;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.scard-image.image-1 {
+  background: url(../images/giohang.jpg) no-repeat center;
+  background-size: cover;
+}
+.scard-image.image-2 {
+  background: url(../images/tintuc-1.jpg) no-repeat center;
+  background-size: cover;
+}
+.scard-image.image-3 {
+  background: url(../images/tintuc-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.scard-image.image-4 {
+  background: url(../images/tintuc-3.jpg) no-repeat center;
+  background-size: cover;
 }
 
 .scard-left .price-after {
@@ -1384,6 +1400,15 @@ footer .copy-right {
 .login-signin-btn,
 .login-signup-btn {
   width: 136px;
+}
+
+.input-box {
+  min-height: 54px;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
 }
 
 /* keyframes */

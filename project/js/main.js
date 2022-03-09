@@ -120,7 +120,6 @@ window.addEventListener("scroll", function(){
 
 const buyBtns = document.querySelectorAll('.card-cart')
 const popup = document.querySelector('.product-popup')
-let cartList = JSON.parse(localStorage.getItem('cartList')) || []
 
 
 // render popup
@@ -199,6 +198,7 @@ function cartSideRender(list) {
         cardSideElement.innerHTML = ''
         let totalQuantity = 0
         let totalPrice = 0
+        console.log(list)
         
         list.forEach((product) => {
             totalPrice += product.quantity * product.sizePrice
@@ -246,6 +246,7 @@ function cartSideRender(list) {
 
 
 function addToCart(product) {
+    let cartList = JSON.parse(localStorage.getItem('cartList')) || []
     
     const addToCart = document.querySelector('.popup-bottom .btn')
     const popupNote = document.querySelector('.popup-input')
@@ -330,18 +331,21 @@ function addToCart(product) {
     })
 }
 
+let cartList = JSON.parse(localStorage.getItem('cartList')) || []
+
 
 cartSideRender(cartList)
 
 // Xử lý khi nhấn mua hàng
 buyBtns.forEach(buyBtn => {
-    
     buyBtn.addEventListener('click', function (e) {
+        // tìm sp mình nhấn vào
         let card = e.target.closest('.card')
         
         let cardId = card.getAttribute('dataset')
         
         let product = products.filter(product => product.id == cardId)[0]
+
         
         // render sp trong popup
         product.quantity = 1
@@ -351,10 +355,75 @@ buyBtns.forEach(buyBtn => {
     })
 })
 
+// Validate form đăng nhập đăng ký
 
+const signUpBtn = document.querySelector('.btn.signup')
+const signInBtn = document.querySelector('.btn.signin')
+const IDList = JSON.parse(localStorage.getItem('IDList')) || []
 
+console.log(signInBtn)
 
+signUpBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    const validate = signUpValidate()
+    if (validate.isValid) {
+        IDList.push(IDList.newId)
+        localStorage.setItem('IDList', JSON.stringify(IDList));
+        console.log(IDList)
+    }
+})
 
+signInBtn.addEventListener('click', function () {
+    console.log(IDList)
+})
+
+function signUpValidate() {
+    let isValid = true
+
+    const email = document.querySelector('.login-signup .email')
+    const password = document.querySelector('.login-signup .password')
+    const repeatPassword = document.querySelector('.login-signup .repeat-password')
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const passwordformat = /^(?=.*\d)[0-9a-zA-Z]{8,}$/
+
+    if(email.value.trim() == '' || !mailformat.test(email.value)) {
+        isValid = false
+        email.closest('.input-box').querySelector('.error').innerHTML = 'Vui lòng nhập email'
+    } else {
+        email.closest('.input-box').querySelector('.error').innerHTML = ''
+    }
+
+    if(password.value.trim() == '') {
+        isValid = false
+        password.closest('.input-box').querySelector('.error').innerHTML = 'Vui lòng nhập mật khẩu'
+    }else if(!passwordformat.test(password.value)) {
+        isValid = false
+        password.closest('.input-box').querySelector('.error').innerHTML = 'Mật khẩu phải có ít nhất 8 kí tự'
+    }else {
+        console.log(isValid)
+        password.closest('.input-box').querySelector('.error').innerHTML = ''
+    }
+
+    if(repeatPassword.value.trim() == '') {
+        isValid = false
+        repeatPassword.closest('.input-box').querySelector('.error').innerHTML = 'Vui lòng nhập mật khẩu'
+    }else if (repeatPassword.value != password.value){
+        isValid = false
+        repeatPassword.closest('.input-box').querySelector('.error').innerHTML = 'Mật khẩu không đúng'
+        
+    }else {
+        console.log(isValid)
+        repeatPassword.closest('.input-box').querySelector('.error').innerHTML = ''
+    }
+    
+    return {
+        isValid, 
+        newId: {
+            id: email.value,
+            password: password.value,
+        }
+    }
+}
 
 
 
