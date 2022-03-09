@@ -51,3 +51,8 @@ function renderMenu(products) {
         })
     }
 }
+
+// tìm kiếm sản phẩm
+
+const search = document.querySelector('.item.search')
+
