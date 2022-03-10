@@ -23,7 +23,7 @@ if (cartList.length == 0) {
         productList.innerHTML += `
             <div class="cart-item d-flex" dataset=${product.code}>
                 <div class="cart-item-image">
-                    <img src=${product.image} alt=${product.alt}>
+                    <img src=.${product.image} alt=${product.alt}>
                 </div>
                 <div class="cart-item-info">
                     <div class="name">${product.name}</div> 

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hồ sơ cá nhân</title>
+    <title>Tin Tức</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../public/images/logo-2.png" type="image/png">
+    <link rel="icon" href="../images/logo-2.png" type="image/png">
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/profile.css">
-    <link rel="stylesheet" href="../public/css/reponsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/tintuc.css">
+    <link rel="stylesheet" href="../css/tintuc-reponsive.css">
 </head>
 <body>
     <div class="overlay"></div>
@@ -116,13 +117,13 @@
         <div class="container">
             <div class="header-inner d-flex align-items-center">
                 <div class="bars-icon"><i class="fa-solid fa-bars"></i></div>
-                <a href="./index.html" class="logo">
-                    <img src="../public/images/logo-2.png" alt="logo">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo-2.png" alt="logo">
                     <!-- <span>CupCoffee</span> --> 
                 </a>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="./index.html">Trang chủ</a>
+                        <a href="../index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item drop-item">
                         <a class='d-flex' href="#">Menu
@@ -162,64 +163,177 @@
 
     <section class="banner"></section>
 
-    <section class="menu-main padding-60">
+    <section class="main padding-60">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="filter">
-                        <div class="title">Tài khoản của tôi</div>
-                        
-                        <div class="filter-content">
-                            <div class="filter-item active align-items-bottom">
-                                <a href="#" class="filter-name">Hồ sơ cá nhân</a> 
+            <div class="row mt-4 main-inner">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="side">
+                        <div class="side-title">Bài viết mới nhất</div>
+                        <div class="side-news-list">
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="side-title">Bài viết đọc nhiều</div>
+                        <div class="side-news-list">
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"class="side-news-item d-flex">
+                                <div class="image">
+                                    <img src="../images/tintuc-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-date d-flex">
+                                        <div class="info-date-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="info-date-time">14/01/2022</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="main-content">
+                        <h3 class="h3-heading">NĂM MỚI, UỐNG "KHỞI ĐẦU SUNG" - NHẬN LÌ XÌ KHỦNG</h3>
+                        <p>Ngày viết: 22/02/2022</p>
+                        <div class="row mt-5">
+                            <div class="col-12 col-md-6">
+                                <h4>Năm mới "khởi đầu sung" với bộ 3 trà Tết</h4>
+
+                                <p>Chia tay năm cũ với quá nhiều nốt trầm, Tết này hãy cùng The Coffee Cup nạp cho mình bộ 3 "Sung" gói trọn tình cảm đong đầy, vừa ngon tròn vị vừa mang đến sự hứng khởi, tươi mới cho những ngày đầu năm để bắt đầu năm Dần đầy năng lượng, mãnh liệt và đủ sức "công phá" mọi thử thách.Nào, giờ thì hãy cùng nhau khám phá bộ 3 trà Tết và cùng nhau đón một cái Tết trọn vẹn hơn cả về sức khỏe, tình cảm, sum vầy và sự thịnh vượng!</p>
                             </div>
-                            <div class="filter-item align-items-bottom">
-                                <a href="#" class="filter-name">Đơn hàng</a> 
+                            <div class="col12 col-md-6">
+                                <img class="tintuc-img-1" src="../images/giohang.jpg" alt="giohang">
                             </div>
-                            <div class="filter-item align-items-bottom">
-                                <a href="#" class="filter-name">Thông báo</a> 
+                            <div class="col-12 mt-4">
+                                <h4>Tranh thủ cơ hội nhận lì xì khủng tại "Nhà"</h4>
+                                
+                                <p>Không chỉ được thưởng thức những "cực phẩm" Trà mùa Tết, The Coffee Cup còn lì xì riêng cho khách hàng khi đến với "Nhà" bằng một món quà đặc biệt: Mua một ly trà Tết KHỞI ĐẦU SUNG, bạn sẽ được tặng thêm một ly tùy chọn trong bộ ba Trà Sen Nhãn Sum Vầy, Trà Dưa Đào Sung Túc và Trà Sữa Sung Sức.</p>
+                                <div >
+                                    <img class="tintuc-img-2" src="../images/cf-svg.jpg" alt="cf">
+                                </div>
+                                <p>Đừng quên chương trình chỉ áp dụng từ 20/1 đến hết ngày 30/2, không áp dụng trên topping và mỗi khách hàng chỉ được nhận 1 mã/SĐT thôi nhé. Ngoài ra bạn cũng không nhận được ưu đãi này khi sử dụng chương trình khuyến mãi song song và chương trình có thể kết thúc sớm hơn dự kiến khi hết số lượng voucher phát ra.
+                                </p>
+                                <p>
+                                    <i>Cùng Nhà chào đón năm Dần đủ đầy, sung sức như hổ, sum vầy tết sang và ngày càng sung túc bạn nhé!</i>
+                                </p>
                             </div>
-                            <div class="filter-item align-items-bottom">
-                                <a href="#" class="filter-name">Voucher</a> 
+                        </div>
+                        <div class="line d-flex align-items-center justify-content-between">
+                            <div class="share">
+                                <span>Chia sẻ: </span>
+                                <a href="#"class="footer-icon"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"class="footer-icon"><i class="fab fa-instagram-square"></i></a>
+                                <a href="#"class="footer-icon"><i class="fab fa-twitter-square"></i></a>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">Bài kế tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="main-right col-lg-9 col-md-8 col-sm-12">
-                    <h2 class="h2-heading">Hồ sơ cá nhân</h2>
-                    <h4 class="sub-heading">Quản lý hồ sơ cá nhân để bảo mật tài khoản</h4>
-                    
-                    <form action="" class="profile">
-                        <div class="profile-item">
-                            <label for="name">Họ tên :</label>
-                            <input type="text" placeholder="Họ và tên" value="Bùi Văn Vinh">
-                        </div>
-
-                        <div class="profile-item">
-                            <label for="name">Điện thoại :</label>
-                            <input type="text" placeholder="Họ và tên" value="0355246686">
-                        </div>
-
-                        <div class="profile-item">
-                            <label for="name">Địa chỉ :</label>
-                            <input type="text" placeholder="Họ và tên" value="69 Khâm Thiên, Đống Đa, Hà Nội">
-                        </div>
-
-                        <div class="profile-item">
-                            <label for="name">Email :</label>
-                            <input type="text" placeholder="Họ và tên" value="vinhhd94@gmail.com">
-                        </div>
-                    </form>
-                </div>
-
-                <div class="text-center">
-                    <button class="btn">Quay lại</button>
-                    <button class="btn">Chỉnh sửa</button>
-                </div>
             </div>
-        </div> 
+        </div>
     </section>
-
 
     <section class="register d-flex align-items-center">
         <div class="container">
@@ -328,5 +442,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
+
 </body>
 </html>

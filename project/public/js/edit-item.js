@@ -8,6 +8,13 @@ function editItem(code) {
 
     console.log(123);
     popup.style.display = 'block'
+    
+    let path
+    if(window.location.pathname=='/index.html'){
+        path='';
+    }else{
+        path='.';
+    }
 
     if (product) {
         popup.innerHTML = `
@@ -15,7 +22,7 @@ function editItem(code) {
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="popup-item d-flex align-items-center">
                 <div class="popup-image">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${path}${product.image}" alt="${product.name}">
                 </div>
                 <div class="d-flex flex-column">
                     <div class="popup-name">${product.name}</div>

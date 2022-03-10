@@ -121,17 +121,24 @@ window.addEventListener("scroll", function(){
 const buyBtns = document.querySelectorAll('.card-cart')
 const popup = document.querySelector('.product-popup')
 
-
 // render popup
 function popupRender(product) {
+    
     popup.style.display = 'block'
+    let path
+
+    if(window.location.pathname=='/index.html'){
+        path='';
+      }else{
+        path='.';
+      }
     if (product) {
         popup.innerHTML = `
         <div class="popup-box">
             <button type="button" class="btn-close" aria-label="Close"></button>
             <div class="popup-item d-flex align-items-center">
                 <div class="popup-image">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${path}${product.image}" alt="${product.name}">
                 </div>
                 <div class="d-flex flex-column">
                     <div class="popup-name">${product.name}</div>
@@ -198,7 +205,14 @@ function cartSideRender(list) {
         cardSideElement.innerHTML = ''
         let totalQuantity = 0
         let totalPrice = 0
-        console.log(list)
+
+        let path
+
+        if(window.location.pathname=='/index.html'){
+            path='';
+        }else{
+            path='.';
+        }
         
         list.forEach((product) => {
             totalPrice += product.quantity * product.sizePrice
@@ -207,7 +221,7 @@ function cartSideRender(list) {
             cardSideElement.innerHTML += `
                 <div class="cart-item d-flex" dataset=${product.code}>
                     <div class="cart-item-image">
-                        <img src=${product.image} alt=${product.alt}>
+                        <img src=${path}${product.image} alt=${product.alt}>
                     </div>
                     <div class="cart-item-info">
                         <div class="name">${product.name}</div> 
@@ -236,7 +250,7 @@ function cartSideRender(list) {
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./thanhtoan.html"class="btn">Thanh toán</a>
+                <a href="./page/thanhtoan.html"class="btn">Thanh toán</a>
             </div>
         `
         
@@ -360,8 +374,6 @@ buyBtns.forEach(buyBtn => {
 const signUpBtn = document.querySelector('.btn.signup')
 const signInBtn = document.querySelector('.btn.signin')
 const IDList = JSON.parse(localStorage.getItem('IDList')) || []
-
-console.log(signInBtn)
 
 signUpBtn.addEventListener('click', function (e) {
     e.preventDefault()

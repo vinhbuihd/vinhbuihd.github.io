@@ -27,6 +27,13 @@ function cartSideRender(list) {
         cardSideElement.innerHTML = ''
         let totalQuantity = 0
         let totalPrice = 0
+
+        let path
+        if(window.location.pathname=='/index.html'){
+            path='';
+        }else{
+            path='.';
+        }
         
         list.forEach((product) => {
             totalPrice += product.quantity * product.sizePrice
@@ -35,7 +42,7 @@ function cartSideRender(list) {
             cardSideElement.innerHTML += `
                 <div class="cart-item d-flex" dataset=${product.code}>
                     <div class="cart-item-image">
-                        <img src=${product.image} alt=${product.alt}>
+                        <img src=${path}${product.image} alt=${product.alt}>
                     </div>
                     <div class="cart-item-info">
                         <div class="name">${product.name}</div> 
