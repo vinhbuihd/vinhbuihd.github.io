@@ -1,7 +1,7 @@
 /**
  * 1. mockup data
- * 2. js filter menu: chọn loại sp, search, checkbox lọc sp, ấn phần bán chạy chuyển sang menu
- * 3. đăng ký đăng nhập
+ * 2. js filter menu: chọn loại sp, search, checkbox lọc sp, ấn phần bán chạy chuyển sang menu -> ok
+ * 3. đăng ký đăng nhập -> ok
  * 4. link các đường link footer
  * 5. header link menu các loại sp
  * 6. mã giảm giá

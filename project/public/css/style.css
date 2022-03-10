@@ -422,6 +422,12 @@ header .nav-item i {
   border-color: var(--pri-2-color);
 }
 
+.user-icon img {
+  width: 28px;
+  height: 28px;
+  display: none;
+}
+
 .cart-quantity {
   position: absolute;
   top: -4px;
@@ -1403,7 +1409,7 @@ footer .copy-right {
 }
 
 .input-box {
-  min-height: 54px;
+  min-height: 48px;
 }
 
 .error {

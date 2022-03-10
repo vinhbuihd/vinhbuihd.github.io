@@ -105,7 +105,11 @@
   background: #fff;
 }
 
+.filter-bestseller .card {
+}
+
 .filter-bestseller .item {
+  cursor: pointer;
   margin: 16px 0;
 }
 
@@ -117,6 +121,14 @@
 
 .filter-item-info {
   margin-left: 12px;
+}
+
+.filter-item-info .card-name {
+  font-size: 14px;
+}
+
+.filter-item-info .price {
+  font-size: 14px;
 }
 
 /* card */
@@ -154,7 +166,7 @@
 }
 
 .card-item-info .card-name {
-  font-size: 1.125rem;
+  font-size: 14rem;
 }
 
 .card-item-info .price-after {

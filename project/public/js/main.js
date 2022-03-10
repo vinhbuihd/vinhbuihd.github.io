@@ -1,7 +1,4 @@
 
-import { products } from "./productAll.js";
-
-
 // click header nav-item drop subnav
 const dropItem = document.querySelector('.drop-item')
 
@@ -118,76 +115,9 @@ window.addEventListener("scroll", function(){
 
 // // click bật ra popup
 
-const buyBtns = document.querySelectorAll('.card-cart')
 const popup = document.querySelector('.product-popup')
 
 // render popup
-function popupRender(product) {
-    
-    popup.style.display = 'block'
-    let path
-
-    if(window.location.pathname=='/index.html'){
-        path='';
-      }else{
-        path='.';
-      }
-    if (product) {
-        popup.innerHTML = `
-        <div class="popup-box">
-            <button type="button" class="btn-close" aria-label="Close"></button>
-            <div class="popup-item d-flex align-items-center">
-                <div class="popup-image">
-                    <img src="${path}${product.image}" alt="${product.name}">
-                </div>
-                <div class="d-flex flex-column">
-                    <div class="popup-name">${product.name}</div>
-                    <div class="popup-price">${product.price.S.toLocaleString()}</div>
-                </div>
-            </div>
-            <div class="popup-picksize">
-                <div class="popup-title">Chọn size *</div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="S" name="flexRadioDefault" id="size-s" checked>
-                        <label class="form-check-label" for="size-s">
-                        Size S
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="M" name="flexRadioDefault" id="size-m">
-                        <label class="form-check-label" for="size-m">
-                        Size M + 5.000đ
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" value="L" name="flexRadioDefault" id="size-l">
-                        <label class="form-check-label" for="size-l">
-                        Size L + 10.000đ
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="popup-note">
-                <div class="popup-title">Ghi chú <span>(nếu có)</span>
-                </div>
-                <input class="popup-input" type="text" placeholder="Ghi chú cho quán">
-            </div>
-        
-            <div class="popup-bottom mt-16 d-flex align-items-center justify-content-center flex-column">
-                <div class="cart-item-button d-flex align-items-center">
-                    <div class="minus"><i class="fa-solid fa-circle-minus"></i></div>
-                    <div class="cart-item-quantity">${product.quantity}</div>
-                    <div class="plus"><i class="fa-solid fa-circle-plus"></i></div>
-                </div>
-                <button class="btn">Thêm vào giỏ hàng : <span>${(product.price.S * product.quantity).toLocaleString()}</span> đ</button>
-            </div>
-        </div>
-        `
-    }
-
-}
 
 function cartSideRender(list) {
     const cardSideElement = document.querySelector('.cart-side .content')
@@ -207,11 +137,14 @@ function cartSideRender(list) {
         let totalPrice = 0
 
         let path
+        let path2
 
         if(window.location.pathname=='/index.html'){
-            path='';
+            path = ''
+            path2 = '/page'
         }else{
-            path='.';
+            path ='.'
+            path2 = ''
         }
         
         list.forEach((product) => {
@@ -250,14 +183,13 @@ function cartSideRender(list) {
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./page/thanhtoan.html"class="btn">Thanh toán</a>
+                <a href=".${path2}/thanhtoan.html"class="btn">Thanh toán</a>
             </div>
         `
         
         cardIconQuantity.innerHTML = totalQuantity
     }
 }
-
 
 function addToCart(product) {
     let cartList = JSON.parse(localStorage.getItem('cartList')) || []
@@ -350,44 +282,67 @@ let cartList = JSON.parse(localStorage.getItem('cartList')) || []
 
 cartSideRender(cartList)
 
-// Xử lý khi nhấn mua hàng
-buyBtns.forEach(buyBtn => {
-    buyBtn.addEventListener('click', function (e) {
-        // tìm sp mình nhấn vào
-        let card = e.target.closest('.card')
-        
-        let cardId = card.getAttribute('dataset')
-        
-        let product = products.filter(product => product.id == cardId)[0]
-
-        
-        // render sp trong popup
-        product.quantity = 1
-
-        popupRender(product)
-        addToCart(product)
-    })
-})
-
 // Validate form đăng nhập đăng ký
 
 const signUpBtn = document.querySelector('.btn.signup')
 const signInBtn = document.querySelector('.btn.signin')
 const IDList = JSON.parse(localStorage.getItem('IDList')) || []
+const loginSignBtn = document.querySelector('.login-sign-btn button')
+const userID = document.querySelector('.user-id')
+const passwordID = document.querySelector('.user-password')
+
+const userImage = document.querySelector('.user-icon img')
+const userIcon = document.querySelector('.user-icon i')
 
 signUpBtn.addEventListener('click', function (e) {
     e.preventDefault()
     const validate = signUpValidate()
-    if (validate.isValid) {
-        IDList.push(IDList.newId)
-        localStorage.setItem('IDList', JSON.stringify(IDList));
-        console.log(IDList)
+    if (validate?.isValid) {
+        if (IDList.length == 0) {
+            IDList.push(validate.newId)
+            localStorage.setItem('IDList', JSON.stringify(IDList));
+            console.log(IDList)
+            loginSignBtn.click()
+            setTimeout(() => {
+                alert('Đăng ký tài khoản thành công!!!')
+            }, 1000)
+        }else {
+            IDList.forEach(user => {
+                if(user.id == validate.newId.id){
+                    alert('Tài khoản đã tồn tại')
+                    return
+                }else {
+                    IDList.push(validate.newId)
+                    localStorage.setItem('IDList', JSON.stringify(IDList));
+                    console.log(IDList)
+                    loginSignBtn.click()
+                    setTimeout(() => {
+                        alert('Đăng ký tài khoản thành công!!!')
+                    }, 1000)
+                }
+            })
+        }
+        
+        
     }
 })
 
-signInBtn.addEventListener('click', function () {
-    console.log(IDList)
+let isSuccess
+signInBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    isSuccess = false
+    IDList.forEach(user => {
+        if (user.id == userID.value && user.password == passwordID.value) {
+            alert('Đăng nhập thành công')
+            isSuccess = true
+            window.location.href = './index.html'
+        }
+    })
+    if (isSuccess == false) {
+        alert('Tài khoản hoặc mật khẩu không đúng')
+    }
 })
+
 
 function signUpValidate() {
     let isValid = true
@@ -412,7 +367,6 @@ function signUpValidate() {
         isValid = false
         password.closest('.input-box').querySelector('.error').innerHTML = 'Mật khẩu phải có ít nhất 8 kí tự'
     }else {
-        console.log(isValid)
         password.closest('.input-box').querySelector('.error').innerHTML = ''
     }
 
@@ -422,11 +376,10 @@ function signUpValidate() {
     }else if (repeatPassword.value != password.value){
         isValid = false
         repeatPassword.closest('.input-box').querySelector('.error').innerHTML = 'Mật khẩu không đúng'
-        
     }else {
-        console.log(isValid)
         repeatPassword.closest('.input-box').querySelector('.error').innerHTML = ''
     }
+    if (!isValid) return
     
     return {
         isValid, 
@@ -436,6 +389,11 @@ function signUpValidate() {
         }
     }
 }
+
+
+
+
+
 
 
 
