@@ -282,27 +282,13 @@ signUpBtn.addEventListener('click', function (e) {
     e.preventDefault()
     const validate = signUpValidate()
     if (validate?.isValid) {
-        if (IDList.length == 0) {
-            IDList.push(validate.newId)
+        IDList.push(validate.newId)
             localStorage.setItem('IDList', JSON.stringify(IDList));
             console.log(IDList)
             loginSignBtn.click()
             setTimeout(() => {
                 alert('Đăng ký tài khoản thành công!!!')
             }, 1000)
-        }else {
-            IDList.forEach(user => {
-                IDList.push(validate.newId)
-                localStorage.setItem('IDList', JSON.stringify(IDList));
-                console.log(IDList)
-                loginSignBtn.click()
-                setTimeout(() => {
-                    alert('Đăng ký tài khoản thành công!!!')
-                }, 1000)
-            })
-        }
-        
-        
     }
 })
 
