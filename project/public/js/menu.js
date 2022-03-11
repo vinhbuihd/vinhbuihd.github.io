@@ -39,6 +39,47 @@ window.onload = () => {
     getProducts()
 }
 
+// chọn sp radio
+const radioGroup = document.querySelectorAll('.radio-group input')
+radioGroup.forEach(radio => {
+    radio.addEventListener('change', function () {
+        console.log(filterTypeList)
+        console.log(radio.value)
+        const radioFilterList = [...filterTypeList].filter(product => product.status == radio.value)
+        renderMenu(radioFilterList)
+        
+    })
+})
+
+// bỏ chọn radio
+const filterDeleteBtn = document.querySelector('.filter-delete-btn')
+filterDeleteBtn.addEventListener('click', function () {
+    radioGroup.forEach(radio => {
+        radio.checked = false
+    })
+    renderMenu(filterTypeList)
+})
+
+// Click filter name -> active
+const filterItems = document.querySelectorAll('.filter-item')
+filterItems.forEach(filterItem => {
+    filterItem.addEventListener('click', function () {
+        document.querySelector('.filter-item.active').classList.remove('active')
+        filterItem.classList.add('active')
+        const buyBtns = document.querySelectorAll('.card-cart')
+        filterDeleteBtn.click()
+    })
+})
+
+// Tìm kiếm sản phẩm
+const searchInput = document.querySelector('.filter-search')
+searchInput.addEventListener('input', function (e) {
+    const searchList = [...filterTypeList].filter(product => product.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    
+    renderMenu(searchList)
+})
+
+
 function renderMenu(products, type) {
     productsList.innerHTML = ''
     if (products.length == 0) {
@@ -377,7 +418,6 @@ function getProductsAPI() {
 }
 
 function bestsellerRender() {
-
     const filterBestseller = document.querySelector('.filter-bestseller')
 
     const bestsellerList = products.filter(product => product.status == 'selling')
@@ -409,49 +449,9 @@ function bestsellerRender() {
         </div>
         `
     }
-
-
 }
 
-// Click filter name -> active
-const filterItems = document.querySelectorAll('.filter-item')
-filterItems.forEach(filterItem => {
-    filterItem.addEventListener('click', function () {
-        document.querySelector('.filter-item.active').classList.remove('active')
-        filterItem.classList.add('active')
-        const buyBtns = document.querySelectorAll('.card-cart')
-        
-    })
-})
 
-// Tìm kiếm sản phẩm
-const searchInput = document.querySelector('.filter-search')
-searchInput.addEventListener('input', function (e) {
-    const searchList = [...filterTypeList].filter(product => product.name.toLowerCase().includes(e.target.value.toLowerCase()))
-    
-    renderMenu(searchList)
-})
-
-// chọn sp radio
-const radioGroup = document.querySelectorAll('.radio-group input')
-radioGroup.forEach(radio => {
-    radio.addEventListener('change', function () {
-        console.log(filterTypeList)
-        console.log(radio.value)
-        const radioFilterList = [...filterTypeList].filter(product => product.status == radio.value)
-        renderMenu(radioFilterList)
-        
-    })
-})
-
-// bỏ chọn radio
-const filterDeleteBtn = document.querySelector('.filter-delete-btn')
-filterDeleteBtn.addEventListener('click', function () {
-    radioGroup.forEach(radio => {
-        radio.checked = false
-    })
-    renderMenu(filterTypeList)
-})
 
 
 

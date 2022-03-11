@@ -311,7 +311,7 @@ signInBtn.addEventListener('click', function (e) {
     e.preventDefault()
 
     IDList.forEach(user => {
-        if (user.id == userID?.value && user.password == passwordID?.value) {
+        if (user?.id == userID?.value && user.password == passwordID?.value) {
             alert('Đăng nhập thành công')
             isSuccess = true
             window.location.href = './index.html'
