@@ -118,7 +118,7 @@
             "type": "tea",
             "quantity": 1,
             "star": 4,
-            "status": "selling"
+            "status": "new"
         },
         {
             "id": 9,
@@ -364,7 +364,7 @@
             "id": 25,
             "name": "Cà phê Roast",
             "alt":"tra-chanh",
-            "image": "./images/sp-23.jpg",
+            "image": "./images/sp-25.jpg",
             "price": {
                 "S": 95000,
                 "M": 100000,

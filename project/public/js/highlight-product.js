@@ -101,7 +101,7 @@ function highlightProductRender() {
         highlightproducts.innerHTML += 
         
         `
-        <div class="card" dataset="${product.id}">
+        <div class="card wow rollIn" dataset="${product.id}">
         <div class="card-image" >
             <img src=${product.image} alt="${product.name}">
         </div>
@@ -286,12 +286,12 @@ function cartSideRender(list) {
         })
         
         cardSideElement.innerHTML += `
-            <a href="../page/menu.html">Thêm món</a>
+            <a href="./page/menu.html">Thêm món</a>
             <div class="sub-total d-flex align-items-center justify-content-between">
                 Tổng cộng <span>${totalPrice.toLocaleString()} đ</span>
             </div>
             <div class="cart-side-btn text-center mt-3">
-                <a href="./thanhtoan.html"class="btn">Thanh toán</a>
+                <a href="./page/thanhtoan.html"class="btn">Thanh toán</a>
             </div>
         `
         
@@ -414,3 +414,4 @@ $(".highlight-product").owlCarousel({
         }
     }
 });
+

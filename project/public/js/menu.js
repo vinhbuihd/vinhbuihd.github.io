@@ -30,7 +30,6 @@ async function getProducts() {
                 addToCart(product)
             })
         })
-
     } catch (error) {
         console.log(error)
     }
@@ -52,8 +51,8 @@ function renderMenu(products, type) {
     
         products.forEach(product => {
             productsList.innerHTML += `
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="card" dataset="${product.id}">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow animate__slideInUp" data-wow-duration="2.5s">
+                    <div class="card" dataset="${product.id}" >
                         <div class="card-image" >
                             <img src=.${product.image} alt="${product.name}">
                         </div>
@@ -92,10 +91,10 @@ function renderMenu(products, type) {
 
         itemsQuantity.innerHTML = `${filterTypeList.length}`
         
-        filterTypeList.forEach(product => {
+        filterTypeList.forEach((product, index) => {
             productsList.innerHTML += `
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="card" dataset="${product.id}">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  wow animate__slideInUp"  data-wow-duration="2.5s">
+                    <div class="card" dataset="${product.id}" >
                         <div class="card-image" >
                             <img src=.${product.image} alt="${product.name}">
                         </div>
@@ -386,7 +385,7 @@ function bestsellerRender() {
     for (let i = 0; i < 3; i++) {
         const item = bestsellerList[i]
         filterBestseller.innerHTML += `
-        <div class="item d-flex align-items-center flex-row" dataset="${item.id}">
+        <div class="item d-flex align-items-center flex-row wow animate__slideInUp" dataset="${item.id}" data-wow-duration ='1.5s'>
             <div class="filter-item-image">
                 <img src=.${item.image} alt=${item.name}>
             </div>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../images/logo-2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +38,11 @@
         
     </div>
 
+    <!-- gotop -->
+    <div class="gotop d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
     <!-- đăng nhập đăng ký -->
     <div class="login-status d-flex">
         <div class="login-main d-flex">
@@ -58,12 +64,12 @@
                     <form action="">
                         <div class="d-flex align-items-end mt-4">
                             <div class="form-icon d-flex"><i class="fa-solid fa-user"></i></div>
-                            <input type="text" name=""  placeholder="Tên đăng nhập" required>
+                            <input type="text" class="user-id"  placeholder="Tên đăng nhập" required>
                         </div>
     
                         <div class="d-flex align-items-end mt-4">
                             <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
-                            <input type="password" name="" placeholder="Mật khẩu" required    >
+                            <input type="password" class="user-password" placeholder="Mật khẩu" required    >
                         </div>
     
                         <div class=" text-center mt-4">
@@ -103,7 +109,7 @@
                             <span class="error"></span>
                         </div>
 
-                        <div class=" text-center mt-4">
+                        <div class=" text-center mt-2">
                             <button class="btn signup" type="submit">Đăng ký</button>
                         </div>
                         
@@ -125,16 +131,8 @@
                     <li class="nav-item">
                         <a href="../index.html">Trang chủ</a>
                     </li>
-                    <li class="nav-item drop-item">
-                        <a class='d-flex' href="#">Menu
-                            <i class="fas fa-sort-down"></i>
-                        </a>
-                        <ul class="sub-nav">
-                            <li><a href="./menu.html">Cà phê</a></li>
-                            <li><a href="./menu.html">Trà</a></li>
-                            <li><a href="./menu.html">Freeze</a></li>
-                            <li><a href="./menu.html">Khác</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="./menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
                         <a href="./tintuc.html">Tin tức</a>
@@ -165,19 +163,19 @@
 
     <section class="main padding-60">
         <div class="container">
-            <h2 class="h2-heading">Về chúng tôi</h2>
+            <h2 data-wow-duration="2s" class="h2-heading wow animate__slideInUp">Về chúng tôi</h2>
 
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-12 col-md-6 mt-4">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp mt-4">
                                     <div class="box box-image">
                                         <img src="../images/bgbgb.jpeg" alt="chungtoi">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp">
                                     <div class="box">
                                         <div class="box-content">
                                             <h3>Khởi nguồn</h3>
@@ -192,7 +190,7 @@
                         
                         <div class="col-12">
                             <div class="row item-2">
-                                <div class="col-12 col-md-6 mt-4">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp mt-4">
                                     <div class="box">
                                         <div class="box-content text-end">
                                             <h3>Phát triển</h3>
@@ -202,7 +200,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp">
                                     <div class="box box-image">
                                         <img src="../images/chungtoi-2.jpg" alt="chungtoi">
                                     </div>
@@ -212,12 +210,12 @@
                         
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-12 col-md-6 mt-4">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp mt-4">
                                     <div class="box box-image">
                                         <img src="../images/h-5-baner-img-1.jpg" alt="chungtoi">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div data-wow-duration="2s" class="col-12 col-md-6 wow animate__slideInUp">
                                     <div class="box">
                                         <div class="box-content">
                                             <h3>Vươn tới đỉnh cao</h3>
@@ -257,7 +255,7 @@
             </div>
             <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                 <p class="footer-title">Thông tin liên hệ</p>
-                <p class="footer-link">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</p>
+                <p class="footer-link"><a target="_blank" href="https://goo.gl/maps/U37UxTnCCesQCuza7">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</a></p>
                 <p class="footer-link"><a href="tel:0987654321">Điện thoại : 0987654321</a></p>
                 <p class="footer-link"><a href="mailto: abc@example.com">Email : coffeecup@gmail.com</a></p>
                 <div class="footer-link d-flex align-items-center">
@@ -294,6 +292,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>new WOW().init()</script>
+    
     <script src="../js/edit-item.js"></script>
     <script src="../js/delete-item.js"></script>
 

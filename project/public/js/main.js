@@ -1,15 +1,4 @@
 
-// click header nav-item drop subnav
-const dropItem = document.querySelector('.drop-item')
-
-window.addEventListener('click', function(e){   
-    if (dropItem.contains(e.target)){
-        dropItem.classList.toggle('show')
-    } else{
-        dropItem.classList.remove('show')
-    }
-});
-
 // mobile click header bar show ra nav-list
 
 const barBtn = document.querySelector('.bars-icon')
@@ -294,6 +283,8 @@ const passwordID = document.querySelector('.user-password')
 const userImage = document.querySelector('.user-icon img')
 const userIcon = document.querySelector('.user-icon i')
 
+console.log(IDList)
+
 signUpBtn.addEventListener('click', function (e) {
     e.preventDefault()
     const validate = signUpValidate()
@@ -308,18 +299,13 @@ signUpBtn.addEventListener('click', function (e) {
             }, 1000)
         }else {
             IDList.forEach(user => {
-                if(user.id == validate.newId.id){
-                    alert('Tài khoản đã tồn tại')
-                    return
-                }else {
-                    IDList.push(validate.newId)
-                    localStorage.setItem('IDList', JSON.stringify(IDList));
-                    console.log(IDList)
-                    loginSignBtn.click()
-                    setTimeout(() => {
-                        alert('Đăng ký tài khoản thành công!!!')
-                    }, 1000)
-                }
+                IDList.push(validate.newId)
+                localStorage.setItem('IDList', JSON.stringify(IDList));
+                console.log(IDList)
+                loginSignBtn.click()
+                setTimeout(() => {
+                    alert('Đăng ký tài khoản thành công!!!')
+                }, 1000)
             })
         }
         
@@ -327,12 +313,12 @@ signUpBtn.addEventListener('click', function (e) {
     }
 })
 
-let isSuccess
+let isSuccess = false
 signInBtn.addEventListener('click', function (e) {
     e.preventDefault()
-    isSuccess = false
+
     IDList.forEach(user => {
-        if (user.id == userID.value && user.password == passwordID.value) {
+        if (user.id == userID?.value && user.password == passwordID?.value) {
             alert('Đăng nhập thành công')
             isSuccess = true
             window.location.href = './index.html'
@@ -390,6 +376,26 @@ function signUpValidate() {
     }
 }
 
+
+// go to top
+const goTop = document.querySelector('.gotop')
+
+window.addEventListener('scroll', function () {
+    console.log(window.pageYOffset)
+    if (window.pageYOffset > 500) {
+        goTop.style.visibility = 'unset'
+    } else {
+        goTop.style.visibility = 'hidden'
+    }
+
+})
+
+goTop.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
 
 
 

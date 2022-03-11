@@ -37,6 +37,10 @@
         
     </div>
 
+    <!-- gotop -->
+    <div class="gotop d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <!-- đăng nhập đăng ký -->
     <div class="login-status d-flex">
         <div class="login-main d-flex">
@@ -58,12 +62,12 @@
                     <form action="">
                         <div class="d-flex align-items-end mt-4">
                             <div class="form-icon d-flex"><i class="fa-solid fa-user"></i></div>
-                            <input type="text" name=""  placeholder="Tên đăng nhập" required>
+                            <input type="text" class="user-id"  placeholder="Tên đăng nhập" required>
                         </div>
     
                         <div class="d-flex align-items-end mt-4">
                             <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
-                            <input type="password" name="" placeholder="Mật khẩu" required    >
+                            <input type="password" class="user-password" placeholder="Mật khẩu" required    >
                         </div>
     
                         <div class=" text-center mt-4">
@@ -103,7 +107,7 @@
                             <span class="error"></span>
                         </div>
 
-                        <div class=" text-center mt-4">
+                        <div class=" text-center mt-2">
                             <button class="btn signup" type="submit">Đăng ký</button>
                         </div>
                         
@@ -125,16 +129,8 @@
                     <li class="nav-item">
                         <a href="../index.html">Trang chủ</a>
                     </li>
-                    <li class="nav-item drop-item">
-                        <a class='d-flex' href="#">Menu
-                            <i class="fas fa-sort-down"></i>
-                        </a>
-                        <ul class="sub-nav">
-                            <li><a href="./menu.html">Cà phê</a></li>
-                            <li><a href="./menu.html">Trà</a></li>
-                            <li><a href="./menu.html">Freeze</a></li>
-                            <li><a href="./menu.html">Khác</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="./menu.html">Menu</a>
                     </li>
                     <li class="nav-item active">
                         <a href="#">Tin tức</a>
@@ -167,13 +163,13 @@
         <div class="container">
             <h2 class="h2-heading">Tin tức</h2>
             <div class="row mt-4 content">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-3 col-md-4">
                     <div class="side">
                         <div class="side-title">Bài viết mới nhất</div>
                         <div class="side-news-list">
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/tintuc-3.jpg" alt="">
                                 </div>
                                 <div class="info">
                                     <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
@@ -185,12 +181,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/giohang.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Năm mới vạn điều may, uống thả ga</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -199,12 +195,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
                                     <img src="../images/tintuc-1.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Coffee Cup - Cảm nhận cà phê mạnh</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -213,12 +209,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/tintuc-2.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Xuân mới phát tài - Uống dài dài</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -231,9 +227,9 @@
                         </div>
                         <div class="side-title">Bài viết đọc nhiều</div>
                         <div class="side-news-list">
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/tintuc-3.jpg" alt="">
                                 </div>
                                 <div class="info">
                                     <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
@@ -245,12 +241,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/giohang.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Năm mới vạn điều may, uống thả ga</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -259,12 +255,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
                                     <img src="../images/tintuc-1.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Coffee Cup - Cảm nhận cà phê mạnh</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -273,12 +269,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"class="side-news-item d-flex">
+                            <a href="./tintuc-1.html"class="side-news-item d-flex">
                                 <div class="image">
-                                    <img src="../images/tintuc-1.jpg" alt="">
+                                    <img src="../images/tintuc-2.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <div class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</div>
+                                    <div class="info-name">Xuân mới phát tài - Uống dài dài</div>
                                     <div class="info-date d-flex">
                                         <div class="info-date-icon">
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -291,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-lg-9 col-md-8">
                     <div class="main-content">
                         <a href="./tintuc-1.html"class="main-content-item d-flex">
                             <div class="image">
@@ -303,7 +299,7 @@
                                     <div class="info-date-icon">
                                         <i class="fa-solid fa-calendar-days"></i>
                                     </div>
-                                    <div class="info-date-time">14/01/2022</div>
+                                    <div class="info-date-time">04/03/2022</div>
                                 </div>
                                 <p class="info-content">Chia tay năm cũ với quá nhiều nốt trầm, Tết này hãy cùng The Coffee Cup nạp cho mình bộ 3 "Sung" gói trọn tình cảm đong đầy, vừa ngon tròn vị vừa mang đến sự hứng khởi...</p>
                             </div>
@@ -313,34 +309,34 @@
                                 <img src="../images/tintuc-1.jpg" alt="tintuc">
                             </div>
                             <div class="info">
-                                <h4 class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</h3>
+                                <h4 class="info-name">Tết cận kề - Fan Coffee Cup có quà năm mới...</h3>
                                 <div class="info-date d-flex">
                                     <div class="info-date-icon">
                                         <i class="fa-solid fa-calendar-days"></i>
                                     </div>
-                                    <div class="info-date-time">14/01/2022</div>
+                                    <div class="info-date-time">14/02/2022</div>
                                 </div>
-                                <p class="info-content">Nhân dịp khai trương cơ sở mới tại 137 Tây Sơn - Đống Đa-Hà nội, chúng tôi vui mừng chào đón khách hang tới tham quan và thưởng thức các sản phẩm của cơ sở với nhiều ưu đãi hấp dẫn...</p>
+                                <p class="info-content">Ra mắt bộ sản phẩm mới toanh để “khuynh đảo” những ngày Tết, The Coffee House đề cao những tiêu chí có thể cuốn hút và chinh phục bạn ngay lần đầu tiên chạm mặt</p>
                             </div>
                         </a>
                         <a href="#"class="main-content-item d-flex">
                             <div class="image">
-                                <img src="../images/tintuc-1.jpg" alt="tintuc">
+                                <img src="../images/tintuc-2.jpg" alt="tintuc">
                             </div>
                             <div class="info">
-                                <h4 class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</h3>
+                                <h4 class="info-name">Coffee Cup - Quán cà phê lý tưởng để gặp gỡ bạn bè mùa Tết này</h3>
                                 <div class="info-date d-flex">
                                     <div class="info-date-icon">
                                         <i class="fa-solid fa-calendar-days"></i>
                                     </div>
-                                    <div class="info-date-time">14/01/2022</div>
+                                    <div class="info-date-time">24/01/2022</div>
                                 </div>
-                                <p class="info-content">Nhân dịp khai trương cơ sở mới tại 137 Tây Sơn - Đống Đa-Hà nội, chúng tôi vui mừng chào đón khách hang tới tham quan và thưởng thức các sản phẩm của cơ sở với nhiều ưu đãi hấp dẫn...</p>
+                                <p class="info-content">Những ngày cuối năm, đầu năm mới, bạn lên kế hoạch để gặp gỡ những...</p>
                             </div>
                         </a>
                         <a href="#"class="main-content-item d-flex">
                             <div class="image">
-                                <img src="../images/tintuc-1.jpg" alt="tintuc">
+                                <img src="../images/tintuc-3.jpg" alt="tintuc">
                             </div>
                             <div class="info">
                                 <h4 class="info-name">Khai trương cơ sở Tây Sơn, giảm giá lên tới 50%</h3>
@@ -398,7 +394,7 @@
             </div>
             <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                 <p class="footer-title">Thông tin liên hệ</p>
-                <p class="footer-link">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</p>
+                <p class="footer-link"><a target="_blank" href="https://goo.gl/maps/U37UxTnCCesQCuza7">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</a></p>
                 <p class="footer-link"><a href="tel:0987654321">Điện thoại : 0987654321</a></p>
                 <p class="footer-link"><a href="mailto: abc@example.com">Email : coffeecup@gmail.com</a></p>
                 <div class="footer-link d-flex align-items-center">

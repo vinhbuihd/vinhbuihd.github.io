@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../images/logo-2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +44,11 @@
             
         </div>
 
+        <!-- gotop -->
+        <div class="gotop d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        
         <!-- popup-product -->
 
         <div class="product-popup"></div>
@@ -68,12 +74,12 @@
                         <form action="">
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-user"></i></div>
-                                <input type="text" name=""  placeholder="Tên đăng nhập" required>
+                                <input type="text" class="user-id"  placeholder="Tên đăng nhập" required>
                             </div>
         
                             <div class="d-flex align-items-end mt-4">
                                 <div class="form-icon d-flex"><i class="fa-solid fa-lock"></i></div>
-                                <input type="password" name="" placeholder="Mật khẩu" required    >
+                                <input type="password" class="user-password" placeholder="Mật khẩu" required    >
                             </div>
         
                             <div class=" text-center mt-4">
@@ -113,7 +119,7 @@
                                 <span class="error"></span>
                             </div>
 
-                            <div class=" text-center mt-4">
+                            <div class=" text-center mt-2">
                                 <button class="btn signup" type="submit">Đăng ký</button>
                             </div>
                             
@@ -137,14 +143,8 @@
                         </li>
                         <li class="nav-item drop-item active">
                             <a class='d-flex' href="#">Menu
-                                <i class="fas fa-sort-down"></i>
                             </a>
-                            <ul class="sub-nav">
-                                <li><a href="#">Cà phê</a></li>
-                                <li><a href="#">Trà</a></li>
-                                <li><a href="#">Freeze</a></li>
-                                <li><a href="#">Khác</a></li>
-                            </ul>
+
                         </li>
                         <li class="nav-item">
                             <a href="./tintuc.html">Tin tức</a>
@@ -274,7 +274,7 @@
                 </div>
                 <div class="item col-12 col-lg-3 col-md-6 col-sm-6">
                     <p class="footer-title">Thông tin liên hệ</p>
-                    <p class="footer-link">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</p>
+                    <p class="footer-link"><a target="_blank" href="https://goo.gl/maps/U37UxTnCCesQCuza7">Địa chỉ : 44 Lê Đại Hành, Hai Bà Trưng, Hà Nội</a></p>
                     <p class="footer-link"><a href="tel:0987654321">Điện thoại : 0987654321</a></p>
                     <p class="footer-link"><a href="mailto: abc@example.com">Email : coffeecup@gmail.com</a></p>
                     <div class="footer-link d-flex align-items-center">
@@ -306,11 +306,13 @@
         </footer>
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>new WOW().init()</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
+    
     <!-- edit, delete item -->
     <script src="../js/edit-item.js"></script>
     <script src="../js/delete-item.js"></script>
