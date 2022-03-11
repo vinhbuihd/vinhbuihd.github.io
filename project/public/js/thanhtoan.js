@@ -115,46 +115,50 @@ applyCodeBtn.addEventListener('click', function (e) {
     }
 })
 
+// đặt hàng
+
+const orderBtn = document.querySelector('.order-btn')
+
+orderBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    formValidate()
+    if (formValidate()) {
+        alert("Chúc mừng bạn đã đặt hàng thành công!!!")
+    }
+})
 
 
-// render related-list
+function formValidate() {
+    let isValid = true
+    const name = document.querySelector('.input-text.name')
+    const tel = document.querySelector('.input-text.tel')
+    const add = document.querySelector('.input-text.add')
+    const regexNumber=/^[0-9]{10}$/;
 
-// const relatedList = document.querySelector('.related-list')
-// const idCartLists = cartList.map(product => product.id)
+    if(name.value.trim() == '') {
+        isValid = false
+        name.closest('.profile-item').querySelector('.error-mesage').innerHTML = 'Vui lòng nhập họ tên'
+    } else {
+        name.closest('.profile-item').querySelector('.error-mesage').innerHTML = ''
+    }
 
-// const hotProducts = products.filter(product => !idCartLists.includes(product.id))
+    if(tel.value.trim() == '') {
+        isValid = false
+        tel.closest('.profile-item').querySelector('.error-mesage').innerHTML = 'Vui lòng nhập số điện thoại'
+    }else if(!regexNumber.test(tel.value)) {
+        isValid = false
+        tel.closest('.profile-item').querySelector('.error-mesage').innerHTML = 'Số điện thoại không đúng'
+    }else {
+        tel.closest('.profile-item').querySelector('.error-mesage').innerHTML = ''
+    }
 
-// hotProducts.forEach(product => {
-//     relatedList.innerHTML += `
-//     <div class="card" dataset="${product.id}">
-//         <div class="card-image" >
-//             <img src=${product.image} alt="${product.name}">
-//         </div>
-
-//         <div class="card-content">
-//             <div class="card-content-left d-flex align-items-center justify-content-between">
-//                 <div class="card-like">
-//                     <div class="like-icon">
-//                         <i class="fa-solid fa-star" style=${product.star - 1 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-//                         <i class="fa-solid fa-star" style=${product.star - 2 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-//                         <i class="fa-solid fa-star" style=${product.star - 3 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-//                         <i class="fa-solid fa-star" style=${product.star - 4 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-//                         <i class="fa-solid fa-star" style=${product.star - 5 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        
-//                     </div>
-//                 </div>
-                
-//                 <div class="card-price d-flex align-items-center">
-//                     <div class="price"><span>${product.price.S.toLocaleString()}</span> đ</div>
-//                 </div>
-                
-//             </div>
-//             <div class="card-content-right d-flex align-items-center justify-content-between">
-//                 <h3 class="card-name">${product.name}</h3>
-                
-//                 <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
-//             </div>
-//         </div>
-//     </div>
-//     `
-// })
+    if(add.value.trim() == '') {
+        isValid = false
+        add.closest('.profile-item').querySelector('.error-mesage').innerHTML = 'Vui lòng nhập địa chỉ'
+    }else {
+        add.closest('.profile-item').querySelector('.error-mesage').innerHTML = ''
+    }
+    if (!isValid) return
+    
+    return isValid
+}

@@ -14,10 +14,9 @@
 
 .product-box {
   margin: 0 auto;
-  background-color: var(--pri-1-color);
   padding: 24px;
   flex-wrap: wrap;
-
+  background-color: var(--pri-1-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -118,7 +117,6 @@ input.code {
 /* profile */
 
 .profile-item {
-  margin: 8px 0;
 }
 
 .profile-item label {
@@ -128,7 +126,7 @@ input.code {
   color: var(--pri-3-color);
 }
 
-.profile-item input[type="text"] {
+.profile-item .input-text {
   border: none;
   font-weight: 500;
   font-size: 16px;
@@ -148,4 +146,10 @@ input.code {
   color: red;
   font-size: 14px;
   margin-top: 16px;
+}
+
+.error-mesage {
+  color: red;
+  font-size: 12px;
+  margin-left: 126px;
 }

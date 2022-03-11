@@ -172,71 +172,72 @@
         <div class="main padding-60">
             <h2 class="h2-heading">Thanh toán</h2>
             <div class="container">
-                <div class="product-box d-flex">
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <form action="" class="profile">
+                <form action="" class="product-box d-flex">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6">
                             <div class="profile-item">
-                                <label for="name">Họ tên :</label>
-                                <input type="text" placeholder="Họ và tên" value="Bùi Văn Vinh">
+                                <div>
+                                    <label for="name">Họ tên :</label>
+                                    <input class="input-text name" required type="text" placeholder="Họ và tên" value="">
+                                </div>
+                                <span class="error-mesage"></span>
                             </div>
     
                             <div class="profile-item">
-                                <label for="name">Điện thoại :</label>
-                                <input type="text" placeholder="Điện thoại" value="0355246686">
+                                <div>
+                                    <label for="name">Điện thoại :</label>
+                                    <input class="input-text tel" required type="text" placeholder="Điện thoại" value="">
+                                </div>
+                                <span class="error-mesage"></span>
                             </div>
     
                             <div class="profile-item">
-                                <label for="name">Địa chỉ :</label>
-                                <input type="text" placeholder="Địa chỉ" value="69 Khâm Thiên, Đống Đa, Hà Nội">
+                                <div>
+                                    <label for="name">Địa chỉ :</label>
+                                    <input class="input-text add" required type="text" placeholder="Địa chỉ" value="">
+                                </div>
+                                <span class="error-mesage"></span>
                             </div>
     
                             <div class="profile-item">
                                 <label for="">Phương thức thanh toán :</label>
                                 <div class="d-flex align-items-center mt-3">
                                     <div>
-                                        <input type="radio" name="thanhtoan" id="tienmat" value="Tiền mặt" checked>
+                                        <input required type="radio" name="thanhtoan" id="tienmat" value="Tiền mặt" checked>
                                         <label class="option" for="tienmat">Tiền mặt</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="thanhtoan" id="taikhoan" value="Thẻ ngân hàng">
+                                        <input required type="radio" name="thanhtoan" id="taikhoan" value="Thẻ ngân hàng">
                                         <label class="option" for="taikhoan">Thẻ ngân hàng</label>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 product-list">
+                            </div> 
+                        </div>
                         
-                    </div>
-
-                    <div class="calculator col-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6">
-                                <form action="" class="d-flex align-items-center justify-content-center">
-                                    <input class="code" type="text" placeholder="Nhập mã giảm giá">
-                                    <button class="btn code-apply" type="submit">Áp dụng mã</button>
-                                </form>
-                                <p class="text-center error-ms"></p>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6">
-                                <div class="price-box">
+                        <div class="col-12 col-sm-12 col-md-6 product-list"></div>
+                        <div class="calculator col-12">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <form action="" class="d-flex align-items-center justify-content-center">
+                                        <input class="code" type="text" placeholder="Nhập mã giảm giá">
+                                        <button class="btn code-apply" type="submit">Áp dụng mã</button>
+                                    </form>
+                                    <p class="text-center error-ms"></p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <div class="price-box">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="button-group text-center col-12">
-                        <a href="./menu.html" class="btn white">Quay lại</a>
-                        <a href="" class="btn">Đặt hàng</a>
+                        <div class="button-group text-center">
+                            <a href="./menu.html" class="btn white">Quay lại</a>
+                            <button type="submit" class="btn order-btn">Đặt hàng</button>
+                        </div>
                     </div>
                     
-                </div>
-
-                <!-- <div class="related-product mt-5">
-                    <h4 class="">Có thể bạn cũng thích</h4>
-                    <div class="related-list owl-carousel owl-theme">
-                    </div>
-                </div> -->
+                </form>
+                
             </div>
         </div>
     
