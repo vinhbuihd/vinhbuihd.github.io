@@ -116,6 +116,7 @@ html {
 .gotop {
   position: fixed;
   visibility: hidden;
+  z-index: 10;
 
   right: 32px;
   bottom: 60px;
