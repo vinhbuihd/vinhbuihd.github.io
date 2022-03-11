@@ -196,7 +196,7 @@
     bottom: 0;
     width: 100%;
 
-    background-color: var(--pri-5-color);
+    background-color: var(--pri-4-color);
     transform: scaleY(0);
     transform-origin: top;
     opacity: 0;

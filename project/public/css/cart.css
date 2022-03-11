@@ -152,4 +152,5 @@ input.code {
   color: red;
   font-size: 12px;
   margin-left: 126px;
+  min-height: 16px;
 }

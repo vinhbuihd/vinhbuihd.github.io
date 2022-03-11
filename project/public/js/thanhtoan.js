@@ -14,7 +14,7 @@ if (cartList.length == 0) {
     </div>
     `
 } else {
-    productList.innerHTML = ''
+    productList.innerHTML = '<h3 class="text-center">Thông tin đơn hàng</h3>'
     
     let totalQuantity = 0
     cartList.forEach(product => {
