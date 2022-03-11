@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .price-box {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-item-image {
+    display: none;
+  }
+
+  .profile-item input[type="text"] {
+    min-width: 100%;
+  }
+}

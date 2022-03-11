@@ -4,6 +4,7 @@ const cartList = JSON.parse(localStorage.getItem('cartList')) || []
 const productList = document.querySelector('.product-list')
 const priceBox = document.querySelector('.price-box')
 const productBox = document.querySelector('.product-box')
+let totalPrice = 0
 
 if (cartList.length == 0) {
     productBox.innerHTML = `
@@ -14,7 +15,7 @@ if (cartList.length == 0) {
     `
 } else {
     productList.innerHTML = ''
-    let totalPrice = 0
+    
     let totalQuantity = 0
     cartList.forEach(product => {
         totalPrice += product.quantity * product.sizePrice
@@ -47,19 +48,21 @@ if (cartList.length == 0) {
     })
 
     priceBox.innerHTML = `
-        <div class="subtotal d-flex align-items-center justify-content-between">
+        <div class="subtotal  d-flex align-items-center justify-content-between">
             <p>Tạm tính</p>
-            <p>${totalPrice.toLocaleString()} đ</p>
+            <p><span>${totalPrice.toLocaleString()}</span> đ</p>
         </div>
-        <div class="subtotal d-flex align-items-center justify-content-between">
+        <div class="sale-money d-flex align-items-center justify-content-between">
             <p>Giảm giá</p>
-            <p>0 đ</p>
+            <p><span>0</span> đ</p>
         </div>
         <div class="total d-flex align-items-center justify-content-between">
             <p>Tổng cộng </p>
-            <p>${totalPrice.toLocaleString()} đ</p>
+            <p><span>${totalPrice.toLocaleString()}</span> đ</p>
         </div>
     `
+    
+    
 }
 
 const overlay = document.querySelector('.overlay')
@@ -81,6 +84,36 @@ closeBtn.addEventListener('click', function () {
     location.reload()
 })
 
+// mã giảm giá
+const codes = {
+    hello: 20,
+    xinchao: 30,
+}
+let codeKeys = Object.keys(codes)
+console.log(totalPrice)
+const applyCodeBtn = document.querySelector('.btn.code-apply')
+const subTotal = document.querySelector('.subtotal span')
+const saleMoney = document.querySelector('.sale-money span')
+const total = document.querySelector('.total span')
+const errorMs = document.querySelector('.error-ms')
+const inputCode = document.querySelector('input.code')
+
+applyCodeBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    let isOk = codeKeys.find(codeKey => codeKey == inputCode.value)
+    if (isOk) {
+        console.log(isOk)
+        let sale = totalPrice * codes[isOk] / 100
+        console.log(sale)
+        total.innerHTML = (totalPrice - sale).toLocaleString()
+        saleMoney.innerHTML = `-(${codes[isOk]}%)${sale.toLocaleString()}`
+        errorMs.innerHTML ='Áp dụng thành công!'
+    } else {
+        errorMs.innerHTML ='Mã giảm giá không đúng'
+        total.innerHTML = totalPrice.toLocaleString()
+        saleMoney.innerHTML = 0
+    }
+})
 
 
 

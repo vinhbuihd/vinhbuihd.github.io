@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/cart-reponsive.css">
 </head>
 <body>
 
@@ -208,15 +209,18 @@
                         
                     </div>
 
-                    <div class="calculator d-flex col-12">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <form action="" class="d-flex align-items-center justify-content-center">
-                                <input class="code" type="text" placeholder="Nhập mã giảm giá">
-                                <button class="btn" type="submit">Áp dụng mã</button>
-                            </form>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <div class="price-box">
+                    <div class="calculator col-12">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <form action="" class="d-flex align-items-center justify-content-center">
+                                    <input class="code" type="text" placeholder="Nhập mã giảm giá">
+                                    <button class="btn code-apply" type="submit">Áp dụng mã</button>
+                                </form>
+                                <p class="text-center error-ms"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="price-box">
+                                </div>
                             </div>
                         </div>
                     </div>

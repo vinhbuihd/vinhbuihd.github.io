@@ -112,14 +112,7 @@ function cartSideRender(list) {
     const cardSideElement = document.querySelector('.cart-side .content')
     const cardIconQuantity = document.querySelector('.cart .cart-quantity')
 
-    if (list.length == 0) {
-        cardSideElement.innerHTML = `
-            <h3>Giỏ hàng trống</h3>
-            <a href='./menu.html' class='btn'>Tiếp tục mua hàng</a>
-        `
-
-        cardIconQuantity.innerHTML = 0
-    }else {
+    if (list.length !== 0) {
         cardIconQuantity.style.display = 'block'
         cardSideElement.innerHTML = ''
         let totalQuantity = 0
@@ -381,7 +374,6 @@ function signUpValidate() {
 const goTop = document.querySelector('.gotop')
 
 window.addEventListener('scroll', function () {
-    console.log(window.pageYOffset)
     if (window.pageYOffset > 500) {
         goTop.style.visibility = 'unset'
     } else {
