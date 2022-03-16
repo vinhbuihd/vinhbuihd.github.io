@@ -1,0 +1,59 @@
+.width-1140 {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+}
+
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+}
+
+.service .row {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.service .col-25 {
+  padding: 16px;
+}
+
+.col-3333 {
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+}
+
+.howto .row {
+  margin: -20px;
+}
+
+.howto .col-50 {
+  padding: 20px;
+}
+
+.innovative .row {
+  margin: -5px;
+}
+
+.innovative .col-3333 {
+  padding: 5px;
+}
+
+.bestpre .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.bestpre .col-3333 {
+  padding-left: 12px;
+  padding-right: 12px;
+}

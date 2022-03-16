@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  --primary-color: #ec5736;
+}
+
+.card {
+  width: 290px;
+  height: 400px;
+  margin: 48px auto;
+  display: flex;
+  overflow: hidden;
+
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.09);
+}
+
+.wraper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("./new-york.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform ease 0.5s;
+}
+
+.card:hover .wraper {
+  transform: scale(1.2);
+  filter: brightness(70%);
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-heading {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  transform: translateY(60%);
+  padding: 16px 16px 4px;
+  transition: transform ease 0.5s;
+}
+
+.card:hover .card-heading {
+  transform: translateY(0);
+}
+
+.card-heading .decs {
+  color: #666;
+  margin: 4px 0;
+}
+
+.card-heading h3 {
+  margin: 8px 0 28px;
+  color: var(--primary-color);
+}
+
+.card-info {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  color: #666;
+  background-color: #fff;
+}
+
+.card-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+
+  padding: 7px 0;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.card-date h3 {
+  font-size: 16px;
+}
+
+.card-date p {
+  font-size: 12px;
+}
+
+.photo-label {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  z-index: 2;
+  font-size: 14px;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 4px 8px;
+}

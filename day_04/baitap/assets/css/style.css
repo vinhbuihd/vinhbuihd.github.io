@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 0 36px;
+  background-color: #429976;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+.heading h2 {
+  color: #fde755;
+  font-size: 6.4rem;
+}
+
+.heading h3 {
+  font-size: 2.4rem;
+  padding: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card-list {
+  padding: 0 16px;
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 296px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 8px 0;
+}
+
+.card-item {
+  display: block;
+  background-color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: all ease-out 0.25s;
+}
+
+.card-item:hover {
+  transform: scale(1.02);
+}
+
+.card-item .image {
+  background-color: #fff;
+}
+
+.card-item img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card-item .content {
+  padding: 0 24px 16px;
+  background-color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.card-item .content h3 {
+  font-size: 1.6rem;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-item .content .desc {
+  color: orange;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  margin: 8px 0;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 1px solid orange;
+  border-radius: 4px;
+  background-color: #fff7ed;
+}
+
+.card-item .content .price {
+  font-size: 1.4rem;
+  padding-top: 8px;
+  color: red;
+  font-weight: bold;
+}
+
+.card-item .content .price span {
+  color: #707070;
+  font-size: 1.2rem;
+  margin-left: 6px;
+  text-decoration: line-through;
+}

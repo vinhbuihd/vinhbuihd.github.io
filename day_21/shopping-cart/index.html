@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main>
+        <header class="container">
+            <h1>Shopping Cart</h1>
+
+            <ul class="breadcrumb">
+                <li>Home</li>
+                <li>Shopping Cart</li>
+            </ul>
+
+            <!-- Total product -->
+            <span class="count">2 items in the bag</span>
+        </header>
+
+        <!-- List product -->
+        <section class="container">
+            <ul class="products">
+                <!-- Product Item 1 -->
+                <li class="row">
+                    <div class="col left">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="https://image.yes24.vn/Upload/ProductImage/anhduong201605/1947415_L.jpg?width=550&height=550" alt="Áo kiểu nữ cam đất phối cổ trắng dập ly">
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <div class="name"><a href="#">Áo kiểu nữ cam đất phối cổ trắng dập ly</a></div>
+                            <div class="description">
+                                Sản phẩm dễ dàng phối hợp cùng nhiều trang phục và phụ kiện khác mang đến phong cách thời trang riêng cho bạn nữ.
+                            </div>
+                            <div class="price">250.000 VND</div>
+                        </div>
+                    </div>
+    
+                    <div class="col right">
+                        <div class="quantity">
+                            <input type="number" class="quantity" value="1">
+                        </div>
+    
+                        <div class="remove">
+                            <span class="close">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            
+                <!-- Product Item 2 -->
+                <li class="row">
+                    <div class="col left">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="https://image.yes24.vn/Upload/ProductImage/anhduong201605/1914666_L.jpg?width=550&height=550" alt="Áo trắng bèo lé đen tay loe dễ thương">
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <div class="name"><a href="#">Áo trắng bèo lé đen tay loe dễ thương</a></div>
+                            <div class="description">
+                                Một chút khéo léo trong khâu mix & match hẳn sẽ giúp bạn trở nên duyên dáng hơn, xinh đẹp hơn trong mắt tất cả mọi người xung quanh.
+                            </div>
+                            <div class="price">350.000 VND</div>
+                        </div>
+                    </div>
+    
+                    <div class="col right">
+                        <div class="quantity">
+                            <input type="number" class="quantity" value="1">
+                        </div>
+    
+                        <div class="remove">
+                            <span class="close">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="option-container container">
+            <!-- Mã giảm giá -->
+            <div class="promotion">
+                <label for="promo-code">Have A Promo Code?</label>
+                <input type="text" id="promo-code" autocomplete="off" />
+                <button type="button"></button>
+            </div>
+
+            <!-- Tổng tiền -->
+            <div class="summary">
+                <ul>
+                    <li class="subtotal">Subtotal <span>600.000 VND</span> VND</li>
+                    <li class="vat">VAT<span>30.000 VND</span> VND</li>
+                    <li class="discount hide">
+                        Discount<span>0 VND</span> VND
+                    </li>
+                    <li class="total">Total <span>630.000 VND</span> VND</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

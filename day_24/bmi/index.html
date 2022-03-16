@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Hiển thị background-image tương ứng với chỉ số BMI cho class "image-box" -->
+        <div class="image-box">
+            <div class="result-wrapper">
+
+                <!-- Khi kiểm tra BMI thì add class "hide" để ẩn phần này đi -->
+                <p class="say-hello text-center">
+                    Techmaster Việt Nam <br />
+                    Xin chào các bạn !
+                </p>
+
+
+                <!-- Khi kiểm tra BMI thì remove class "hide" để hiện phần này đi -->
+                <div class="result-container hide">
+                    <!-- Hiển thị chỉ số BMI -->
+                    <span class="result-num"></span>
+
+                    <!-- Hiển thị giới hạn về BMI -->
+                    <span class="result-title"></span>
+
+                    <!-- Hiển thị thông tin BMI -->
+                    <span class="result-content"></span>
+                </div>
+            </div>
+        </div>
+        <div class="content-box">
+            <h3 class="title text-center">
+                Tính chỉ số cơ thể BMI
+            </h3>
+            <div class="intro">
+                <p><strong>Chỉ số BMI là gì?</strong></p>
+                <p>Chỉ số BMI (Body Mass Index) hay còn gọi là chỉ số khối cơ thể, chỉ số thể trọng, là một công cụ
+                    thường được sử dụng để đo lượng mỡ trong cơ thể. Chỉ số BMI chuẩn được tính dựa trên chiều cao và
+                    cân nặng, áp dụng cho nam và nữ trưởng thành.</p>
+            </div>
+            <div class="input-box">
+                
+                <!-- Nếu validate đúng thì add class "success" -->
+                <!-- Nếu validate sai thì add class "error" -->
+                <div class="input">
+                    <input type="text" placeholder="Nhập chiều cao (cm)" id="height" class="height">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <!-- Nếu validate đúng thì add class "success" -->
+                <!-- Nếu validate sai thì add class "error" -->
+                <div class="input">
+                    <input type="text" placeholder="Nhập cân nặng (kg)" id="weight" class="weight">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="input">
+                    <button class="btn-submit" id="btn-submit">Kiểm tra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

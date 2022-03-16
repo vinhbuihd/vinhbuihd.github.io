@@ -1,0 +1,167 @@
+.baner {
+  height: 400px;
+}
+
+.baner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box-content {
+  margin-top: -178px;
+  position: relative;
+}
+
+.box-1 {
+  padding: 30px;
+  background-color: #1231fe;
+  color: #fff;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+}
+
+.box-1 h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.1;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.box-1 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 20px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box-1 a {
+  color: #fff;
+  font-size: 0.875rem;
+  display: inline-block;
+  letter-spacing: 3px;
+
+  padding-bottom: 2px;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box-2 {
+  box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+  padding: 30px;
+  color: #ffffff;
+  background-color: #31345c;
+}
+
+.box-2 img {
+  width: 64px;
+  height: 64px;
+  margin: 0 20px;
+}
+
+.box-2 .quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 24px 0 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box-2 .author {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+}
+
+.follow {
+  text-align: center;
+  margin: 40px;
+}
+
+.follow h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-logo {
+  height: 32px;
+  margin: 18px 0 48px;
+}
+
+.contact-logo img {
+  height: 100%;
+}
+
+.freepik {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.freepik a {
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 2px solid #1231fe;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  .box-content .row {
+    max-width: 865px;
+  }
+  .box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+  }
+
+  .box-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 0;
+    height: 400px;
+    position: relative;
+    top: 104px;
+  }
+
+  .box-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .follow {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 104px;
+    margin: 40px 0 0;
+  }
+
+  .box-1 h2 {
+    font-size: 3rem;
+    margin-top: 30px;
+  }
+  .box-2 .quote {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .baner {
+    height: 437px;
+  }
+}

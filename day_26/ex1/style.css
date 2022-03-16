@@ -1,0 +1,52 @@
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #111;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #111;
+  line-height: 1.2;
+  font-family: "Playfair Display", serif;
+}
+
+.item {
+  max-width: 340px;
+  margin: 4px auto;
+}
+
+.image {
+  height: 310px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.image img {
+  width: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .item {
+    max-width: 265px;
+    margin: 4px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    padding: 30px;
+  }
+}

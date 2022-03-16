@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./image/card/react-native.png" type="png">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <a href="#" class="menu-logo">
+                <img src="./image/logo.png" alt="logo">
+            </a>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <a href="">
+                        Lộ trình
+                        <span class='menu-item-icon'><i class="fas fa-caret-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="">Front-End + ReactJS</a>
+                        <a href="">Java Spring Fullstack</a>
+                        <a href="">Lộ trình IOS</a>
+                        <a href="">Code Game</a>
+                        <a href="">Lộ trình Devops</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="">phòng lab</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">Trực tuyến</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">sản phẩm học viên</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">khai giảng</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">blog</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">trải nghiệm</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">việc làm</a>
+                    <span class='menu-item-border'></span>
+                </div>
+                <div class="menu-item">
+                    <a href="">
+                        chúng tôi 
+                        <span class='menu-item-icon'><i class="fas fa-caret-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="">Trung tâm</a>
+                        <a href="">Giảng viên</a>
+                        <a href="">Quy định</a>
+                        <a href="">Đăng ký học</a>
+                    </div>
+                </div>
+                <a href="" class="menu-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="quantity">0</div>
+                </a>
+                <a href="#" class="menu-avatar">
+                    <img src="./image/avatar.jpg" alt="avatar" />
+                    <ul class='sub-menu-avatar'>
+                        <li>Lớp học của tôi</li>
+                        <li>Hồ sơ cá nhân</li>
+                        <li>Đăng xuất</li>
+                    </ul>
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="card-list">
+                <div class="row">
+
+                    <div class="col-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="2s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/java.jpg" alt="java">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Java căn bản</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 16 buổi</p>
+                                    <span class="rating">
+                                        4 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">4,500,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/react-native.png" alt="React Native">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Lập trình di động đa nền tảng React Native cập nhật 2021</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 14 buổi</p>
+                                    <span class="rating">
+                                        4.7 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">3,900,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/devops.png" alt="devops">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Devops 2021</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 12 buổi</p>
+                                    <span class="rating">
+                                        5 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">3,700,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="2s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/golang.jpg" alt="Golang">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Lập trình Web - API - Microservice bằng Golang</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 28 buổi</p>
+                                    <span class="rating">
+                                        4 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">5,600,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="2s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/react.jpg" alt="React">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Web Frontend nâng cao với React</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 16 buổi</p>
+                                    <span class="rating">
+                                        4.8 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">4,500,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/ux-ui.jpg" alt="UX-UI">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Thiết kế UX-UI cho phần mềm</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 8 buổi</p>
+                                    <span class="rating">
+                                        4.8 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">3,000,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/fluter.jpg" alt="fluter">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Lập trình di động Fluter cho IOS - Android</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 14 buổi</p>
+                                    <span class="rating">
+                                        4.5 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">3,900,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="2s"> 
+                        <a href='#' class="card-item">
+                            <div class="card-image">
+                                <img src="./image/card/ios.jpg" alt="IOS">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title">Lập trình IOS Swift căn bản cập nhật 2021</h2>
+                                <div class="info">
+                                    <p class="description">Phòng lab, 12 buổi</p>
+                                    <span class="rating">
+                                        4.8 <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <p class="price">3,900,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="list about">
+                <h3 class="heading">
+                    Chủ sở hữu website
+                </h3>
+                <ul>
+                    <li class="item"><a href="">Công ty TNHH TechMaster Vietnam Ltd</a></li>
+                    <li class="item">Số ĐKDN: 0105392153</li>
+                    <li class="item">Ngày cấp: 4-7-2011</li>
+                    <li class="item">Nơi cấp: Sở kế hoạch - đầu tư Hà nội</li>
+                    <li class="item">Người đại diện pháp luật: Lê Minh Thu</li>
+                    <li class="item">Phụ trách nội dung: Trịnh Minh Cường</li>
+                </ul>
+            </div>
+    
+            <div class="list infomation">
+                <h3 class="heading">
+                    Giới thiệu
+                </h3>
+                <ul>
+                    <li class="item"><a href="">Học viện CNTT TechMaster</a></li>
+                    <li class="item"><a href="">Giảng viên</a></li>
+                    <li class="item"><a href="">Quy định</a></li>
+                    <li class="item"><a href="">Hướng dẫn mua khóa học</a></li>
+                    <li class="item"><a href="">Ưu đãi và hoàn trả học phí</a></li>
+                    <li class="item"><a href="">Bảo vệ thông tin khách hàng</a></li>
+                </ul>
+            </div>
+    
+            <div class="list contact">
+                <h3 class="heading">
+                    Tư vấn tuyển sinh
+                </h3>
+                <ul>
+                    <li class="item">Tư vấn viên :</li>
+                    <li class="item"><a href="tel:0963023185">Phạm Thị Mẫn - 0963023185</a></li>
+                    <li class="item"><a href="mailto:manpham@techmaster.vn">manpham@techmaster.vn</a></li>
+                    <li class="item"><a href="tel:0987273764">Dương Đức Thịnh - 0987273764</a></li>
+                    <li class="item"><a href="mailto:thinh@techmaster.vn">thinh@techmaster.vn</a></li>
+                    <li class="item"><a href="tel:090 220 9011">Tư vấn đào tạo doanh nghiệp: 090 220 9011</a></li>
+                    <li class="item"><a href="mailto:cuong@techmaster.vn">cuong@techmaster.vn</a></li>
+                </ul>
+            </div>
+    
+            <div class="list address">
+                <h3 class="heading">
+                    Địa chỉ
+                </h3>
+                <ul>
+                    <li class="item"><a href="">Cơ sở Tố Hữu: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</a></li>
+                    <li class="item"><a href="">Cơ sở Nguyễn Đình Chiểu: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội</a></li>
+                    <li class="item">
+                        <a href="" class='address-icon'>
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="" class='address-icon'>
+                            <i class="fab fa-youtube-square"></i>
+                        </a>
+                        <a href="" class='address-icon'>
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script>
+        new WOW().init();
+     </script>
+</body>
+
+</html>

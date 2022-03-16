@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #74b9ff;
+  height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.item {
+  background-color: #277aba;
+  padding: 20px;
+}
+
+.time,
+.score {
+  font-weight: 700;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 100px;
+  padding-top: 0;
+}
+
+h2 {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #0984e3;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#primary-number,
+#secondary-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  width: 125px;
+  height: 125px;
+  box-sizing: border-box;
+}
+
+#primary-number {
+  border: solid 4px #0984e3;
+}
+
+#secondary-number {
+  border: solid 4px #0984e3;
+}
+
+#operator,
+#equal {
+  font-weight: bold;
+  font-size: 40px;
+  padding: 30px;
+}
+
+input {
+  border: solid 4px #0984e3;
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  outline: none;
+  font-size: 40px;
+  font-weight: bold;
+}

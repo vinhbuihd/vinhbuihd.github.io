@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todo List</h1>
+
+            <!-- Box Nhập công việc -->
+            <div class="todo-input">
+                <input
+                    type="text"
+                    placeholder="Nhập công việc"
+                    id="todo-input"
+                />
+                <button id="btn-add">Thêm</button>
+                <!-- <button id="btn-update">Cập nhật</button> -->
+            </div>
+
+            <!-- Box chọn option (all - Hoàn thành - Chưa hoàn thành) -->
+            <div class="todo-option">
+                <div class="todo-option-item">
+                    <input
+                        type="radio"
+                        name="todo-option-item"
+                        id="all"
+                        checked
+                        value="all"
+                    />
+                    <label for="all">All</label>
+                </div>
+                <div class="todo-option-item">
+                    <input
+                        type="radio"
+                        name="todo-option-item"
+                        id="unactive"
+                        value="unactive"
+                    />
+                    <label for="unactive">Chưa hoàn thành</label>
+                </div>
+                <div class="todo-option-item">
+                    <input
+                        type="radio"
+                        name="todo-option-item"
+                        id="active"
+                        value="active"
+                    />
+                    <label for="active">Hoàn thành</label>
+                </div>
+            </div>
+
+            <!-- Danh sách todo -->
+            <div class="todo-container">
+                <div class="todo-list">
+                    <div class="todo-item active-todo">
+                        <div class="todo-item-title">
+                            <input type="checkbox" checked/>
+                            <p>Làm bài tập Javascript Phần array + string</p>
+                        </div>
+                        <div class="option">
+                            <button class="btn btn-update">
+                                <img src="./img/pencil.svg" alt="icon" />
+                            </button>
+                            <button class="btn btn-delete">
+                                <img src="./img/remove.svg" alt="icon" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <div class="todo-item-title">
+                            <input type="checkbox" />
+                            <p>Mua đồ ăn trưa</p>
+                        </div>
+                        <div class="option">
+                            <button class="btn btn-update">
+                                <img src="./img/pencil.svg" alt="icon" />
+                            </button>
+                            <button class="btn btn-delete">
+                                <img src="./img/remove.svg" alt="icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

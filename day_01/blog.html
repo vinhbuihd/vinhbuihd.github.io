@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích nghiệp vụ: Action - Event - Status</title>
+</head>
+<body>
+    
+    <h1>Phân tích nghiệp vụ: Action - Event - Status</h1>
+    <p>14 tháng 10, 2021 - 82 lượt xem</p>
+    <button>Design Pattern</button>
+    <hr>
+    <p><i>Gần đây tôi tham gia thiết kế một dự án. Các thành viên trong nhóm cứ tạo những bảng có trường status, rồi thêm trường create_date và modified_date nhìn rất giống trong sách. Nhưng họ không hiểu rõ khác biệt giữa Action (Hành động) - Event (Sự kiện) - Status (Trạng thái) trong phân tích thiết kế phần mềm. Kết quả là bảng nhiều, cột nhiều nhưng không xử lý hết yêu cầu nghiệp vụ. Bàn tới bàn lui, mà không giải quyết được nghiệp vụ.</i></p>
+    <h2>Action là động từ, Event là danh từ, còn Status là tính từ</h2>
+    <p>Action: Khách hàng đặt hàng - customer orders an item</p>
+    <p>Event: Bản ghi đơn hàng được tạo ra - order record is created</p>
+    <p>Status: Trạng thái của đơn hàng là "được tạo" - order status is "created"</p>
+    <p>Khi chúng ta lấy yêu cầu từ khách hàng, tạo user story thì khách hàng thường mô tả: Ai đó làm gì? Ví dụ:</p>
+    <p><i>Khách hàng đăng nhập -> khách hàng truy vấn tài khoản -> khách hàng nhập tài khoản cần chuyển khoản -> khách hàng chọn ngân hàng -> khách hàng gõ số tiền cần chuyển -> Hệ thống gửi mã OTP -> khách hàng nhập xác nhận -> tiến hành chuyển khoản -> Hệ thống gửi biên lai chuyển khoản.</i></p>
+    <p>Action mô tả một người (role) hành động hay hệ thống (system) thực hiện tác vụ. Ở đây tôi cố ý phân biệt:</p>
+    <ul>
+        <li>Người tác động lên một đối tượng - User does some thing</li>
+        <li>Hệ thống (phần mềm) thì thực hiện tác vụ - System run a task
+            <br>
+            <br>
+            Nếu bạn sử CSDL quan hệ bạn có thể lưu lại từng dòng action theo thời gian. Tuy nhiên sau một hành động có ít nhất 2 sự kiện: thành công hoặc thất bại. Nếu bạn chỉ quan tâm đến sự kiện hữu ích với hệ thống thì bạn nên dùng event.
+        </li>
+    </ul>
+
+    <h2>Liệt kê đủ sự kiện / tác vụ phát sinh sau một hành động ban đầu.</h2>
+    <p>Khi khách hàng đặt mua một mặt hàng ~ action: customer orders an item. Có những sự kiện và tác vụ phát sinh:</p>
+    <br>
+    <p>
+        Khi khách hàng đặt mua một mặt hàng ~ action: customer orders an item. Có những sự kiện và tác vụ phát sinh:
+        <br>
+    <br>
+
+
+    1- Event: Đơn hàng được tạo ra ~ order is created.
+    <br>
+    <br>
+
+    2- Action: Hệ thống kho kiểm tra số lượng hàng tồn kho - inventory check item availability. Hoặc với shop nhỏ, chỉ cần truy vấn số lượng hàng có sẵn.
+    <br>
+    <br>
+
+    3- Nếu mặt hàng ở trạng thái hết hàng (status out of stock) --> action: hệ thống tự động đặt mua bổ xung hàng hoặc trả về thông báo hết hàng hoặc email thông báo cho phòng đặt hàng.
+    <br>
+    <br>
+
+    Liệt kê đủ thì cơ bản hiểu được yêu cầu nghiệp vụ. Nhưng việc chúng ta hiện thực hoá nghiệp vụ như thế nào xin mời đọc tiếp.
+    </p>
+    <p>Liệt kê đủ thì cơ bản hiểu được yêu cầu nghiệp vụ. Nhưng việc chúng ta hiện thực hoá nghiệp vụ như thế nào xin mời đọc tiếp.</p>
+
+    <h2>CSDL thần thánh làm được những gì?</h2>
+    <p>Hồi mới lập trình, khi insert một bản ghi vào CSDL rồi lại truy vấn được ra, chế biến thành các báo cáo khác nhau, tôi vô cùng phân khích cảm giác mãn nguyện với phần mềm mình viết. Nhưng càng dùng thấy nó càng thiếu sót nhiều trường hợp, thậm chí dữ liệu sai lệch. Mà rõ ràng là khi phân tích nghiệp vụ đã liệt kê chi tiết.
+        <br>
+        <br>
+        Một lỗi căn bản tôi thường mắc là chỉ lưu trạng thái, giá trị cuối cùng của một sự kiện. Ví dụ khách hàng mua một đôi giày ngày 1/10/2021, lúc đó giá là 100VND. Nhưng đến ngày 10/10, giá tăng lên 110VND. Cuối tháng hệ thống cứ báo là đơn hàng này thu thiếu 10VND.
+        <br>
+        <br>
+        
+        Khách hàng mua 1 sản phẩm không được giảm giá, nhưng mua 2 mặt hàng được giảm 500VND. Nhưng mua xong, họ hoàn lại 1. Nếu chỉ lưu trạng thái cuối cùng đơn hàng là một sản phẩm. Chúng ta lại thu thiếu 500VND!
+        <br>
+        <br>
+        
+        **Sai lầm lớn nhất của lập trình viên CSDL chỉ lưu trạng thái (status) cuối cùng mà bỏ qua các hành động (action) - sự kiện (event) dẫn đến trạng thái đó. **
+        <br>
+        <br>
+        
+        <i>
+            Trong software engineering có một kỹ thuật gọi là Event Sourcing luôn lưu sự kiện chân thực nhất theo thực tế đã xảy ra, không sửa đổi, không xoá. Để đơn giản hoá, Action ban đầu cũng coi là một sự kiện ban đầu (initial event hay starting event). Kết thúc một event, một hay nhiều đối tượng thay đổi trạng thái. Lưu hay không lưu CSDL, tuỳ thuộc nhu cầu báo cáo. Nếu không có hiệu ứng phụ, sai lệch số liệu, hệ thống chỉ cần chạy lại play back lại chuỗi event ghi trung thực những gì đã diễn ra thì có được trạng thái cuối cùng.
+        </i></p>
+
+        <h2>Lưu lại chân thực các sự kiện đã diễn ra - store immutable events</h2>
+        <p>Nếu bạn thiết kế một hệ thống lớn, microservice phức tạp. Ở đó các microservice trao đổi với nhau qua những event, message thi bạn cần phải đọc khá nhiều pattern này nọ, phức tạp. Bài viết này dành cho những bạn sinh viên đang học nghề, code với một CSDL:</p>
+
+        <ul>
+            <li>Hãy tạo bảng lưu sự kiện: <strong>order_event, member_event, inventory_event</strong></li>
+            <li>Tạo bảng lưu giá trị theo thời gian ví dụ lịch sử giá mặt hàng. Mỗi dòng trong đơn hàng, tham chiếu đến giá tại thời điểm đặt hàng. Thay đổi giá hay tạo khuyến mại thì tạo bản ghi lưu giá mới, không sửa trực tiếp vào bản ghi cũ.</li>
+        </ul>
+        <p>Khi lưu sự kiện theo thời gian, đôi khi chúng ta cần lưu cả trạng thái kết quả của sự kiện đó. Vậy các bạn cần liệt kê các trạng thái có thể xảy ra.</p>
+        <br>
+        <br>
+        <img src="https://dwarvesf-outline.s3.amazonaws.com/uploads/08852c07-eed1-4703-b411-fe1581277313/67db667c-f11d-46f8-8b5b-48fe348916d2/image.png" alt="event">
+        <p>Liệt kê các sự kiện (event) một lớp học ở Techmaster</p>
+        <ol>
+            <li>Giáo vụ lên lịch khai giảng một lớp học - Staff schedules a class</li>
+            <li>Giáo vụ điều chỉnh lịch khai giảng - Staff reschedules a class</li>
+            <li>Giáo vụ thu học phí và chuyển sinh viên vào lớp - Staff adds student to class</li>
+            <li>Giáo vụ chọn giảng viên dạy lớp - Staff assigns teacher to class</li>
+            <li>Giáo vụ khai giảng một lớp học - Staff opens class</li>
+            <li>Giáo vụ đánh dấu một lớp học đã hoàn tất - Staff marks class completed</li>
+            <li>Giáo vụ ghép hai lớp học lại thành một - Staff merges two classes into one</li>
+            <li>Giáo vụ huỷ lịch khai giảng - Staff cancels a class</li>
+            <li>Giáo vụ dừng một lớp học đang diễn ra - Staff aborts a class</li>
+            <li>Giáo vụ rút học viên ra khỏi lớp - Staff moves a student out class</li>
+        </ol>
+        <p>Liệt kê các trạng thái (status) một lớp học:</p>
+        <ol>
+            <li><b>scheduled</b>: lập lịch để khai giảng</li>
+            <li><b>active</b>: đang học</li>
+            <li><b>canceled</b>: huỷ khi chưa diễn ra</li>
+            <li><b>aborted</b>: dừng giữa chừng</li>
+            <li><b>merged</b>: bị ghép chuyển sang lớp khác</li>
+            <li><b>completed</b>: hoàn tất</li>
+        </ol>
+        <p>Rõ ràng không phải sự kiện nào cũng thay đổi trạng thái của lớp học, hoặc có lúc thay đổi có lúc không.</p>
+        <ul>
+            <li>Ví dụ 1: thêm sinh viên vào lớp, không chuyển lớp từ <b>scheduled</b> sang <b>active</b>.</li>
+            <li>Ví dụ 2: file được tạo ra trong ổ cứng (file is created) là sự kiện tác động lên ổ cứng. Ổ cứng chuyển sang trạng thái đầy <b>disk full</b> sau khi rất nhiều file kích thước khủng tạo ra.</li>
+
+        </ul>
+        <br>
+        <br>
+
+        <img src="https://techmaster.vn/media/static/36/c5k4s6451co6ehverbt0" alt="scheduled">
+        <h2>Tóm lại</h2>
+        <ol>
+            <li>Cần phiên biệt rõ Action - Event - Status.</li>
+            <li>Đừng chỉ lưu trạng thái cuối cùng, mà lưu chuỗi các sự kiện theo đúng trình tự thực tế diễn ra. Không sửa, xoá sự kiện chân thực, chỉ tạo thêm: only append immutable event.</li>
+            <li>Cần liệt kê đầy đủ các sự kiện - trạng thái.</li>
+            <li>Vẽ lược đồ chuyển đổi trạng thái để hình dung và lập trình đúng.</li>
+            <li>Đừng lưu trường <b>created_date</b> và <b>modified_date</b> cùng một bảng. Hay tạo bảng lưu sự kiện chỉ với <b>created_date</b> và không sửa đổi nó. Xem mục 2.</li>
+            <li>Nếu <b>event_id</b> của một sự kiện sẽ broad cast sang nhiều microservice khác nhau hãy dùng global unique id nhưng sắp xếp được theo thời gian. Còn nếu event_id chỉ là sự kiện trong một hệ thống nhỏ monolithic, single database, bạn có thẻ</li>
+        </ol>
+</body>
+</html>

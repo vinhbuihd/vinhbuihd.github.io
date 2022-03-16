@@ -93,6 +93,7 @@ let products = [
 
 const highlightproducts = document.querySelector('.highlight-product')
 const popup = document.querySelector('.product-popup')
+const overlay = document.querySelector('.overlay')
 
 
 function highlightProductRender() {
@@ -227,7 +228,7 @@ function popupRender(product) {
         </div>
         `
     }
-
+    overlay.style.display = 'block'
 }
 
 function cartSideRender(list) {

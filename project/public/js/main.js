@@ -212,12 +212,12 @@ function addToCart(product) {
     })
 
 
-    const closeCartBtn = document.querySelector('.popup-box .btn-close')
+    const closePopupBtn = document.querySelector('.popup-box .btn-close')
     
-    closeCartBtn.addEventListener('click', function () {
+    closePopupBtn.addEventListener('click', function () {
         popup.style.display = 'none'
         
-        // overlay.style.display = 'none'
+        overlay.style.display = 'none'
     })
 
     addToCart.addEventListener('click', function () {

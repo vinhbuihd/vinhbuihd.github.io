@@ -67,7 +67,9 @@ filterItems.forEach(filterItem => {
         document.querySelector('.filter-item.active').classList.remove('active')
         filterItem.classList.add('active')
         const buyBtns = document.querySelectorAll('.card-cart')
-        filterDeleteBtn.click()
+        filterDeleteBtn.click(
+
+        )
     })
 })
 
@@ -371,7 +373,7 @@ function addToCart(product) {
     closeCartBtn.addEventListener('click', function () {
         popup.style.display = 'none'
         
-        // overlay.style.display = 'none'
+        overlay.style.display = 'none'
     })
 
     addToCart.addEventListener('click', function () {

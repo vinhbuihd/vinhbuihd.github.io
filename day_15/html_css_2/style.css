@@ -1,0 +1,555 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --violet-color: #fe7ec9;
+  --yellow-color: #feca02;
+  --blueX2-color: #488df4;
+  --blue-color: #38c4c1;
+  --text-color: #42434b;
+}
+
+.bgc-violet {
+  background-color: var(--violet-color);
+}
+.bgc-yellow {
+  background-color: var(--yellow-color);
+}
+.bgc-blueX2 {
+  background-color: var(--blueX2-color);
+}
+.bgc-blue {
+  background-color: var(--blue-color);
+}
+
+.color-violet {
+  color: var(--violet-color);
+}
+
+.color-yellow {
+  color: var(--yellow-color);
+}
+
+.color-blueX2 {
+  color: var(--blueX2-color);
+}
+
+.color-blue {
+  color: var(--blue-color);
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+.heading-h4 {
+  font-size: 24px;
+  color: #808080;
+  font-weight: 300;
+  text-align: center;
+}
+
+.heading-h2 {
+  text-align: center;
+  font-size: 48px;
+  color: var(--text-color);
+}
+
+.heading-h5 {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.p-heading {
+  color: var(--text-color);
+}
+
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  min-height: 400px;
+}
+
+.header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .home a {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  color: var(--violet-color);
+}
+
+.header .nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item a {
+  color: #212121;
+  font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+  margin-left: 25px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* baner */
+
+.baner {
+  margin: 60px 0;
+}
+
+.baner .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 54px;
+}
+
+.baner .content h1 {
+  font-size: 72px;
+  color: var(--blueX2-color);
+  line-height: 1.2;
+}
+
+.baner .content h3 {
+  font-size: 30px;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+.baner .image {
+  height: 670px;
+  background: url(./images/banner-background.jpg);
+}
+
+/* activities */
+
+.activities .item {
+  color: #fff;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .item-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.item h2 {
+  font-size: 36px;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+/* kid-love */
+
+.kid-love {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.kid-love h2 {
+  font-size: 60px;
+  color: var(--blueX2-color);
+  margin: 75px 60px 0;
+}
+
+.kid-love .border {
+  margin: 24px auto 0;
+  width: 66px;
+  height: 6px;
+  background-color: #000;
+}
+
+.kid-love p {
+  font-size: 20px;
+  margin: 35px 164px;
+  color: var(--text-color);
+}
+
+.about {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.about-content-1 {
+  height: 700px;
+  background: url(./images/about-img1.jpg) no-repeat center;
+}
+
+.about-content-2 {
+  height: 360px;
+}
+
+.about .teacher,
+.about .mission {
+  height: 100%;
+  padding: 20px;
+  text-align: right;
+}
+
+.about .teacher {
+  background-color: #ebfcfc;
+}
+
+.about .mission {
+  background-color: #fff2fa;
+}
+
+.about .row {
+  margin: -10px;
+}
+
+.about .row .col-50 {
+  padding: 10px;
+}
+
+.about .heading-h2 {
+  margin: 14px 0 60px;
+}
+
+.about .icon {
+  border-radius: 50%;
+  display: inline-block;
+  margin: 12px 0 26px;
+}
+
+.teacher .icon {
+  background-color: var(--blue-color);
+  padding: 14px 17px;
+}
+
+.mission .icon {
+  background-color: var(--violet-color);
+  padding: 14px;
+}
+
+.about .icon i {
+  color: #fff;
+  font-size: 41px;
+}
+
+.about .desc {
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+  color: var(--text-color);
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.teacher .btn {
+  font-size: 16px;
+  color: var(--blue-color);
+  font-weight: bold;
+}
+
+.teacher .btn:hover {
+  color: #32b0ae;
+}
+
+.mission .btn {
+  font-size: 16px;
+  color: var(--violet-color);
+  font-weight: bold;
+}
+
+.mission .btn:hover {
+  color: #fe58b9;
+}
+
+.about .img2 {
+  height: 100%;
+  background: url(./images/about-img-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.about .img3 {
+  height: 100%;
+  background: url(./images/about-img-3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* Service */
+
+.service {
+  padding: 60px 0;
+  background-color: var(--yellow-color);
+}
+.service .heading-h2 {
+  font-size: 36px;
+}
+
+.service .heading-h4,
+.service .heading-h2 {
+  color: #fff;
+}
+
+.service .heading-h2 {
+  margin: 12px 0 36px;
+}
+
+.service .item {
+  background-color: #fff;
+  padding: 32px;
+  text-align: center;
+}
+
+.item .image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.service .heading-h5 {
+  margin: 32px 0;
+}
+
+.service .p-heading {
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* howto */
+
+.howto {
+  padding: 80px 0;
+}
+
+.howto .heading-h1 {
+  color: var(--text-color);
+  font-size: 60px;
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+
+.howto .p-heading {
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding: 0 20px;
+}
+
+/* innovative */
+
+.innovative {
+  min-height: 200px;
+  padding: 70px 0;
+}
+
+.innovative .col-3333 {
+  height: 480px;
+}
+
+.innovative .image1 {
+  height: 100%;
+  background: url(./images/innovative1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.innovative .image2 {
+  height: 100%;
+  background: url(./images/innovative2.jpg) no-repeat;
+  background-size: cover;
+}
+
+.innovative .desc {
+  background-color: #fff;
+  padding: 30px;
+  height: 100%;
+}
+
+.innovative .heading-h3 {
+  font-size: 30px;
+  padding-right: 46px;
+  color: var(--text-color);
+}
+
+.innovative .p-heading {
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+/* bestpre */
+
+.bestpre {
+  padding: 60px 0;
+}
+.facility .heading-h2,
+.bestpre .heading-h2 {
+  font-size: 36px;
+}
+
+.bestpre .content {
+  margin-top: 120px;
+  height: 550px;
+}
+
+.bestpre .image {
+  height: 100%;
+  background: url(./images/bestpre.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.bestpre .item {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bestpre .item:last-child {
+  text-align: left;
+}
+
+.bestpre .text {
+  padding: 0 20px;
+}
+
+.bestpre .p-heading {
+  margin-top: 20px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* facility */
+
+.facility {
+  padding: 60px 0;
+}
+
+.facility .heading-h4 {
+  color: #fff;
+}
+
+.facility .heading-h2 {
+  color: #fff;
+  margin: 10px 0 48px;
+}
+
+.facility .image {
+  height: 600px;
+  background: url(./images/facility-image.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.facility .content {
+  padding: 60px;
+  background-color: #fff;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.facility .content .heading-h2 {
+  color: var(--text-color);
+  text-align: left;
+}
+
+.facility .content .p-heading {
+  margin: 20px 0 30px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.facility .btn {
+  font-size: 16px;
+}
+
+.facility .btn:hover {
+  color: #fe58b9;
+}
+
+/* contact */
+
+.contact {
+  padding: 122px 0;
+}
+
+.contact .item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 26px;
+}
+
+.contact .icon i {
+  font-size: 40px;
+  color: #fff;
+}
+
+.contact h6 {
+  font-size: 14px;
+  color: var(--text-color);
+  letter-spacing: 1.1px;
+}
+
+/* footer */
+
+.footer {
+  padding: 122px 0 48px;
+  color: #fff;
+}
+
+.footer .item h6,
+.footer .item p {
+  font-size: 14px;
+}
+
+.footer .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 86px;
+}
+
+.footer .icon a {
+  color: #fff;
+}
+
+.footer .icon i {
+  font-size: 16px;
+  margin: 0 8px;
+}

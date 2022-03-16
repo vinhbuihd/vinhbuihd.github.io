@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: "Roboto";
+    color: #696969;
+}
+
+.container-fluid {
+    background-color: #82daca;
+}
+
+.hero {
+    height: 300px;
+    padding: 50px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    flex: 1;
+}
+
+.menu {
+    flex: 2;
+}
+
+h1 {
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin: 0;
+}
+
+#jobs-listed {
+    font-size: 16px;
+    margin-top: 2rem;
+}
+
+#jobs-listed span {
+    font-size: 2rem;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+input {
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+button#show-all {
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid #696969;
+    background-color: #696969;
+    transition: all 0.3s ease-in;
+    outline: none;
+    cursor: pointer;
+}
+
+button#show-all:hover {
+    background-color: white;
+    color: #696969;
+}
+
+#search {
+    height: 46px;
+    line-height: 46px;
+    padding-left: 10px;
+}
+
+.jobs {
+    padding: 50px 0px 100px;
+    display: flex;
+}
+
+.job-card {
+    text-align: center;
+    border-radius: 8px;
+}
+
+.job-card-inner {
+    background-color: #f4f4f4;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.job-card h3 {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    background-color: #82daca;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.job-card h4 {
+    font-size: 2rem;
+    color: #82daca;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.job-card ul {
+    margin: 0;
+    padding: 15px;
+    list-style-type: none;
+}

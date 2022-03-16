@@ -1,0 +1,6 @@
+GET https://dog.ceo/api/breeds/image/random HTTP/1.1
+
+###
+
+GET https://dog.ceo/api/breeds/image/random HTTP/1.1
+

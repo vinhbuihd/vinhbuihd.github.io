@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form {
+            display: flex;
+        }
+        select {
+            min-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>BREEDS LIST</h3>
+    <div class="form">
+        <p>https://dog.ceo/api/breed/</p>
+        <select name="" id="breed-list">
+            <!-- Render data -->
+        </select>
+        <p>/images/random</p>
+        <button id='btn'>Fetch!</button>
+    </div>
+    
+    <div class="result">
+        <img id='image' src="" alt="dog">
+    </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
