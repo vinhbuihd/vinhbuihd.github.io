@@ -8,6 +8,9 @@ function deleteItem(code) {
     localStorage.setItem('cartList', JSON.stringify(cartList));
 
     cartSideRender(JSON.parse(localStorage.getItem('cartList')))
+    if(window.location.pathname =='/page/thanhtoan.html') {
+        location.reload()
+    }
 }
 
 

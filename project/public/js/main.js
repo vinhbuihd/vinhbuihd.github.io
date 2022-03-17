@@ -106,7 +106,6 @@ window.addEventListener("scroll", function(){
 
 const popup = document.querySelector('.product-popup')
 
-// render popup
 
 function cartSideRender(list) {
     const cardSideElement = document.querySelector('.cart-side .content')
@@ -132,6 +131,7 @@ function cartSideRender(list) {
         list.forEach((product) => {
             totalPrice += product.quantity * product.sizePrice
             totalQuantity += product.quantity
+
 
             cardSideElement.innerHTML += `
                 <div class="cart-item d-flex" dataset=${product.code}>
@@ -216,7 +216,6 @@ function addToCart(product) {
     
     closePopupBtn.addEventListener('click', function () {
         popup.style.display = 'none'
-        
         overlay.style.display = 'none'
     })
 
@@ -255,7 +254,7 @@ function addToCart(product) {
 
         
         popup.style.display = 'none'
-        // overlay.style.display = 'none'
+        overlay.style.display = 'none'
     })
 }
 

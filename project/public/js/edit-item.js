@@ -2,12 +2,15 @@ function editItem(code) {
             
     const cartList = JSON.parse(localStorage.getItem('cartList')) || []
     const popup = document.querySelector('.product-popup')
+    const overlay = document.querySelector('.overlay')
 
     const product = cartList.find(item => item.code == code)
     const index = cartList.findIndex(item => item.code == code)
 
+
     console.log(123);
     popup.style.display = 'block'
+    
     
     let path
     if(window.location.pathname=='/index.html'){

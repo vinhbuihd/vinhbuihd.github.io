@@ -142,13 +142,15 @@ html {
 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #eee;
+  transform: translate(-50%, -50%);
 
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: none;
+
+  animation: popupShow ease 0.5s;
 }
 
 .product-popup .btn-close {
@@ -181,6 +183,7 @@ html {
   font-weight: 500;
   font-size: 30px;
   color: var(--pri-4-color);
+  text-transform: capitalize;
 }
 
 .popup-price {
@@ -210,6 +213,10 @@ html {
   font-size: 14px;
   padding: 4px 8px;
   outline: none;
+
+  border-radius: 4px;
+  border: 1px solid var(--pri-4-color);
+  background: #eee;
 }
 
 .popup-bottom .cart-item-button i {
@@ -223,6 +230,15 @@ html {
 
 .popup-bottom .btn {
   margin-top: 16px;
+}
+
+.form-check label {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--pri-3-color);
+  border-color: var(--pri-3-color);
 }
 
 /* overlay */
@@ -1134,7 +1150,7 @@ header .sub-nav a:hover {
 .register input {
   font-size: 1rem;
   padding: 7px 16px;
-  border-radius: 4px;
+  border-radius: 2px;
   color: var(--pri-4-color);
   border: none;
   outline: none;
@@ -1477,5 +1493,17 @@ footer .copy-right {
   100% {
     height: max-content;
     opacity: 1;
+  }
+}
+
+@keyframes popupShow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }

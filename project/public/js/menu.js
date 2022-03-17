@@ -1,6 +1,7 @@
 const productsList = document.querySelector('.product-list')
 const itemsQuantity = document.querySelector('.item-quantity-bar span')
 const popup = document.querySelector('.product-popup')
+const overlay = document.querySelector('.overlay')
 
 let products = []
 let filterTypeList = []
@@ -196,6 +197,7 @@ function renderMenu(products, type) {
 function popupRender(product) {
     
     popup.style.display = 'block'
+    overlay.style.display = 'block'
     let path
 
     if(window.location.pathname=='/index.html'){
@@ -257,7 +259,7 @@ function popupRender(product) {
         </div>
         `
     }
-
+    closePopup()
 }
 
 function cartSideRender(list) {
@@ -366,16 +368,7 @@ function addToCart(product) {
         popupQuantity.innerHTML = product.quantity
         popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
     })
-
-
-    const closeCartBtn = document.querySelector('.popup-box .btn-close')
     
-    closeCartBtn.addEventListener('click', function () {
-        popup.style.display = 'none'
-        
-        overlay.style.display = 'none'
-    })
-
     addToCart.addEventListener('click', function () {
         let radio = Array.from(radios).find(radio => radio.checked)
         
@@ -387,7 +380,6 @@ function addToCart(product) {
             code: new Date().valueOf()
         }
         
-
         // so sánh newItem đã có trong cartList hay chưa
 
         if (cartList.length == 0) {
@@ -411,7 +403,7 @@ function addToCart(product) {
 
         
         popup.style.display = 'none'
-        // overlay.style.display = 'none'
+        overlay.style.display = 'none'
     })
 }
 
@@ -452,6 +444,21 @@ function bestsellerRender() {
         `
     }
 }
+
+function closePopup() {
+    const popupBtnClose = document.querySelector('.popup-box .btn-close')
+
+    popupBtnClose.addEventListener('click', function () {
+        overlay.style.display = 'none'
+        popup.style.display = 'none'
+    })
+
+    overlay.addEventListener('click', function () {
+        overlay.style.display = 'none'
+        popup.style.display = 'none'
+    })
+}
+
 
 
 

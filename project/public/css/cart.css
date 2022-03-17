@@ -154,3 +154,14 @@ input.code {
   margin-left: 126px;
   min-height: 16px;
 }
+
+.edit-list {
+  cursor: pointer;
+  color: var(--pri-3-color);
+  text-decoration: underline;
+  margin: 8px 0;
+}
+
+.edit-list:hover {
+  color: var(--pri-4-color);
+}

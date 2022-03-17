@@ -4,6 +4,7 @@ const cartList = JSON.parse(localStorage.getItem('cartList')) || []
 const productList = document.querySelector('.product-list')
 const priceBox = document.querySelector('.price-box')
 const productBox = document.querySelector('.product-box')
+const cart  = document.querySelector('.cart')
 let totalPrice = 0
 
 if (cartList.length == 0) {
@@ -29,7 +30,6 @@ if (cartList.length == 0) {
                 <div class="cart-item-info">
                     <div class="name">${product.name}</div> 
                     <div class="size d-flex align-items-center">Size ${product.size}<span>x${product.quantity}</span>
-                        <div class="edit" onclick='editCart()'><i class="fa-solid fa-pen"></i></div>
                     </div>
                     <div class="note">${product.note}</div>
                 </div>
@@ -39,14 +39,10 @@ if (cartList.length == 0) {
                         <span>${(product.quantity * product.sizePrice).toLocaleString()}</span> đ
                     </div>
                 </div>
-
-                <div class="delete-product d-flex align-items-center" onclick='editCart()'>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
             </div>
         `
     })
-
+    productList.innerHTML += `<div class='edit-list'>Chỉnh sửa đơn hàng</div>`
     priceBox.innerHTML = `
         <div class="subtotal  d-flex align-items-center justify-content-between">
             <p>Tạm tính</p>
@@ -68,13 +64,6 @@ if (cartList.length == 0) {
 const overlay = document.querySelector('.overlay')
 const cartSideEle = document.querySelector('.cart-side')
 const closeBtn = document.querySelector('.btn-close')
-// const editBtn = document.querySelector('.btn-close')
-// const deleteBtn = document.querySelector('.btn-close')
-
-function editCart() {
-    cartSideEle.classList.add('open')
-    overlay.style.display = 'block'
-}
 
 overlay.addEventListener('click', function () {
     location.reload()
@@ -106,8 +95,9 @@ applyCodeBtn.addEventListener('click', function (e) {
         let sale = totalPrice * codes[isOk] / 100
         console.log(sale)
         total.innerHTML = (totalPrice - sale).toLocaleString()
-        saleMoney.innerHTML = `-(${codes[isOk]}%)${sale.toLocaleString()}`
+        saleMoney.innerHTML = `-(${codes[isOk]}%) ${sale.toLocaleString()}`
         errorMs.innerHTML ='Áp dụng thành công!'
+        inputCode.value = ''
     } else {
         errorMs.innerHTML ='Mã giảm giá không đúng'
         total.innerHTML = totalPrice.toLocaleString()
@@ -124,6 +114,7 @@ orderBtn.addEventListener('click', function (e) {
     formValidate()
     if (formValidate()) {
         alert("Chúc mừng bạn đã đặt hàng thành công!!!")
+        window.location.href = "/page/menu.html"
     }
 })
 
@@ -162,3 +153,11 @@ function formValidate() {
     
     return isValid
 }
+
+// Chỉnh sửa đơn hàng
+
+const editList = document.querySelector('.edit-list')
+
+editList.addEventListener('click', function () {
+    cart.click()
+})

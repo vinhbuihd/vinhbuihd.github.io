@@ -91,9 +91,20 @@ let products = [
     }
 ]
 
+function clickBuy(id) {
+    let product = products.filter(product => product.id == id)[0]
+        
+    // render sp trong popup
+    product.quantity = 1
+
+    popupRender(product)
+    addToCart(product)
+}
+
 const highlightproducts = document.querySelector('.highlight-product')
 const popup = document.querySelector('.product-popup')
 const overlay = document.querySelector('.overlay')
+
 
 
 function highlightProductRender() {
@@ -103,35 +114,35 @@ function highlightProductRender() {
         
         `
         <div class="card wow rollIn" dataset="${product.id}">
-        <div class="card-image" >
-            <img src=${product.image} alt="${product.name}">
-        </div>
+            <div class="card-image" >
+                <img src=${product.image} alt="${product.name}">
+            </div>
 
-        <div class="card-content">
-            <div class="card-content-left d-flex align-items-center justify-content-between">
-                <div class="card-like">
-                    <div class="like-icon">
-                        <i class="fa-solid fa-star" style=${product.star - 1 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        <i class="fa-solid fa-star" style=${product.star - 2 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        <i class="fa-solid fa-star" style=${product.star - 3 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        <i class="fa-solid fa-star" style=${product.star - 4 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        <i class="fa-solid fa-star" style=${product.star - 5 >= 0 ? 'display:inline-block' : 'display:none'}></i>
-                        
+            <div class="card-content">
+                <div class="card-content-left d-flex align-items-center justify-content-between">
+                    <div class="card-like">
+                        <div class="like-icon">
+                            <i class="fa-solid fa-star" style=${product.star - 1 >= 0 ? 'display:inline-block' : 'display:none'}></i>
+                            <i class="fa-solid fa-star" style=${product.star - 2 >= 0 ? 'display:inline-block' : 'display:none'}></i>
+                            <i class="fa-solid fa-star" style=${product.star - 3 >= 0 ? 'display:inline-block' : 'display:none'}></i>
+                            <i class="fa-solid fa-star" style=${product.star - 4 >= 0 ? 'display:inline-block' : 'display:none'}></i>
+                            <i class="fa-solid fa-star" style=${product.star - 5 >= 0 ? 'display:inline-block' : 'display:none'}></i>
+                            
+                        </div>
                     </div>
+                    
+                    <div class="card-price d-flex align-items-center">
+                        <div class="price"><span>${product.price.S.toLocaleString()}</span> đ</div>
+                    </div>
+                    
                 </div>
-                
-                <div class="card-price d-flex align-items-center">
-                    <div class="price"><span>${product.price.S.toLocaleString()}</span> đ</div>
+                <div class="card-content-right d-flex align-items-center justify-content-between">
+                    <h3 class="card-name">${product.name}</h3>
+                    
+                    <div onclick="clickBuy(${product.id})" class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
                 </div>
-                
-            </div>
-            <div class="card-content-right d-flex align-items-center justify-content-between">
-                <h3 class="card-name">${product.name}</h3>
-                
-                <div class="card-cart d-flex align-items-center justify-content-center"><i class="fa-solid fa-basket-shopping"></i></div>
             </div>
         </div>
-    </div>
         `
     })
 }
@@ -142,27 +153,6 @@ if (highlightproducts) {
 }
 
 const buyBtns = document.querySelectorAll('.card-cart')
-
-buyBtns.forEach(buyBtn => {
-    buyBtn.addEventListener('click', function (e) {
-        // tìm sp mình nhấn vào
-        let card = e.target.closest('.card')
-        console.log(123)
-        
-        let cardId = card.getAttribute('dataset')
-        
-        let product = products.filter(product => product.id == cardId)[0]
-        
-        // render sp trong popup
-        product.quantity = 1
-
-        popupRender(product)
-        addToCart(product)
-    })
-})
-
-
-
 
 function popupRender(product) {
     
@@ -228,7 +218,12 @@ function popupRender(product) {
         </div>
         `
     }
+
     overlay.style.display = 'block'
+    overlay.addEventListener('click', function () {
+        popup.style.display = 'none'
+    })
+    closePopup()
 }
 
 function cartSideRender(list) {
@@ -300,7 +295,6 @@ function cartSideRender(list) {
     }
 }
 
-
 function addToCart(product) {
     let cartList = JSON.parse(localStorage.getItem('cartList')) || []
     
@@ -339,15 +333,6 @@ function addToCart(product) {
         popupBottomPrice.innerHTML = (product.price[radio.value] * product.quantity).toLocaleString()
     })
 
-
-    const closeCartBtn = document.querySelector('.popup-box .btn-close')
-    
-    closeCartBtn.addEventListener('click', function () {
-        popup.style.display = 'none'
-        
-        // overlay.style.display = 'none'
-    })
-
     addToCart.addEventListener('click', function () {
         let radio = Array.from(radios).find(radio => radio.checked)
         
@@ -383,36 +368,18 @@ function addToCart(product) {
 
         
         popup.style.display = 'none'
-        // overlay.style.display = 'none'
+        overlay.style.display = 'none'
+    })
+}
+
+function closePopup() {
+    const popupBtnClose = document.querySelector('.popup-box .btn-close')
+
+    popupBtnClose.addEventListener('click', function () {
+        overlay.style.display = 'none'
+        popup.style.display = 'none'
     })
 }
 
 
-// thư viện owl
-
-
-$(".highlight-product").owlCarousel({
-    items:4,
-    margin:16,
-    autoplayHoverPause: true,
-    loop:true,
-    autoplay:true,
-    dots: true,
-    nav: true,
-    autoplayTimeout:5000,
-    responsive:{
-        0:{
-            items:1
-        },
-        510:{
-            items:2
-        },
-        1000:{
-            items:3
-        },
-        1200:{
-            items:4
-        }
-    }
-});
 
