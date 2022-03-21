@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  width: 470px;
+  margin: 60px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-time {
+  text-align: center;
+  color: #fff;
+}
+
+.card-time-year {
+  font-size: 16px;
+  padding: 6px;
+  background-color: #ef5321;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card-time-date {
+  padding: 36px 0;
+  background-color: #fe6d3f;
+}
+
+.card-time-date .day {
+  font-size: 40px;
+}
+
+.card-time-date .month {
+  font-size: 16px;
+}
+
+.card-content {
+  padding: 16px 24px 0;
+  color: #464646;
+}
+
+.card-content-1 h3 a {
+  font-size: 20.8px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #464646;
+  text-decoration: none;
+}
+
+.card-content-1 p {
+  font-size: 14.4px;
+  padding: 4px 0 12px;
+}
+
+.card-content-time .date,
+.card-content-time .time,
+.card-content-time .position {
+  font-size: 14.4px;
+  padding: 4px 0;
+}
+
+.card-content-time .register {
+  font-size: 16px;
+  color: #3c78e8;
+  display: block;
+  text-decoration: none;
+
+  margin-top: 6px;
+  padding: 8px 0;
+  border-top: 0.5px solid #c4c4c4e3;
+}
+
+.card-content-time span {
+  margin-right: 4px;
+}

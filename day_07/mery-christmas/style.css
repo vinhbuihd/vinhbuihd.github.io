@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(90deg, #d6171e, #4f0101);
+}
+
+.main .tree {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 500px;
+  color: green;
+}
+
+.main .gift1 {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  font-size: 100px;
+  color: blue;
+  z-index: 1;
+}
+
+.main .gift2 {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  font-size: 110px;
+  color: orangered;
+}
+
+.main .gift3 {
+  position: absolute;
+  bottom: 5px;
+  left: 283px;
+  font-size: 65px;
+  color: yellow;
+  z-index: 2;
+}
+
+.star {
+  position: absolute;
+  top: -35px;
+  left: 42%;
+  transform: translateX(-50%);
+  color: yellow;
+  font-size: 60px;
+  animation: changColor ease-in-out 1s infinite, tiktok ease 1s infinite;
+}
+
+.star1 {
+  position: absolute;
+  top: 222px;
+  left: 68%;
+  color: yellow;
+  font-size: 30px;
+  animation: changColor1 ease 1.5s infinite;
+}
+
+.star2 {
+  position: absolute;
+  top: 84px;
+  left: 36%;
+  color: yellow;
+  font-size: 30px;
+  animation: changColor2 linear 2s infinite;
+}
+.star3 {
+  position: absolute;
+  top: 278px;
+  left: 51%;
+  color: yellow;
+  font-size: 33px;
+  animation: changColor3 ease 1s infinite;
+}
+.star4 {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  color: yellow;
+  font-size: 30px;
+  animation: changColor4 ease-in-out 3s infinite;
+}
+.star5 {
+  position: absolute;
+  top: 170px;
+  left: 20%;
+  color: yellow;
+  font-size: 20px;
+  animation: changColor5 ease-out 0.5s infinite;
+}
+
+.star6 {
+  position: absolute;
+  top: 220px;
+  left: 20%;
+  color: yellow;
+  font-size: 30px;
+  animation: changColor6 ease 1.7s infinite;
+}
+
+.star7 {
+  position: absolute;
+  top: 100px;
+  left: 60%;
+  color: yellow;
+  font-size: 20px;
+  animation: changColor7 ease-in-out 0.9s infinite;
+}
+
+.star8 {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  color: yellow;
+  font-size: 20px;
+  animation: changColor8 ease-in 2s infinite;
+}
+.star9 {
+  position: absolute;
+  top: 180px;
+  left: 80%;
+  color: yellow;
+  font-size: 20px;
+  animation: changColor7 ease-in 2s infinite;
+}
+
+.star10 {
+  position: absolute;
+  top: 180px;
+  left: 80%;
+  color: yellow;
+  font-size: 20px;
+  animation: changColor7 ease-in 2s infinite;
+}
+
+.star11 {
+  position: absolute;
+  top: 550%;
+  left: 30%;
+  color: yellow;
+  font-size: 45px;
+  animation: changColor4 ease-in 2s infinite;
+}
+.star12 {
+  position: absolute;
+  top: 360%;
+  left: 30%;
+  color: yellow;
+  font-size: 40px;
+  animation: changColor3 ease-in 0.8s infinite;
+}
+.star13 {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  color: yellow;
+  font-size: 35px;
+  animation: changColor2 ease-in 1s infinite;
+}
+.star14 {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  color: yellow;
+  font-size: 25px;
+  animation: changColor1 ease-in 0.5s infinite;
+}
+.star15 {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  color: yellow;
+  font-size: 15px;
+  animation: changColor1 ease-in 0.5s infinite;
+}
+.star16 {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  color: yellow;
+  font-size: 30px;
+  animation: changColor1 ease-in 0.5s infinite;
+}
+
+.ball {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ball1 {
+  top: 30%;
+  left: 36%;
+  animation: changeBGColor1 ease-in 1.5s infinite;
+}
+.ball2 {
+  top: 50%;
+  left: 30%;
+  width: 25px;
+  height: 25px;
+  animation: changeBGColor2 ease-out 1s infinite;
+}
+.ball3 {
+  top: 65%;
+  left: 38%;
+  width: 30px;
+  height: 30px;
+  animation: changeBGColor3 ease 0.8s infinite;
+}
+.ball4 {
+  top: 60%;
+  left: 60%;
+  width: 33px;
+  height: 33px;
+  animation: changeBGColor4 linear 0.7s infinite;
+}
+.ball5 {
+  top: 66%;
+  left: 12%;
+  width: 15px;
+  height: 15px;
+  animation: changeBGColor5 ease-in 2s infinite;
+}
+.ball6 {
+  top: 40%;
+  left: 48%;
+  width: 32px;
+  height: 32px;
+  animation: changeBGColor6 ease-in-out 1.2s infinite;
+}
+
+.bell {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  color: yellowgreen;
+  font-size: 20px;
+}
+
+.decorate1 {
+  position: absolute;
+  top: 14%;
+  left: 34%;
+  height: 78px;
+  width: 229px;
+  transform: rotate(25deg);
+  border-radius: 50%;
+  border-bottom: 15px solid yellow;
+}
+
+.decorate2 {
+  position: absolute;
+  top: 24%;
+  left: 19%;
+  height: 133px;
+  width: 340px;
+  border-radius: 46%;
+  transform: rotate(25deg);
+  border-bottom: 15px solid yellow;
+}
+
+.decorate3 {
+  position: absolute;
+  top: 44%;
+  left: 9%;
+  height: 164px;
+  width: 422px;
+  border-radius: 50%;
+  transform: rotate(25deg);
+  border-bottom: 15px solid yellow;
+}
+
+/*  */
+.text {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  font-family: "Yuji Mai", serif;
+}
+
+ul {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  -webkit-box-reflect: below -30px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.alphabet1 li {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.item {
+  font-size: 90px;
+  color: #fff;
+  margin: 0 8px;
+  text-shadow: 3px 1px #c43026;
+  animation: jump ease-in-out 2s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.item i {
+  font-size: 32px;
+}
+
+.message {
+  font-size: 28px;
+  margin-top: 56px;
+  color: #fff;
+  font-family: "Yuji Boku", serif;
+}
+
+.sign {
+  font-size: 28px;
+  color: #fff;
+  text-align: right;
+  margin: 32px;
+  font-family: "Yuji Boku", serif;
+}
+/* SNOW */
+
+.snow {
+  color: #fff;
+}
+
+.snow1 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  font-size: 30px;
+  animation: down1 ease-in 10s infinite;
+  animation-delay: calc(2s * var(--i));
+}
+
+.snow2 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  font-size: 15px;
+  animation: down2 ease-in-out 8s infinite;
+  animation-delay: calc(1s * var(--i));
+}
+
+.snow3 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: down3 ease 15s infinite;
+  animation-delay: calc(3s * var(--i));
+}
+
+.snow4 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  font-size: 10px;
+  animation: down3 linear 10s infinite;
+  animation-delay: calc(4s * var(--i));
+}
+
+.snow5 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  font-size: 35px;
+  animation: down2 linear 10s infinite;
+  animation-delay: calc(1.5s * var(--i));
+}
+
+.snow6 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10%;
+  font-size: 35px;
+  animation: down3 linear 7s infinite;
+  animation-delay: calc(5s * var(--i));
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes changColor {
+  0% {
+    color: blue;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+@keyframes changColor1 {
+  0% {
+    color: #d6171e;
+  }
+  100% {
+    color: teal;
+  }
+}
+
+@keyframes changeBGColor1 {
+  0% {
+    background-color: #d6171e;
+  }
+  100% {
+    background-color: teal;
+  }
+}
+
+@keyframes changColor2 {
+  0% {
+    color: #4f0101;
+  }
+  100% {
+    color: fuchsia;
+  }
+}
+@keyframes changeBGColor2 {
+  0% {
+    background-color: #4f0101;
+  }
+  100% {
+    background-color: fuchsia;
+  }
+}
+
+@keyframes changColor3 {
+  0% {
+    color: turquoise;
+  }
+  100% {
+    color: orange;
+  }
+}
+@keyframes changeBGColor3 {
+  0% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+@keyframes changColor4 {
+  0% {
+    color: purple;
+  }
+  100% {
+    color: blue;
+  }
+}
+@keyframes changeBGColor4 {
+  0% {
+    background-color: purple;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes changColor5 {
+  0% {
+    color: lightseagreen;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes changeBGColor5 {
+  0% {
+    background-color: lightseagreen;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes changColor6 {
+  0% {
+    color: turquoise;
+  }
+  100% {
+    color: deeppink;
+  }
+}
+
+@keyframes changeBGColor6 {
+  0% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+@keyframes changColor7 {
+  0% {
+    color: turquoise;
+  }
+  100% {
+    color: navy;
+  }
+}
+
+@keyframes changColor8 {
+  0% {
+    color: cyan;
+  }
+  100% {
+    color: indigo;
+  }
+}
+
+/* SNOW DOWN*/
+
+@keyframes down1 {
+  0% {
+    opacity: 0.1;
+    top: calc(-10% * var(--i));
+    left: calc(18% * var(--i));
+  }
+  100% {
+    opacity: 0.8;
+    top: 100%;
+    left: calc(15% * var(--i));
+  }
+}
+
+@keyframes down2 {
+  0% {
+    opacity: 0.3;
+    top: calc(-9% * var(--i));
+    left: calc(10% * var(--i));
+  }
+  100% {
+    opacity: 0.5;
+    top: 100%;
+    left: calc(15% * var(--i));
+  }
+}
+
+@keyframes down3 {
+  0% {
+    opacity: 0.2;
+    top: calc(-5% * var(--i));
+    left: calc(10% * var(--i));
+  }
+
+  100% {
+    opacity: 0.7;
+    top: 100%;
+    left: calc(3% * var(--i));
+  }
+}
+
+/* CHange backgroundcolor */
+
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #d6171e;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes tiktok {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

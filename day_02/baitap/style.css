@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+.footer {
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  padding: 28px 110px;
+  background-color: #464646;
+}
+
+.heading {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 16px 0 12px;
+}
+
+.list {
+  width: 25%;
+  padding: 0 22px;
+}
+
+.list ul {
+  list-style: none;
+}
+
+.item,
+.item a {
+  color: #919294;
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 4px 0;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.item a:not(.icon):hover {
+  text-decoration: underline;
+}
+
+.item .icon {
+  font-size: 3rem;
+  margin-right: 18px;
+}

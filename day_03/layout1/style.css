@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  width: 470px;
+  margin: 60px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card .time {
+  text-align: center;
+  color: #fff;
+}
+
+.time .year {
+  font-size: 16px;
+  padding: 6px;
+  background-color: #ef5321;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.time .time2 {
+  padding: 36px 0;
+  background-color: #fe6d3f;
+}
+
+.time .time2 .day {
+  font-size: 40px;
+}
+
+.time .time2 .month {
+  font-size: 16px;
+}
+
+.content {
+  padding: 16px 24px 0;
+  color: #464646;
+}
+
+.content h2 a {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #464646;
+  text-decoration: none;
+}
+
+.content .teacher {
+  font-size: 14.4px;
+  padding: 4px 0 12px;
+}
+
+.content .date,
+.content .hour,
+.content .location {
+  font-size: 14.4px;
+  padding: 4px 0;
+}
+
+.content .register {
+  font-size: 16px;
+  color: #3c78e8;
+  display: block;
+  text-decoration: none;
+
+  margin-top: 6px;
+  padding: 8px 0;
+  border-top: 0.5px solid #c4c4c4e3;
+}
+
+.content span {
+  margin-right: 4px;
+}

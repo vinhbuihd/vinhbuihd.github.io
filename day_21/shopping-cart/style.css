@@ -1,0 +1,334 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 2rem 4rem;
+	line-height: 1.7;
+	font-family: "Nunito Sans", sans-serif;
+	color: #555;
+	min-height: 100vh;
+	background-image: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border-radius: 4px;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:hover {
+	color: #f58551;
+}
+
+button {
+	background-color: #16cc9b;
+	border: 2px solid #16cc9b;
+	color: #ffffff;
+	transition: all 0.25s linear;
+	cursor: pointer;
+}
+
+button::after {
+	position: relative;
+	right: 0;
+	content: " \276f";
+	transition: all 0.15s linear;
+}
+
+button:hover {
+	background-color: #f58551;
+	border-color: #f58551;
+}
+
+button:hover::after {
+	right: -5px;
+}
+
+button:focus {
+	outline: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+input {
+	transition: all 0.25s linear;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+input {
+	outline: none;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+/* --- HEADER --- */
+header h1 {
+	font-family: "Bungee Inline", sans-serif;
+	font-weight: 400;
+	font-size: 3rem;
+	color: white;
+	margin-bottom: 2rem;
+	text-align: center;
+	word-spacing: 3px;
+}
+
+header.container {
+	margin-bottom: 1.5rem;
+}
+
+header .breadcrumb li {
+	float: left;
+	padding: 0 6px;
+}
+
+header .breadcrumb li:first-child {
+	padding-left: 2px;
+}
+
+header .breadcrumb li:not(:last-child)::after {
+	content: " \276f";
+	padding-left: 8px;
+}
+
+header .count {
+	float: right;
+}
+
+/* --- PRODUCT LIST --- */
+.products {
+	border-top: 1px solid #ddd;
+}
+
+.products > li {
+	padding: 1rem 0;
+	background-color: #fff;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+.row {
+	display: flex;
+}
+
+.col.left {
+	flex-basis: 70%;
+}
+
+.col.right {
+	flex-basis: 30%;
+	display: flex;
+	align-items: center;
+}
+
+.detail {
+	padding: 0 0.5rem;
+	line-height: 2.2rem;
+}
+
+.detail .name {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.detail .description {
+	font-size: 1rem;
+	margin: 0.7rem 0;
+	line-height: 1.4;
+}
+
+.detail .price {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.quantity,
+.remove {
+	width: 50%;
+	text-align: center;
+}
+
+.quantity>input {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	position: relative;
+	left: calc(50% - 30px);
+	background: #fff;
+	border: 2px solid #ddd;
+	text-align: center;
+	font: 600 1.5rem Helvetica, Arial, sans-serif;
+}
+
+.quantity>input:hover,
+.quantity>input:focus {
+	border-color: #f58551;
+}
+
+.close {
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+
+.close:hover {
+	color: #f58551;
+}
+
+/* --- SUMMARY --- */
+.promotion,
+.summary,
+.checkout {
+	float: left;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.promotion>label {
+	float: left;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.promotion>input {
+	float: left;
+	width: 80%;
+	font-size: 1rem;
+	padding: 1rem 1.5rem;
+	border: 2px solid #16cc9b;
+}
+
+.promotion:hover>input {
+	border-color: #f58551;
+}
+
+.promotion>button {
+	float: left;
+	width: 20%;
+	padding: 1rem 0.5rem;
+}
+
+.promotion:hover>button {
+	border-color: #f58551;
+	background-color: #f58551;
+}
+
+.promotion>button::after {
+	content: "\276f";
+	font-size: 1rem;
+}
+
+.summary {
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+.summary ul li {
+	padding: 0.5rem 0;
+}
+
+.summary ul li span {
+	display: inline-block;
+	width: 30%;
+}
+
+.summary ul li.total {
+	font-weight: bold;
+}
+
+.hide {
+	display: none !important;
+}
+
+/* --- SMALL SCREEN --- */
+@media all and (max-width: 599px) {
+	.thumbnail img {
+		display: none;
+	}
+
+	.quantity>input {
+		width: 40px;
+		height: 40px;
+		left: calc(50% - 20px);
+	}
+
+	.remove svg {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+/* --- MEDIUM & LARGE SCREEN --- */
+@media all and (min-width: 600px) {
+	html {
+		font-size: 14px;
+	}
+
+	.container {
+		width: 75%;
+		max-width: 960px;
+	}
+
+	.thumbnail,
+	.detail {
+		float: left;
+	}
+
+	.thumbnail {
+		width: 30%;
+	}
+
+	.detail {
+		width: 65%;
+		padding: 0 1rem;
+	}
+
+	.promotion,
+	.summary {
+		width: 50%;
+	}
+
+	.checkout {
+		width: 100%;
+	}
+
+	.checkout,
+	.summary {
+		text-align: right;
+	}
+}
+
+/* --- LARGE SCREEN --- */
+@media all and (min-width: 992px) {
+	html {
+		font-size: 16px;
+	}
+}

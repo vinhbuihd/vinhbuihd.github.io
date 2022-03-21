@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="hero">
+                <header>
+                    <div class="logo">
+                        <h1>Bảng công việc</h1>
+                        <p>Tìm kiếm công việc phù hợp với bạn</p>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><button id="show-all">Tất cả công việc</button></li>
+                            <li><input id="search" type="text" placeholder="Tìm kiếm"></li>
+                        </ul>
+                    </div>
+
+                </header>
+
+                <h2 id="jobs-listed"><span>300</span> công việc có trong danh sách</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mt-5">Danh sách công việc hiện có</h2>
+            </div>
+        </div>
+        <div class="row jobs">
+            <div class="col-md-3 job-card">
+                <div class="job-card-inner">
+                    <h3>Software Engineer</h3>
+                    <h4>$50</h4>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Git</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
