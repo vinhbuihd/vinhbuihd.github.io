@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI - App</title>
+    <style>
+      .container {
+        width: 360px;
+        margin: 60px auto;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 32px 0;
+      }
+      .input-group {
+        display: flex;
+      }
+
+      .input-controller {
+        width: 50%;
+      }
+      .input-group input {
+        max-width: 120px;
+        padding: 4px 8px;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        outline: none;
+        margin-right: 4px;
+      }
+
+      button {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script type="text/babel" src="./main.jsx"></script>
+  </body>
+</html>
