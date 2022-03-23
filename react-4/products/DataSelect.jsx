@@ -3,7 +3,7 @@ const DataSelect = (props) => {
   return (
     <div>
       <select
-        value={props.sortByCategory}
+        defaultValue={props.sortByCategory}
         onChange={props.handleChangeSortByCategory}
       >
         <option value="">-----</option>
