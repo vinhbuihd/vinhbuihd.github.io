@@ -38,6 +38,7 @@ function App() {
       [e.target.name]: e.target.value,
     });
   };
+
   console.log(bmi);
 
   const handleSubmit = (e) => {
