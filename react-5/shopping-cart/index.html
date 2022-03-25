@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .width {
+            width:700px;
+            margin: 0 auto;
+            
+        }
+        .cart-header {
+            background-color: #2680c0;
+            
+            color: #fff;
+        }
+
+        .cart-header-inner {
+          display: flex;
+          justify-content:space-between; 
+          height: 78px;
+          align-items: center;
+        }
+
+        .cart-header-icon {
+          position: relative;
+        }
+
+        .cart-header-quantity {
+          position: absolute;
+          top: -7px;
+          right: -8px;
+          padding: 4px 8px;
+          border-radius: 50%;
+          background-color: #85c6f4;
+        }
+
+        .cart-content {
+          display: flex;
+          align-items: center;
+        }
+
+        .cart-item {
+          display: flex;
+          justify-content:space-between; 
+          align-items: center;
+          margin: 16px 0;
+        }
+
+        .cart-info {
+          color: #2680c0;
+          display: flex;
+          flex-direction: column;
+          height: 70px;
+          justify-content:space-between; 
+        }
+
+        .cart-quantity {
+          display: flex;
+          align-items: center;
+          justify-content:space-between; 
+          flex-direction: column;
+
+          color: #2680c0;
+          font-weight: bolder;
+          height: 70px;
+        }
+
+        .cart-quantity i {
+          font-size: 18px;
+          cursor: pointer;
+        }
+
+        .cart-header i {
+            font-size: 36px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 36px 0 24px;
+            font-size: 36px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .cart-footer-total {
+          display: flex;
+          align-items: center;
+          justify-content:space-between; 
+
+          color: #2680c0;
+          margin-bottom: 16px;
+        }
+
+        .cart-footer {
+          text-align: center;
+        }
+
+        .cart-footer button {
+          padding: 8px 16px;
+          color: #bb2525;
+          border:1px solid #bb2525;
+          border-radius: 4px;
+
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        .total-price {
+          letter-spacing: 2px;
+        }
+
+        .cart-info span {
+          cursor: pointer;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+
+    <script type="text/babel" src="./Cart.jsx"></script>
+    <script type="text/babel" src="./CartItem.jsx"></script>
+    <script type="text/babel" src="./CartHeader.jsx"></script>
+    <script type="text/babel" src="./CartFooter.jsx"></script>
+    <script type="text/babel" src="./App.jsx"></script>
+</html>

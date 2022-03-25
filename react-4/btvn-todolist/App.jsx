@@ -2,8 +2,9 @@ const { useState } = React;
 
 const App = () => {
   const [list, setList] = useState([]);
-  const [inputText, setInputText] = useState("");
-
+  const [inputText, setInputText] = useState(() => {
+    return JSON.parse(localStorage.getItem("inputText"));
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -14,6 +15,7 @@ const App = () => {
         id: new Date().getTime(),
       };
       newList = [newJob, ...newList];
+      localStorage.setItem("inputText", JSON.stringify(newList));
       setList(newList);
       setInputText("");
     }
@@ -29,7 +31,7 @@ const App = () => {
     const id = element.getAttribute("dataset");
     let newList = [...list];
     newList = newList.filter((job) => job.id != id);
-    console.log(newList);
+    localStorage.setItem("inputText", JSON.stringify(newList));
     setList(newList);
   };
   return (
