@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Caro</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .btn {
+        padding: 4px 8px;
+        margin: 8px 0;
+      }
+      .game-board {
+        display: flex;
+        justify-content: center;
+        margin-top: 180px;
+      }
+
+      .board-row {
+        display: flex;
+      }
+      .square {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #000;
+        margin-top: -4px;
+        margin-right: -1px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      .container {
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      .status {
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script type="text/babel" src="./App.jsx"></script>
+  </body>
+</html>
