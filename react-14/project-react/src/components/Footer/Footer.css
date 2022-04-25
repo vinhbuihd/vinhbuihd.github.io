@@ -1,0 +1,53 @@
+footer {
+  background-color: var(--pri-1-color);
+  padding: 32px 16px 0px;
+}
+
+footer .copy-right,
+footer .item a,
+footer .item {
+  color: var(--pri-3-color);
+}
+
+footer .item a:hover {
+  color: var(--pri-4-color);
+}
+
+footer .logo-image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background: url(../images/logo-2.png) no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+footer .logo-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--pri-2-color);
+  margin-top: 22px;
+  font-family: "Caveat", cursive;
+}
+
+.footer-icon {
+  font-size: 2.25rem;
+  color: var(--pri-3-color);
+  margin-right: 24px;
+}
+
+p.footer-title {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+
+footer .copy-right {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-link {
+  font-size: 16px;
+}

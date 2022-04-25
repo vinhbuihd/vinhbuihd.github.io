@@ -1,0 +1,355 @@
+@media (min-width: 1200px) {
+  .container:not(.menu-main .container) {
+    max-width: 1140px;
+  }
+}
+
+.col-24 {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.col-96 {
+  flex: 0 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-xl-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+}
+
+.col-24 {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.col-96 {
+  flex: 0 0 auto;
+  width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .col-lg-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-lg-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+  .padding-60 {
+    padding: 48px 0;
+  }
+  .banner,
+  .banner-item {
+    height: 630px;
+  }
+
+  .banner-heading {
+    font-size: 6rem;
+  }
+  .product-highlight .card-image {
+    height: 320px;
+  }
+
+  /* cart-product */
+
+  .product-box {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .product-info {
+    padding-left: 16px;
+  }
+
+  .product-box .title {
+    font-size: 20px;
+  }
+
+  .card-image {
+    height: 222px;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-md-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+  html {
+    font-size: 80%;
+  }
+  header .nav-item > a {
+    padding: 0px 14px;
+    font-size: 15px;
+  }
+
+  header .nav-item i {
+    height: 16px;
+  }
+
+  /* BANNER */
+  .banner,
+  .banner-item {
+    height: 450px;
+  }
+
+  .banner-icon {
+    width: 134px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  /* card */
+
+  .h2-heading {
+    font-size: 38px;
+  }
+
+  .product-highlight .card-image {
+    height: 250px;
+  }
+
+  .price-after {
+    margin-right: 8px;
+  }
+
+  /* intro */
+
+  .intro-item {
+    height: 220px;
+  }
+
+  .intro-item h4 {
+    font-size: 30px;
+  }
+
+  /* product-box */
+
+  .product-box .title {
+    font-size: 16px;
+  }
+
+  footer .item {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .footer-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-24 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col-sm-96 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+  .padding-60 {
+    padding: 24px 0;
+  }
+
+  header .bars-icon i {
+    display: block;
+    cursor: pointer;
+    width: 99px;
+  }
+
+  .header-inner {
+    padding: 0 8px;
+    height: 60px;
+  }
+
+  header .logo {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .nav-list {
+    position: absolute;
+    z-index: 11;
+    height: max-content;
+    padding: 0;
+
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    background-color: var(--pri-4-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+
+    flex-direction: column;
+    transition: all linear 0.35s;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  header .nav-item > a {
+    line-height: 36px;
+    text-shadow: none;
+  }
+
+  header.scroll-top .nav-item > a {
+    line-height: 36px;
+  }
+
+  header .sub-nav {
+    box-shadow: unset;
+    padding: 0 0 0 16px;
+    position: unset;
+    background-color: var(--pri-5-color);
+  }
+
+  header .sub-nav a {
+    color: #fff;
+  }
+
+  /* banner */
+
+  .banner,
+  .banner-item {
+    height: 400px;
+  }
+
+  .banner-icon {
+    display: none;
+  }
+
+  /* heading */
+
+  .h2-heading {
+    font-size: 30px;
+    margin: 0;
+    line-height: 48px;
+  }
+
+  /* intro */
+
+  .intro-item h4 {
+    font-size: 24px;
+  }
+
+  .intro-item {
+    height: 160px;
+  }
+
+  /* ve chung toi */
+
+  .about .item {
+    height: unset;
+  }
+
+  .about .image {
+    height: 230px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .about .content {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  /* đăng nhập đăng xuất */
+
+  .login-status {
+    align-items: start;
+  }
+
+  .login-main {
+    width: 318px;
+    height: 240px;
+    margin-top: 36px;
+  }
+
+  .login-box {
+    height: 240px;
+  }
+
+  .login-sign-btn {
+    flex-direction: column;
+    width: 318px;
+    height: 320px;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    padding: 16px 0;
+  }
+
+  .login-signin.hide {
+    transform: translateY(-200%);
+  }
+
+  .login-signup {
+    transform: translateY(200%);
+  }
+  .login-signup.show {
+    transform: translateY(0);
+  }
+
+  .login-runback {
+    transform: translateY(0);
+  }
+
+  .login-runback.run-right {
+    transform: translateY(50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .register form {
+    flex-direction: column;
+  }
+
+  .register h2 {
+    font-size: 16px;
+  }
+
+  .register form input {
+    margin-bottom: 16px;
+  }
+
+  .product-filter .btn {
+    min-width: 86px;
+  }
+
+  .cart-side {
+    padding: 0 8px;
+  }
+
+  .intro-item h4 {
+    font-size: 20px;
+  }
+
+  .product-popup {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .popup-name {
+    font-size: 24px;
+  }
+}

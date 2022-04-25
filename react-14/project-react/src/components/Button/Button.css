@@ -1,0 +1,57 @@
+/* button */
+
+.btn {
+  color: #fff;
+  border-color: var(--pri-3-color);
+  font-weight: 400;
+  font-size: 1rem;
+
+  background-color: var(--pri-3-color);
+  margin: 6px 4px 0;
+  min-width: 130px;
+  padding: 6px 18px;
+
+  outline: none;
+  transition: ease-in-out 0.5s;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+
+  text-transform: uppercase;
+}
+
+.btn.small {
+  font-size: 13px;
+  min-width: 80px;
+  padding: 2px 8px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn.white {
+  color: var(--pri-3-color);
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.btn.white:hover {
+  color: #fff;
+  border-color: var(--pri-3-color);
+  background-color: var(--pri-3-color);
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.big-btn {
+  max-width: 280px;
+  margin: 16px auto 0;
+}
+
+.btn:active,
+.btn:hover {
+  color: #fff;
+  outline: none;
+  border-color: var(--pri-4-color);
+  background-color: var(--pri-4-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}

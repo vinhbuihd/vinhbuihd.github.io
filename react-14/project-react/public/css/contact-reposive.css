@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .shop {
+    justify-content: center;
+    margin: 32px 0 24px;
+  }
+
+  .shop-info {
+    text-align: center;
+  }
+
+  .form-message {
+    margin: 0 auto;
+  }
+}

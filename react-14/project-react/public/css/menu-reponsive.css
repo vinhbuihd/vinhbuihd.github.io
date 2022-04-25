@@ -1,0 +1,57 @@
+@media (max-width: 1200px) {
+  .filter .title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter .title {
+    display: none;
+  }
+
+  .filter-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .radio-group {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .filter-bestseller {
+    display: none;
+  }
+
+  .filter-content {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-item {
+    text-align: center;
+    min-width: 30%;
+  }
+
+  .filter-item.active {
+    border-bottom: 2px solid var(--pri-5-color);
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-content-2 .item label {
+    margin: 0;
+  }
+
+  .filter-content-2 .item label {
+    font-size: 13px;
+  }
+}

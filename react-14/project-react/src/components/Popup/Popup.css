@@ -1,0 +1,114 @@
+.product-popup {
+  width: 500px;
+  min-height: 500px;
+  position: fixed;
+  z-index: 1700;
+
+  top: 50%;
+  left: 50%;
+  background-color: #eee;
+  transform: translate(-50%, -50%);
+
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  animation: popupShow ease 0.5s;
+}
+
+.product-popup .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+
+  font-size: 20px;
+}
+
+.product-popup .btn-close:focus {
+  box-shadow: none;
+}
+
+.popup-picksize,
+.popup-note,
+.popup-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(104, 44, 14, 0.3);
+}
+
+.popup-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 24px;
+}
+
+.popup-name {
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--pri-4-color);
+  text-transform: capitalize;
+}
+
+.popup-price {
+  font-size: 24px;
+  color: var(--pri-3-color);
+  font-weight: 500;
+}
+
+.popup-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.popup-title span {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.popup-input {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 8px;
+  outline: none;
+
+  border-radius: 4px;
+  border: 1px solid var(--pri-4-color);
+  background: #eee;
+}
+
+.popup-bottom .cart-item-button .minus,
+.popup-bottom .cart-item-button .plus {
+  font-size: 36px;
+  cursor: pointer;
+}
+.quantityBtn {
+  fill: var(--pri-3-color);
+}
+.quantityBtn:hover {
+  fill: var(--pri-4-color);
+}
+
+.popup-bottom .cart-item-quantity {
+  font-size: 32px;
+  margin: 0 12px;
+  min-width: 30px;
+}
+
+.popup-bottom .btn {
+  margin-top: 16px;
+}
+
+.form-check label {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--pri-3-color);
+  border-color: var(--pri-3-color);
+}

@@ -1,0 +1,28 @@
+@media (max-width: 992px) {
+  .profile-item label:not(.option) {
+    display: none;
+  }
+
+  .cart-item-sub-price {
+    margin: 0;
+  }
+  .error-mesage {
+    margin-left: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-box {
+    margin: 0 auto;
+  }
+  .profile-item input[type="text"] {
+    min-width: 100%;
+  }
+  .product-list {
+    margin-top: 32px;
+  }
+
+  .promocode {
+    text-align: center;
+  }
+}
