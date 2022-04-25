@@ -1,0 +1,167 @@
+/* banner */
+
+.banner {
+  height: 400px;
+  background: url(../images/home-4-slide.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.main {
+  background-color: #fff;
+}
+
+/* product */
+
+.product-box {
+  margin: 0 auto;
+  padding: 24px;
+  flex-wrap: wrap;
+  background-color: var(--pri-1-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.product-info {
+  padding-left: 32px;
+}
+
+.product-image {
+  width: 60px;
+  height: 68px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-text {
+  margin-left: 16px;
+  min-width: 130px;
+  max-width: 140px;
+}
+
+.product-title {
+  border-bottom: 1px solid rgba(104, 44, 14, 0.3);
+}
+
+.product-box .title {
+  font-size: 22px;
+  color: var(--pri-4-color);
+  font-weight: 500;
+}
+
+.product .name {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pri-4-color);
+}
+
+.product .size {
+  color: var(--pri-3-color);
+  font-size: 14px;
+}
+
+.product .size span {
+  margin: 0 8px;
+}
+
+.product .note {
+  min-height: 24px;
+  font-size: 14px;
+}
+
+.product-price {
+  color: var(--pri-4-color);
+  font-size: 16px;
+}
+
+.product-money {
+  font-weight: 500;
+  color: var(--pri-4-color);
+  font-size: 16px;
+  min-width: 98px;
+}
+
+/* calculator */
+
+.calculator {
+  padding-top: 16px;
+  border-top: 1px solid rgba(104, 44, 14, 0.3);
+}
+
+input.code {
+  outline: none;
+  border: none;
+  padding: 7px 16px;
+  font-size: 14px;
+
+  border-radius: 16px;
+  color: var(--pri-4-color);
+  max-width: 160px;
+  margin-top: 6px;
+}
+
+.price-box {
+  width: 220px;
+  font-size: 16px;
+  color: var(--pri-3-color);
+}
+
+.price-box .total {
+  font-weight: 500;
+  color: var(--pri-4-color);
+}
+
+/* profile */
+
+.profile-item {
+}
+
+.profile-item label {
+  min-width: 120px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--pri-3-color);
+}
+
+.profile-item .input-text {
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  min-width: 300px;
+
+  outline: none;
+  border-bottom: 1px solid var(--pri-4-color);
+  background-color: var(--pri-1-color);
+}
+
+.profile-item .option {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.error-ms {
+  color: red;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.error-mesage {
+  color: red;
+  font-size: 12px;
+  margin-left: 126px;
+  min-height: 16px;
+}
+
+.edit-list {
+  cursor: pointer;
+  color: var(--pri-3-color);
+  text-decoration: underline;
+  margin: 8px 0;
+}
+
+.edit-list:hover {
+  color: var(--pri-4-color);
+}

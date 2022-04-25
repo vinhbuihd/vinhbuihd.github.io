@@ -1,0 +1,77 @@
+.about-banner {
+  background: url(../images/chungtoi.jpg) no-repeat center;
+  background-size: cover;
+  height: 400px;
+}
+
+.main {
+  background: var(--pri-01-color);
+}
+
+.box {
+  width: 100%;
+  padding: 16px;
+  height: 330px;
+  border-radius: 8px;
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.box-content {
+  background: linear-gradient(90deg, var(--pri-2-color), var(--pri-1-color));
+  padding: 32px;
+  height: 100%;
+  border-radius: 8px;
+
+  color: var(--pri-4-color);
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.box-content h3 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.box-content .pharagraph {
+  letter-spacing: 1px;
+}
+
+/* Reponsive */
+
+@media (max-width: 1200px) {
+  .box-content {
+    padding: 18px;
+  }
+
+  .box-content h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .box {
+    height: 308px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row.item-2 {
+    flex-direction: column-reverse;
+  }
+  .mt-5 {
+    margin-top: 0;
+  }
+}

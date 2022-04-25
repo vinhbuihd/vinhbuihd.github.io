@@ -1,0 +1,28 @@
+.register {
+  height: 150px;
+  width: 100%;
+  background: url(../images/bg-112.jpeg) no-repeat center;
+  background-size: cover;
+  padding: 0 48px;
+}
+
+.register .btn {
+  margin: 0 16px 0;
+}
+
+.register .content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.register input {
+  font-size: 1rem;
+  padding: 7px 16px;
+  border-radius: 2px;
+  color: var(--pri-4-color);
+  border: none;
+  outline: none;
+  min-width: 200px;
+}

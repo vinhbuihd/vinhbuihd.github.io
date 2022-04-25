@@ -1,0 +1,65 @@
+/* .bannerHome {
+  width: 100%;
+  position: relative;
+}
+
+.banner-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+  overflow: hidden;
+}
+
+.banner-item {
+  width: 100%;
+  height: 700px;
+}
+
+.carousel-caption {
+  padding-bottom: 4.25rem;
+}
+
+.banner .owl-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-icon {
+  width: 194px;
+  height: 163px;
+  margin: 0 auto;
+}
+
+.banner-item .content {
+  color: #fff;
+  margin: 160px auto 0;
+  text-align: center;
+
+  display: none;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.btn.banner-btn {
+  text-shadow: none;
+}
+
+.owl-item.active .banner-item .content {
+  display: block;
+}
+
+.banner-heading {
+  font-family: "Caveat", cursive;
+  font-size: 7rem;
+}
+
+.banner-subheading {
+  margin: 16px 24px;
+  font-size: 1.75rem;
+  color: #fff;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.25);
+} */

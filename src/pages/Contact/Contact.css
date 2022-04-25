@@ -1,0 +1,91 @@
+.contact-banner {
+  background: url(../images/bg-lh-1.jpeg) no-repeat center;
+  background-size: cover;
+  height: 400px;
+}
+
+/* main */
+
+.contact-main {
+  background-color: var(--pri-1-color);
+}
+
+.shop-logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 16px;
+}
+
+.shop-logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.shop-name {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  color: var(--pri-2-color);
+  margin: 0;
+}
+
+.shop-info a,
+.shop-info {
+  color: var(--pri-4-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.shop-info a:hover {
+  color: var(--pri-3-color);
+}
+/* form-message */
+
+.form-message {
+  width: 360px;
+}
+
+.form-message h4 {
+  color: var(--pri-4-color);
+  margin: 24px 0;
+  font-weight: 700;
+}
+
+.form-message textarea,
+.form-message input {
+  font-size: 1rem;
+  padding: 4px 8px;
+  width: 100%;
+  color: var(--pri-4-color);
+  display: block;
+
+  border-radius: 2px;
+  border: 1px solid #000;
+  outline: none;
+  /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.form-message button {
+  min-width: 100px;
+}
+
+.shop-map iframe {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+/* reponsive */
+
+@media (max-width: 768px) {
+  .shop {
+    justify-content: center;
+    margin: 32px 0 24px;
+  }
+
+  .shop-info {
+    text-align: center;
+  }
+
+  .form-message {
+    margin: 0 auto;
+  }
+}

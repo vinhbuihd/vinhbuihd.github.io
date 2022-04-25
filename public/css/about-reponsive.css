@@ -1,0 +1,24 @@
+@media (max-width: 1200px) {
+  .box-content {
+    padding: 18px;
+  }
+
+  .box-content h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .box {
+    height: 308px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row.item-2 {
+    flex-direction: column-reverse;
+  }
+  .mt-5 {
+    margin-top: 0;
+  }
+}
