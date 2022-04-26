@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import Button from "../Button";
 import { Link } from "react-router-dom";
 import Card from "../Card";
-import "./SPNoiBat.css";
+import "./SpNoibat.css";
 
 let products = [
   {
@@ -99,7 +99,6 @@ let products = [
 ];
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 1200 },
     items: 4,
   },
@@ -117,18 +116,18 @@ const responsive = {
   },
 };
 
-const SPNoiBat = () => {
+const SpNoibat = () => {
   return (
     <section className="product-highlight padding-60">
       <div className="container">
         <h2 className="h2-heading">Sản phẩm nổi bật</h2>
         <div className="lineBorder text-center mt-4 mb-4">
-          <img src="./images/line-under-heading.png" alt="line" />
+          <img src="/images/line-under-heading.png" alt="line" />
         </div>
 
         <div className="highlight-product">
           <Carousel
-            draggable={false}
+            draggable={true}
             showDots={true}
             responsive={responsive}
             infinite={true}
@@ -153,4 +152,4 @@ const SPNoiBat = () => {
   );
 };
 
-export default SPNoiBat;
+export default SpNoibat;

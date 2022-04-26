@@ -3,7 +3,7 @@ const databaseFile = "database.json";
 const server = jsonServer.create();
 const router = jsonServer.router(databaseFile);
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");

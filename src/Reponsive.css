@@ -315,6 +315,10 @@
   .singin-input {
     min-height: 48px;
   }
+
+  .carousel-caption {
+    padding-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 576px) {

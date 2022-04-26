@@ -1,7 +1,6 @@
 import Banner from "../../components/Banner";
 import { Link, NavLink } from "react-router-dom";
-import SPNoiBat from "../../components/SPNoiBat";
-
+import SpNoibat from "../../components/SpNoibat";
 import Register from "../../components/Register";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -13,7 +12,7 @@ const ThucDon = () => {
       <div className="container">
         <h2 className="h2-heading">Thực đơn</h2>
         <div className="lineborder text-center">
-          <img src="./images/line-under-heading.png" alt="lineborder" />
+          <img src="/images/line-under-heading.png" alt="lineborder" />
         </div>
         <div className="intro-list row mt-4">
           <div className="col-4">
@@ -231,7 +230,7 @@ const Home = () => {
     <div>
       <Banner />
       <ThucDon />
-      <SPNoiBat />
+      <SpNoibat />
       <Register />
       <HomeAbout />
       <HomeNews />

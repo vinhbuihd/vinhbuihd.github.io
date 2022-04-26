@@ -4,12 +4,12 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import "./Login.css";
 import { useForm } from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Register from "../../components/Register";
 import { ToastContainer, toast } from "react-toastify";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
-const FormSignin = ({ userList }) => {
+const FormSignin = ({ userList, setIsLoged }) => {
   const {
     register,
     handleSubmit,
@@ -29,6 +29,7 @@ const FormSignin = ({ userList }) => {
     if (isLogin) {
       toast.success("Đăng nhập thành công", { position: "top-center" });
       navigate("/");
+      setIsLoged(true);
     } else {
       toast.error("Tài khoản hoặc mật khẩu không đúng");
     }
@@ -95,11 +96,12 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const [userList, setUserList] = useState([]);
-  const [isSingin, setIsSingin] = useState(true);
+  const [isSignin, setIsSignin] = useState(true);
+  const [isLoged, setIsLoged] = useState(false);
+
   const compare = () => {
     const signupPw = document.querySelector(".signup-password").value;
     const signupRepeatPw = document.querySelector(".repeat-password").value;
@@ -107,27 +109,30 @@ const Login = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("/users")
       .then((response) => response.json())
       .then((json) => {
         setUserList(json);
       });
   }, []);
+
   console.log(userList);
 
-  const singupSubmit = (data) => {
+  const signupSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:3001/users", {
+    fetch("users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((json) => {
+        console.log(json);
+        console.log(userList);
         const isHasUser = userList.find(
-          (user) => user.singupEmail == json.singupEmail
+          (user) => user.signupEmail == json.signupEmail
         );
         if (isHasUser) {
           toast.error("Tài khoản đã tồn tại", {
@@ -145,14 +150,14 @@ const Login = () => {
 
   return (
     <div>
-      <div className={`login-status d-flex ${isSingin ? "" : "light"}`}>
+      <div className={`login-status d-flex ${isSignin ? "" : "light"}`}>
         <div className="login-main d-flex">
           <div className="login-sign-btn d-flex align-items-center">
             <div className="d-flex flex-column justify-content-between align-items-center">
               <span>Bạn đã có tài khoản</span>
               <button
                 className="btn white login-signin-btn"
-                onClick={() => setIsSingin(true)}
+                onClick={() => setIsSignin(true)}
               >
                 Đăng nhập
               </button>
@@ -161,28 +166,28 @@ const Login = () => {
               <span>Bạn chưa có tài khoản</span>
               <button
                 className="btn login-signup-btn"
-                onClick={() => setIsSingin(false)}
+                onClick={() => setIsSignin(false)}
               >
                 Đăng ký
               </button>
             </div>
           </div>
-          <div className={`login-runback ${isSingin ? "" : "run-right"}`}>
+          <div className={`login-runback ${isSignin ? "" : "run-right"}`}>
             <div
               className={`login-signin ${
-                isSingin ? "" : "hide"
+                isSignin ? "" : "hide"
               } login-box d-flex flex-column justify-content-center`}
             >
               <h2 className="mb-4">Đăng nhập</h2>
-              <FormSignin userList={userList} />
+              <FormSignin userList={userList} setIsLoged={setIsLoged} />
             </div>
             <div
               className={`login-signup ${
-                isSingin ? "" : "show"
+                isSignin ? "" : "show"
               } login-box d-flex flex-column justify-content-center`}
             >
               <h2>Đăng ký</h2>
-              <form action="" onSubmit={handleSubmit(singupSubmit)} id="form-2">
+              <form action="" onSubmit={handleSubmit(signupSubmit)} id="form-2">
                 <div className="input-box">
                   <div className="d-flex align-items-end">
                     <div className="form-icon d-flex">
@@ -191,17 +196,17 @@ const Login = () => {
                     <input
                       className="email"
                       type="email"
-                      {...register("singupEmail", {
+                      {...register("signupEmail", {
                         required: true,
                         pattern: /^\S+@\S+$/i,
                       })}
                       placeholder="Email của bạn"
                     />
                   </div>
-                  {errors.singupEmail?.type == "required" && (
+                  {errors.signupEmail?.type == "required" && (
                     <span className="error">Vui lòng nhập Email</span>
                   )}
-                  {errors.singupEmail?.type == "pattern" && (
+                  {errors.signupEmail?.type == "pattern" && (
                     <span className="error">Email không đúng!!!</span>
                   )}
                 </div>
@@ -218,7 +223,7 @@ const Login = () => {
                     <input
                       className="signup-password"
                       name="signupPassword"
-                      type="text"
+                      type="password"
                       {...register("signupPassword", {
                         required: true,
                         validate: (value) => value.length >= 6,
@@ -245,7 +250,7 @@ const Login = () => {
                     </div>
                     <input
                       className="repeat-password"
-                      type="text"
+                      type="password"
                       {...register("singupPasswordRepeat", {
                         required: true,
                         validate: compare,

@@ -18,7 +18,7 @@ const Layout = () => {
   const [isEdit, setIsEdit] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3001/products")
+    fetch("/products")
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []);

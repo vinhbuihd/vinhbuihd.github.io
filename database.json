@@ -381,37 +381,13 @@
       "singupEmail": "vinhhd94@gmail.com",
       "signupPassword": "111111",
       "singupPasswordRepeat": "111111",
+      "id": 1
+    },
+    {
+      "singupEmail": "vinhhd94@gmail.com",
+      "signupPassword": "111111",
+      "singupPasswordRepeat": "111111",
       "id": 2
-    },
-    {
-      "singupEmail": "vinhhd94@gmail.com",
-      "signupPassword": "111111",
-      "singupPasswordRepeat": "111111",
-      "id": 3
-    },
-    {
-      "singupEmail": "vinhhd94@gmail.com",
-      "signupPassword": "111111",
-      "singupPasswordRepeat": "111111",
-      "id": 4
-    },
-    {
-      "singupEmail": "vinhhd94@gmail.com",
-      "signupPassword": "222222",
-      "singupPasswordRepeat": "222222",
-      "id": 5
-    },
-    {
-      "singupEmail": "vinhhd94@gmail.com",
-      "signupPassword": "333333",
-      "singupPasswordRepeat": "333333",
-      "id": 6
-    },
-    {
-      "singupEmail": "vinhhd94@gmail.com",
-      "signupPassword": "333333",
-      "singupPasswordRepeat": "333333",
-      "id": 7
     }
   ]
 }

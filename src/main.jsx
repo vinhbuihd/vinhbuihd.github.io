@@ -16,6 +16,9 @@ import {
 } from "./pages/Allpage";
 import News1 from "./pages/News/News1";
 import { NewsMain } from "./pages/News";
+import { worker } from "./mocks/browser";
+
+worker.start();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

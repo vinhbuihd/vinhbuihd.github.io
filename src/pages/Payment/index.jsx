@@ -7,7 +7,13 @@ import "./Payment.css";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 
-const OrderList = ({ cartList, editItem, deleteItem, totalPrice }) => {
+const OrderList = ({
+  cartList,
+  editItem,
+  deleteItem,
+  totalPrice,
+  setCartList,
+}) => {
   return (
     <div>
       {cartList.map((product) => {
@@ -56,7 +62,7 @@ const OrderList = ({ cartList, editItem, deleteItem, totalPrice }) => {
 };
 
 const Payment = () => {
-  const { cartList, editItem, deleteItem, totalPrice } =
+  const { cartList, editItem, deleteItem, totalPrice, setCartList } =
     useContext(WrapperContext);
   const [saleValue, setSaleValue] = useState(0);
   const navigate = useNavigate();
@@ -72,7 +78,7 @@ const Payment = () => {
     toast.success("Bạn đã đặt hàng thành công!!!", {
       position: "top-center",
     });
-    navigate("/menu");
+    setCartList([]);
   };
 
   const promoCode = [
@@ -109,9 +115,11 @@ const Payment = () => {
       <>
         <section className="payment-banner"></section>
 
-        <div className="text-center mt-4 mb-4" style={{ margin: "0 auto" }}>
+        <div className="text-center mt-5 mb-5" style={{ margin: "0 auto" }}>
           <h3>Giỏ hàng trống</h3>
-          <Link to="/menu">Tiếp tục mua hàng</Link>
+          <Link to="/menu" className="btn">
+            Tiếp tục mua hàng
+          </Link>
         </div>
       </>
     );
@@ -239,6 +247,7 @@ const Payment = () => {
                   editItem={editItem}
                   deleteItem={deleteItem}
                   totalPrice={totalPrice}
+                  setCartList={setCartList}
                 />
               </div>
               <div className="calculator col-12">
