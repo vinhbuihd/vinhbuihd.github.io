@@ -784,6 +784,40 @@ header .sub-nav a:hover {
   min-height: 60px;
 }
 
+.login-main-loged {
+  background-color: var(--pri-1-color);
+}
+
+.login-main-loged .banner {
+  background: url(../images/bg-lh-1.jpeg) no-repeat center;
+  background-size: cover;
+  height: 400px;
+}
+
+.login-main-loged .container {
+  padding: 32px;
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+.input-group label {
+  width: 160px;
+}
+
+.input-group input {
+  padding: 4px 8px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-group input.active {
+  border: 1px solid green;
+}
+
 /* banner */
 .bannerHome {
   width: 100%;

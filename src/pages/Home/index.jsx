@@ -2,9 +2,13 @@ import Banner from "../../components/Banner";
 import { Link, NavLink } from "react-router-dom";
 import SpNoibat from "../../components/SpNoibat";
 import Register from "../../components/Register";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
 
 const ThucDon = () => {
   return (
@@ -12,7 +16,7 @@ const ThucDon = () => {
       <div className="container">
         <h2 className="h2-heading">Thực đơn</h2>
         <div className="lineborder text-center">
-          <img src="/images/line-under-heading.png" alt="lineborder" />
+          <img src="images/line-under-heading.png" alt="lineborder" />
         </div>
         <div className="intro-list row mt-4">
           <div className="col-4">
@@ -57,7 +61,7 @@ const HomeAbout = () => {
       <div className="container">
         <h2 className="h2-heading">Về chúng tôi</h2>
         <div className="lineborder text-center">
-          <img src="./images/line-under-heading.png" alt="lineborder" />
+          <img src="images/line-under-heading.png" alt="lineborder" />
         </div>
         <div className="item row g-0">
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -115,103 +119,97 @@ const HomeAbout = () => {
   );
 };
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1200 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1200, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
 const HomeNews = () => {
   return (
     <section className="news padding-60">
       <div className="container">
         <h2 className="h2-heading">Tin tức khuyến mãi</h2>
         <div className="lineborder text-center">
-          <img src="./images/line-under-heading.png" alt="lineborder" />
+          <img src="images/line-under-heading.png" alt="lineborder" />
         </div>
 
         <div className="wrap mt-3">
           <div className="tintuc-carousel">
-            <Carousel
-              responsive={responsive}
-              itemClass="carouselItem"
-              draggable={false}
-              showDots={true}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              customTransition="ease .75s"
-              transitionDuration={500}
+            <Swiper
+              spaceBetween={20}
+              modules={[Autoplay, Navigation]}
+              slidesPerView={3}
+              autoplay={{
+                delay: 2000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+              }}
+              navigation={true}
+              loop
             >
-              <Link to="/news">
-                <div className="card">
-                  <div className="scard-image image-1"></div>
-                  <div className="scard-content d-flex flex-column">
-                    <h3>NĂM MỚI, UỐNG "KHỞI ĐẦU SUNG" - NHẬN LÌ XÌ KHỦNG</h3>
-                    <div className="calendar d-flex align-items-center">
-                      <div className="calendar-icon">
-                        <i className="fas fa-calendar-alt"></i>
+              <SwiperSlide>
+                <Link to="/news">
+                  <div className="card">
+                    <div className="scard-image image-1"></div>
+                    <div className="scard-content d-flex flex-column">
+                      <h3>NĂM MỚI, UỐNG "KHỞI ĐẦU SUNG" - NHẬN LÌ XÌ KHỦNG</h3>
+                      <div className="calendar d-flex align-items-center">
+                        <div className="calendar-icon">
+                          <i className="fas fa-calendar-alt"></i>
+                        </div>
+                        <div className="calendar-date">02/02/2022, 20:02</div>
                       </div>
-                      <div className="calendar-date">02/02/2022, 20:02</div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </SwiperSlide>
 
-              <Link to="/news">
-                <div className="card">
-                  <div className="scard-image image-4"></div>
-                  <div className="scard-content d-flex flex-column">
-                    <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
-                    <div className="calendar d-flex align-items-center">
-                      <div className="calendar-icon">
-                        <i className="fas fa-calendar-alt"></i>
+              <SwiperSlide>
+                <Link to="/news">
+                  <div className="card">
+                    <div className="scard-image image-4"></div>
+                    <div className="scard-content d-flex flex-column">
+                      <h3>Khai trương cơ sở tây sơn, giảm giá lên tới 50%</h3>
+                      <div className="calendar d-flex align-items-center">
+                        <div className="calendar-icon">
+                          <i className="fas fa-calendar-alt"></i>
+                        </div>
+                        <div className="calendar-date">14/01/2022, 15:30</div>
                       </div>
-                      <div className="calendar-date">14/01/2022, 15:30</div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </SwiperSlide>
 
-              <Link to="/news">
-                <div className="card">
-                  <div className="scard-image image-2"></div>
-                  <div className="scard-content d-flex flex-column">
-                    <h3>Mừng xuân mới, Uống thả ga, Nhận quà liền tay</h3>
-                    <div className="calendar d-flex align-items-center">
-                      <div className="calendar-icon">
-                        <i className="fas fa-calendar-alt"></i>
+              <SwiperSlide>
+                <Link to="/news">
+                  <div className="card">
+                    <div className="scard-image image-2"></div>
+                    <div className="scard-content d-flex flex-column">
+                      <h3>Mừng xuân mới, Uống thả ga, Nhận quà liền tay</h3>
+                      <div className="calendar d-flex align-items-center">
+                        <div className="calendar-icon">
+                          <i className="fas fa-calendar-alt"></i>
+                        </div>
+                        <div className="calendar-date">14/01/2022, 15:30</div>
                       </div>
-                      <div className="calendar-date">14/01/2022, 15:30</div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </SwiperSlide>
 
-              <Link to="/news">
-                <div className="card">
-                  <div className="scard-image image-3"></div>
-                  <div className="scard-content d-flex flex-column">
-                    <h3>"Ô long mùa xuân" - Hương vị mới lạ</h3>
-                    <div className="calendar d-flex align-items-center">
-                      <div className="calendar-icon">
-                        <i className="fas fa-calendar-alt"></i>
+              <SwiperSlide>
+                <Link to="/news">
+                  <div className="card">
+                    <div className="scard-image image-3"></div>
+                    <div className="scard-content d-flex flex-column">
+                      <h3>"Ô long mùa xuân" - Hương vị mới lạ</h3>
+                      <div className="calendar d-flex align-items-center">
+                        <div className="calendar-icon">
+                          <i className="fas fa-calendar-alt"></i>
+                        </div>
+                        <div className="calendar-date">14/01/2022, 15:30</div>
                       </div>
-                      <div className="calendar-date">14/01/2022, 15:30</div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </Carousel>
+                </Link>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
 

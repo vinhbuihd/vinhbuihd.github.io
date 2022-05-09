@@ -2,10 +2,7 @@ import "./Banner.css";
 import Carousel from "react-bootstrap/Carousel";
 import { NavLink } from "react-router-dom";
 import Button from "../Button";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper";
-import "swiper/css/autoplay";
+
 const CarouselContainer = () => {
   return (
     <Carousel fade>

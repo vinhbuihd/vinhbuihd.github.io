@@ -1,3 +1,8 @@
 h4 {
   color: #fff;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}

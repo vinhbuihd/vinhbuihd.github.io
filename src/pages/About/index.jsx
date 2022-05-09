@@ -25,7 +25,7 @@ const About = () => {
                       className="col-12 col-md-6 wow animate__slideInUp mt-4"
                     >
                       <div className="box box-image">
-                        <img src="../images/bgbgb.jpeg" alt="chungtoi" />
+                        <img src="/images/bgbgb.jpeg" alt="chungtoi" />
                       </div>
                     </div>
                     <div
@@ -77,7 +77,7 @@ const About = () => {
                       className="col-12 col-md-6 wow animate__slideInUp"
                     >
                       <div className="box box-image">
-                        <img src="../images/chungtoi-2.jpg" alt="chungtoi" />
+                        <img src="images/chungtoi-2.jpg" alt="chungtoi" />
                       </div>
                     </div>
                   </div>
@@ -90,10 +90,7 @@ const About = () => {
                       className="col-12 col-md-6 wow animate__slideInUp mt-4"
                     >
                       <div className="box box-image">
-                        <img
-                          src="../images/h-5-baner-img-1.jpg"
-                          alt="chungtoi"
-                        />
+                        <img src="images/h-5-baner-img-1.jpg" alt="chungtoi" />
                       </div>
                     </div>
                     <div

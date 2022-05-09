@@ -13,7 +13,7 @@ const Contact = () => {
             <div className="col-md-6 col-sm-12 col-12">
               <div className="shop d-flex align-items-center">
                 <div className="shop-logo">
-                  <img src="../images/logo-2.png" alt="logo" />
+                  <img src="/images/logo-2.png" alt="logo" />
                 </div>
                 <p className="shop-name">Coffee Cup</p>
               </div>

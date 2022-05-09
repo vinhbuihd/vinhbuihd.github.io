@@ -10,7 +10,7 @@ export const NewsMain = () => {
       <div className="main-content">
         <Link to="/news/1" className="main-content-item d-flex">
           <div className="image">
-            <img src="../images/giohang.jpg" alt="tintuc" />
+            <img src="/images/giohang.jpg" alt="tintuc" />
           </div>
           <div className="info">
             <h3 className="info-name">
@@ -31,7 +31,7 @@ export const NewsMain = () => {
         </Link>
         <Link to="/news/1" className="main-content-item d-flex">
           <div className="image">
-            <img src="../images/tintuc-1.jpg" alt="tintuc" />
+            <img src="/images/tintuc-1.jpg" alt="tintuc" />
           </div>
           <div className="info">
             <h3 className="info-name">
@@ -52,7 +52,7 @@ export const NewsMain = () => {
         </Link>
         <Link to="/news/1" className="main-content-item d-flex">
           <div className="image">
-            <img src="../images/tintuc-2.jpg" alt="tintuc" />
+            <img src="/images/tintuc-2.jpg" alt="tintuc" />
           </div>
           <div className="info">
             <h3 className="info-name">
@@ -72,7 +72,7 @@ export const NewsMain = () => {
         </Link>
         <Link to="/news/1" className="main-content-item d-flex">
           <div className="image">
-            <img src="../images/tintuc-3.jpg" alt="tintuc" />
+            <img src="/images/tintuc-3.jpg" alt="tintuc" />
           </div>
           <div className="info">
             <h3 className="info-name">
@@ -142,7 +142,7 @@ const News = () => {
                 <div className="side-news-list">
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-3.jpg" alt="" />
+                      <img src="/images/tintuc-3.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -158,7 +158,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/giohang.jpg" alt="" />
+                      <img src="/images/giohang.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -174,7 +174,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-1.jpg" alt="" />
+                      <img src="/images/tintuc-1.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -190,7 +190,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-2.jpg" alt="" />
+                      <img src="/images/tintuc-2.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -209,7 +209,7 @@ const News = () => {
                 <div className="side-news-list">
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-3.jpg" alt="" />
+                      <img src="/images/tintuc-3.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -225,7 +225,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/giohang.jpg" alt="" />
+                      <img src="/images/giohang.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -241,7 +241,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-1.jpg" alt="" />
+                      <img src="/images/tintuc-1.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">
@@ -257,7 +257,7 @@ const News = () => {
                   </Link>
                   <Link to="/news/1" className="side-news-item d-flex">
                     <div className="image">
-                      <img src="../images/tintuc-2.jpg" alt="" />
+                      <img src="/images/tintuc-2.jpg" alt="" />
                     </div>
                     <div className="info">
                       <div className="info-name">

@@ -1,37 +1,42 @@
-import { AiFillQuestionCircle, AiOutlineClose } from "react-icons/ai";
+import { AiFillQuestionCircle } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import "./Login.css";
 import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import Register from "../../components/Register";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router";
+import { WrapperContext } from "../../components/Layout";
 
 const FormSignin = ({ userList, setIsLoged }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const navigate = useNavigate();
 
   const loginSubmit = (data) => {
-    let isLogin = userList.find(
-      (user) =>
-        data.userName == user.singupEmail &&
+    let isLoginUser = userList.find((user) => {
+      return (
+        data.userName == user.signupEmail &&
         data.password == user.signupPassword
-    );
-    console.log(isLogin);
-    if (isLogin) {
+      );
+    });
+    if (isLoginUser) {
+      setIsLoged({
+        status: true,
+        user: isLoginUser,
+      });
       toast.success("Đăng nhập thành công", { position: "top-center" });
       navigate("/");
-      setIsLoged(true);
     } else {
-      toast.error("Tài khoản hoặc mật khẩu không đúng");
+      toast.error("Tài khoản hoặc mật khẩu không đúng", {
+        position: "top-center",
+      });
     }
   };
   return (
@@ -98,9 +103,12 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [userList, setUserList] = useState([]);
+
   const [isSignin, setIsSignin] = useState(true);
-  const [isLoged, setIsLoged] = useState(false);
+  const [isEditInfo, setIsEditInfo] = useState(false);
+
+  const { userList, setUserList, isLoged, setIsLoged } =
+    useContext(WrapperContext);
 
   const compare = () => {
     const signupPw = document.querySelector(".signup-password").value;
@@ -108,18 +116,26 @@ const Login = () => {
     return signupPw == signupRepeatPw;
   };
 
+  const toBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
   useEffect(() => {
     fetch("/users")
       .then((response) => response.json())
       .then((json) => {
+        console.log("loading");
+        console.log(json);
         setUserList(json);
       });
   }, []);
 
-  console.log(userList);
-
   const signupSubmit = (data) => {
-    console.log(data);
     fetch("users", {
       method: "POST",
       body: JSON.stringify(data),
@@ -129,8 +145,7 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
-        console.log(userList);
+        console.log("new user", json);
         const isHasUser = userList.find(
           (user) => user.signupEmail == json.signupEmail
         );
@@ -142,14 +157,171 @@ const Login = () => {
           toast.success("Đăng ký thành công", {
             position: "top-center",
           });
+          localStorage.setItem(
+            "userList",
+            JSON.stringify([
+              ...userList,
+              { ...json, avartar: "images/user-image.png" },
+            ])
+          );
+          setUserList([
+            ...userList,
+            { ...json, avartar: "images/user-image.png" },
+          ]);
           document.querySelector(".login-signin-btn").click();
         }
       })
       .catch((error) => console.log(error));
   };
 
+  const handleChangeInfo = (e, type) => {
+    const logedUserIndex = userList.findIndex(
+      (user) => (user.signupEmail = isLoged.user.signupEmail)
+    );
+    let newUser;
+    if (type == "avartar") {
+      const newImage = e.target.files[0];
+      toBase64(newImage).then((res) => {
+        newUser = {
+          ...userList[logedUserIndex],
+          avartar: res,
+        };
+        let newUserList = [...userList];
+        newUserList.splice(logedUserIndex, 1, newUser);
+        localStorage.setItem("userList", JSON.stringify(newUserList));
+        setUserList(newUserList);
+      });
+    } else {
+      newUser = {
+        ...userList[logedUserIndex],
+        [type]: e.target.value,
+      };
+      let newUserList = [...userList];
+      newUserList.splice(logedUserIndex, 1, newUser);
+      localStorage.setItem("userList", JSON.stringify(newUserList));
+      setUserList(newUserList);
+    }
+  };
+
+  const handleUpdateUserInfo = (e) => {
+    e.preventDefault();
+    if (!isEditInfo) {
+      toast.success("Cập nhật thành công!!!", {
+        position: "top-center",
+      });
+    }
+    localStorage.setItem("userList", JSON.stringify(userList));
+  };
+
+  if (isLoged.status) {
+    const logedUser = userList.find(
+      (user) => user.signupEmail == isLoged.user.signupEmail
+    );
+    return (
+      <div className="login-main-loged">
+        <section className="banner"></section>
+        <div className="container">
+          <h2 className="text-center">Thông tin tài khoản</h2>
+          <form action="" className="mt-4" onSubmit={handleUpdateUserInfo}>
+            <div className="row">
+              <div className="user-text col-12 col-sm-6">
+                <div className="input-group">
+                  <label htmlFor="">Tên tài khoản: </label>
+                  <input
+                    type="text"
+                    defaultValue={logedUser.signupEmail}
+                    disabled
+                    readOnly
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="">Mật khẩu: </label>
+                  <input
+                    type="password"
+                    defaultValue={logedUser.signupPassword}
+                    readOnly
+                    disabled
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="">Họ tên: </label>
+                  <input
+                    placeholder="Họ và tên"
+                    type="text"
+                    onChange={(e) => handleChangeInfo(e, "name")}
+                    value={logedUser.name}
+                    readOnly={!isEditInfo}
+                    className={isEditInfo ? "active" : ""}
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="">Số điện thoại: </label>
+                  <input
+                    placeholder="Số điện thoai"
+                    type="number"
+                    onChange={(e) => handleChangeInfo(e, "phone")}
+                    value={logedUser.phone}
+                    readOnly={!isEditInfo}
+                    className={isEditInfo ? "active" : ""}
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="">Địa chỉ: </label>
+                  <input
+                    placeholder="Địa chỉ"
+                    type="text"
+                    onChange={(e) => handleChangeInfo(e, "address")}
+                    value={logedUser.address}
+                    readOnly={!isEditInfo}
+                    className={isEditInfo ? "active" : ""}
+                  />
+                </div>
+              </div>
+              <div className="user-avatar col-12 col-sm-6">
+                <div className="user-avatar-box">
+                  <p>Ảnh đại diện</p>
+                  <img
+                    src={logedUser.avartar}
+                    alt="avatar"
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                  />
+
+                  <p className="mt-4">
+                    <input
+                      disabled={!isEditInfo}
+                      type="file"
+                      id="change-avatar"
+                      accept="image/png, image/jpeg"
+                      onChange={(e) => handleChangeInfo(e, "avartar")}
+                    />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-5">
+              <button
+                type="submit"
+                className="btn "
+                onClick={() => setIsEditInfo(!isEditInfo)}
+              >
+                {isEditInfo ? "Lưu lại" : "Chỉnh sửa"}
+              </button>
+            </div>
+          </form>
+        </div>
+        <Register />
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <>
       <div className={`login-status d-flex ${isSignin ? "" : "light"}`}>
         <div className="login-main d-flex">
           <div className="login-sign-btn d-flex align-items-center">
@@ -179,7 +351,12 @@ const Login = () => {
               } login-box d-flex flex-column justify-content-center`}
             >
               <h2 className="mb-4">Đăng nhập</h2>
-              <FormSignin userList={userList} setIsLoged={setIsLoged} />
+              <FormSignin
+                userList={userList}
+                setUserList={setUserList}
+                isLoged={isLoged}
+                setIsLoged={setIsLoged}
+              />
             </div>
             <div
               className={`login-signup ${
@@ -277,7 +454,7 @@ const Login = () => {
         </div>
       </div>
       <Register />
-    </div>
+    </>
   );
 };
 

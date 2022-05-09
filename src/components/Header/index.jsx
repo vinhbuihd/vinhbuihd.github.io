@@ -5,8 +5,26 @@ import "./Header.css";
 import { useContext, useEffect, useState } from "react";
 import { WrapperContext } from "../Layout";
 
+const Avatar = ({ avartar }) => {
+  return (
+    <div className="avatar">
+      <img
+        src={avartar}
+        alt="avatar"
+        style={{
+          width: "25px",
+          height: "25px",
+          borderRadius: "50%",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  );
+};
+
 const Header = () => {
-  const { cartList, isShowCart, setIsShowCart } = useContext(WrapperContext);
+  const { cartList, setIsShowCart, isLoged, userList } =
+    useContext(WrapperContext);
   const totalQuantity = cartList.reduce((acc, cur) => {
     return acc + cur.quantity;
   }, 0);
@@ -48,10 +66,14 @@ const Header = () => {
   const headerClick = (e) => {
     const clickItem = e.target.closest(".nav-item");
 
-    document.querySelector(".nav-item.active").classList.remove("active");
+    document.querySelector(".nav-item.active")?.classList.remove("active");
     clickItem.classList.add("active");
     setIsShowSide(false);
   };
+
+  const userLoged = userList.find(
+    (user) => user.signupEmail == isLoged.user.signupEmail
+  );
 
   return (
     <header>
@@ -64,10 +86,10 @@ const Header = () => {
             />
           </div>
           <Link to="/" className="logo">
-            <img src="images/logo-2.png" alt="logo" />
+            <img src="/images/logo-2.png" alt="logo" />
           </Link>
           <ul className={`nav-list ${isShowSide ? "show" : ""}`}>
-            <li onClick={headerClick} className="nav-item active">
+            <li onClick={headerClick} className="nav-item">
               <NavLink to="/">Trang chủ</NavLink>
             </li>
             <li onClick={headerClick} className="nav-item">
@@ -99,7 +121,11 @@ const Header = () => {
             </div>
             <div className="user-icon">
               <NavLink to="/login">
-                <FaUser style={{ color: "#fff" }} />
+                {isLoged.status ? (
+                  <Avatar avartar={userLoged.avartar} />
+                ) : (
+                  <FaUser style={{ color: "#fff" }} />
+                )}
               </NavLink>
             </div>
           </div>

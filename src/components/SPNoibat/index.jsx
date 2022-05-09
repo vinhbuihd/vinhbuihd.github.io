@@ -1,9 +1,12 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Button from "../Button";
 import { Link } from "react-router-dom";
 import Card from "../Card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper";
 import "./SpNoibat.css";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
 
 let products = [
   {
@@ -126,21 +129,29 @@ const SpNoibat = () => {
         </div>
 
         <div className="highlight-product">
-          <Carousel
-            draggable={true}
-            showDots={true}
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            // customTransition="ease .75s"
-            transitionDuration={500}
-            itemClass="carouselItem"
+          <Swiper
+            loop
+            modules={[Autoplay, Navigation]}
+            autoplay={{
+              delay: 2000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
+            navigation={true}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              576: { slidesPerView: 2, spaceBetween: 20 },
+              992: { slidesPerView: 3, spaceBetween: 30 },
+              1200: { slidesPerView: 4, spaceBetween: 30 },
+            }}
           >
             {products.map((product) => (
-              <Card key={product.id} product={product} />
+              <SwiperSlide key={product.id}>
+                <Card product={product} />
+              </SwiperSlide>
             ))}
-          </Carousel>
+          </Swiper>
         </div>
         <div className="text-center mt-3">
           <Link to="/menu">

@@ -5,7 +5,7 @@ const products = [
     id: 1,
     name: "Caramel latte",
     alt: "caramel-latte",
-    image: "./images/sp-1-caramel-latte.jpg",
+    image: "/images/sp-1-caramel-latte.jpg",
     price: {
       S: 30000,
       M: 35000,
@@ -20,7 +20,7 @@ const products = [
     id: 2,
     name: "Cà phê mocha",
     alt: "mocha-nong",
-    image: "./images/sp-2-cafe-mocha-nong.jpg",
+    image: "/images/sp-2-cafe-mocha-nong.jpg",
     price: {
       S: 45000,
       M: 50000,
@@ -35,7 +35,7 @@ const products = [
     id: 3,
     name: "Macchiato",
     alt: "epresso-macchiato",
-    image: "./images/sp-3-epresso-macchiato.jpg",
+    image: "/images/sp-3-epresso-macchiato.jpg",
     price: {
       S: 35000,
       M: 40000,
@@ -50,7 +50,7 @@ const products = [
     id: 4,
     name: "americano",
     alt: "americano",
-    image: "./images/sp-4-americano.jpg",
+    image: "/images/sp-4-americano.jpg",
     price: {
       S: 40000,
       M: 45000,
@@ -65,7 +65,7 @@ const products = [
     id: 5,
     name: "mocha socola",
     alt: "mocha-socola",
-    image: "./images/sp-5-mocha-socola.jpg",
+    image: "/images/sp-5-mocha-socola.jpg",
     price: {
       S: 50000,
       M: 55000,
@@ -80,7 +80,7 @@ const products = [
     id: 6,
     name: "mocha caramel",
     alt: "caramel-Mocha",
-    image: "./images/sp-6.jpg",
+    image: "/images/sp-6.jpg",
     price: {
       S: 50000,
       M: 55000,
@@ -95,7 +95,7 @@ const products = [
     id: 7,
     name: "Capuchino",
     alt: "Capuchino",
-    image: "./images/sp-7.jpg",
+    image: "/images/sp-7.jpg",
     price: {
       S: 40000,
       M: 45000,
@@ -110,7 +110,7 @@ const products = [
     id: 8,
     name: "Trà Sen",
     alt: "tra-sen",
-    image: "./images/sp-8-trasen.jpg",
+    image: "/images/sp-8-trasen.jpg",
     price: {
       S: 30000,
       M: 35000,
@@ -125,7 +125,7 @@ const products = [
     id: 9,
     name: "Trà vải",
     alt: "travai",
-    image: "./images/sp-9-travai.jpg",
+    image: "/images/sp-9-travai.jpg",
     price: {
       S: 40000,
       M: 45000,
@@ -140,7 +140,7 @@ const products = [
     id: 10,
     name: "mocha dừa",
     alt: "mocha-dua",
-    image: "./images/sp-10-mocha-dua.jpg",
+    image: "/images/sp-10-mocha-dua.jpg",
     price: {
       S: 45000,
       M: 50000,
@@ -155,7 +155,7 @@ const products = [
     id: 11,
     name: "Trà Quất",
     alt: "tra-quat",
-    image: "./images/sp-11.jpg",
+    image: "/images/sp-11.jpg",
     price: {
       S: 50000,
       M: 55000,
@@ -170,7 +170,7 @@ const products = [
     id: 12,
     name: "mocha latte",
     alt: "mocha-latte",
-    image: "./images/sp-12-mocha-latte.jpg",
+    image: "/images/sp-12-mocha-latte.jpg",
     price: {
       S: 50000,
       M: 55000,
@@ -185,7 +185,7 @@ const products = [
     id: 13,
     name: "Bạc xỉu",
     alt: "bac-xiu",
-    image: "./images/sp-13-bacxiu.jpg",
+    image: "/images/sp-13-bacxiu.jpg",
     price: {
       S: 30000,
       M: 35000,
@@ -200,7 +200,7 @@ const products = [
     id: 14,
     name: "Trà đào",
     alt: "tra-dao",
-    image: "./images/sp-14-tradao.jpg",
+    image: "/images/sp-14-tradao.jpg",
     price: {
       S: 30000,
       M: 35000,
@@ -215,7 +215,7 @@ const products = [
     id: 15,
     name: "Freeze Matcha",
     alt: "Freeze-Matcha",
-    image: "./images/sp-15-freeze-matcha.png",
+    image: "/images/sp-15-freeze-matcha.png",
     price: {
       S: 40000,
       M: 45000,
@@ -230,7 +230,7 @@ const products = [
     id: 16,
     name: "Freeze Việt Quất",
     alt: "Freeze-vietquat",
-    image: "./images/sp-16-freeze-vietquat.jpg",
+    image: "/images/sp-16-freeze-vietquat.jpg",
     price: {
       S: 55000,
       M: 60000,
@@ -245,7 +245,7 @@ const products = [
     id: 17,
     name: "cà phê dừa",
     alt: "caphe-dua",
-    image: "./images/sp-17-duada.jpg",
+    image: "/images/sp-17-duada.jpg",
     price: {
       S: 35000,
       M: 40000,
@@ -260,7 +260,7 @@ const products = [
     id: 18,
     name: "Freeze Socola",
     alt: "Freeze-Socola",
-    image: "./images/sp-18-freeze-socola.jpg",
+    image: "/images/sp-18-freeze-socola.jpg",
     price: {
       S: 55000,
       M: 60000,
@@ -275,7 +275,7 @@ const products = [
     id: 19,
     name: "Cà phê đen",
     alt: "caphe-den",
-    image: "./images/sp-19.jpg",
+    image: "/images/sp-19.jpg",
     price: {
       S: 25000,
       M: 30000,
@@ -290,7 +290,7 @@ const products = [
     id: 20,
     name: "Cà phê sữa",
     alt: "caphe-sưa",
-    image: "./images/sp-20.jpg",
+    image: "/images/sp-20.jpg",
     price: {
       S: 25000,
       M: 30000,
@@ -305,7 +305,7 @@ const products = [
     id: 21,
     name: "Freeze kem",
     alt: "Freeze-kem",
-    image: "./images/sp-21-freezekem.jpg",
+    image: "/images/sp-21-freezekem.jpg",
     price: {
       S: 40000,
       M: 45000,
@@ -320,7 +320,7 @@ const products = [
     id: 22,
     name: "Trà chanh",
     alt: "tra-chanh",
-    image: "./images/sp-22-trachanh.jpg",
+    image: "/images/sp-22-trachanh.jpg",
     price: {
       S: 25000,
       M: 30000,
@@ -335,7 +335,7 @@ const products = [
     id: 23,
     name: "Cà phê gói",
     alt: "tra-chanh",
-    image: "./images/sp-23.jpg",
+    image: "/images/sp-23.jpg",
     price: {
       S: 65000,
       M: 70000,
@@ -350,7 +350,7 @@ const products = [
     id: 24,
     name: "Cà phê hòa tan",
     alt: "tra-chanh",
-    image: "./images/sp-24.jpg",
+    image: "/images/sp-24.jpg",
     price: {
       S: 80000,
       M: 85000,
@@ -365,7 +365,7 @@ const products = [
     id: 25,
     name: "Cà phê Roast",
     alt: "tra-chanh",
-    image: "./images/sp-25.jpg",
+    image: "/images/sp-25.jpg",
     price: {
       S: 95000,
       M: 100000,
@@ -377,20 +377,7 @@ const products = [
     status: "new",
   },
 ];
-const users = [
-  {
-    signupEmail: "vinhhd94@gmail.com",
-    signupPassword: "111111",
-    signupPasswordRepeat: "111111",
-    id: 1,
-  },
-  {
-    signupEmail: "vinhhd94@gmail.com",
-    signupPassword: "111111",
-    signupPasswordRepeat: "111111",
-    id: 2,
-  },
-];
+const users = JSON.parse(localStorage.getItem("userList")) || [];
 
 export const handlers = [
   rest.get("users", (req, res, ctx) => {
@@ -402,11 +389,8 @@ export const handlers = [
   }),
 
   rest.post("/users", (req, res, ctx) => {
-    // Persist user's authentication in the session
     sessionStorage.setItem("is-authenticated", "true");
-    return res(
-      // Respond with a 200 status code
-      ctx.status(200)
-    );
+
+    return res(ctx.status(200), ctx.json(req.body));
   }),
 ];

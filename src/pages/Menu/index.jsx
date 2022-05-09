@@ -107,7 +107,7 @@ const MenuFilter = () => {
           </div>
         </div>
       </div>
-      <div className="title">Bán chạy</div>
+
       <div className="filter-bestseller"></div>
     </div>
   );
@@ -205,7 +205,7 @@ const Menu = () => {
         <section className="menu-main">
           <h2 className="h2-heading">Menu</h2>
           <div className="lineBorder text-center mb-4">
-            <img src="../images/line-under-heading.png" alt="line" />
+            <img src="/images/line-under-heading.png" alt="line" />
           </div>
           <div className="container">
             <div className="row g-3">

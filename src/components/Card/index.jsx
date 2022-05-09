@@ -1,14 +1,11 @@
 import "./Card.css";
-import data from "/public/js/db";
 import { FaShoppingBasket } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { WrapperContext } from "../Layout";
-import { toast } from "react-toastify";
 
 const Card = ({ product }) => {
-  const { currentBuy, setCurrentBuy, closePopup, isShowModal, setIsShowModal } =
-    useContext(WrapperContext);
+  const { setCurrentBuy, data } = useContext(WrapperContext);
 
   const handleClickBuy = (productId) => {
     const product = data.find((product) => product.id == productId);
@@ -30,7 +27,6 @@ const Card = ({ product }) => {
         <div className="card-content-left d-flex align-items-center justify-content-between">
           <div className="card-like">
             <div className="like-icon">
-              {/* {product.star} */}
               <AiFillStar
                 style={{
                   display: `${product.star > 0 ? "inline-block" : "none"}`,

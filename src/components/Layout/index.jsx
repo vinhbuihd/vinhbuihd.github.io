@@ -16,6 +16,18 @@ const Layout = () => {
   const [data, setData] = useState([]);
   const [isShowCart, setIsShowCart] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
+  const [userList, setUserList] = useState(
+    () => JSON.parse(localStorage.getItem("userList")) || []
+  );
+
+  const [isLoged, setIsLoged] = useState({
+    status: false,
+    user: {},
+  });
+
+  useEffect(() => {
+    document.title = "Coffee Cup";
+  }, []);
 
   useEffect(() => {
     fetch("/products")
@@ -65,6 +77,10 @@ const Layout = () => {
         deleteItem,
         isEdit,
         setIsEdit,
+        userList,
+        setUserList,
+        isLoged,
+        setIsLoged,
       }}
     >
       <Header />
