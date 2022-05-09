@@ -149,7 +149,7 @@ const ProductList = () => {
           </div>
         ))}
       </div>
-      <div className="row">
+      {/* <div className="row">
         <nav>
           <ul className="pagination justify-content-center">
             <li className="page-item disabled">
@@ -179,7 +179,7 @@ const ProductList = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
     </div>
   );
 };
