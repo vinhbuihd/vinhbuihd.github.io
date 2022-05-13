@@ -125,17 +125,18 @@ const Login = () => {
     });
   };
 
-  useEffect(() => {
-    fetch("/users")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("loading");
-        console.log(json);
-        setUserList(json);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/users")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       console.log("loading");
+  //       console.log(json);
+  //       setUserList(json);
+  //     });
+  // }, []);
 
   const signupSubmit = (data) => {
+    console.log(data);
     fetch("users", {
       method: "POST",
       body: JSON.stringify(data),
@@ -169,6 +170,16 @@ const Login = () => {
             { ...json, avartar: "images/user-image.png" },
           ]);
           document.querySelector(".login-signin-btn").click();
+          fetch("/users", {
+            method: "POST",
+            body: JSON.stringify([
+              ...userList,
+              { ...json, avartar: "images/user-image.png" },
+            ]),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
         }
       })
       .catch((error) => console.log(error));
@@ -213,10 +224,14 @@ const Login = () => {
     localStorage.setItem("userList", JSON.stringify(userList));
   };
 
-  if (isLoged.status) {
+  if (isLoged.status && userList.length > 0) {
+    console.log(isLoged.user);
+    console.log(userList);
     const logedUser = userList.find(
       (user) => user.signupEmail == isLoged.user.signupEmail
     );
+
+    console.log(logedUser);
     return (
       <div className="login-main-loged">
         <section className="banner"></section>
@@ -229,7 +244,7 @@ const Login = () => {
                   <label htmlFor="">Tên tài khoản: </label>
                   <input
                     type="text"
-                    defaultValue={logedUser.signupEmail}
+                    defaultValue={logedUser?.signupEmail}
                     disabled
                     readOnly
                   />
@@ -238,7 +253,7 @@ const Login = () => {
                   <label htmlFor="">Mật khẩu: </label>
                   <input
                     type="password"
-                    defaultValue={logedUser.signupPassword}
+                    defaultValue={logedUser?.signupPassword}
                     readOnly
                     disabled
                   />
@@ -249,7 +264,7 @@ const Login = () => {
                     placeholder="Họ và tên"
                     type="text"
                     onChange={(e) => handleChangeInfo(e, "name")}
-                    value={logedUser.name}
+                    value={logedUser?.name}
                     readOnly={!isEditInfo}
                     className={isEditInfo ? "active" : ""}
                   />
@@ -260,7 +275,7 @@ const Login = () => {
                     placeholder="Số điện thoai"
                     type="number"
                     onChange={(e) => handleChangeInfo(e, "phone")}
-                    value={logedUser.phone}
+                    value={logedUser?.phone}
                     readOnly={!isEditInfo}
                     className={isEditInfo ? "active" : ""}
                   />
@@ -271,7 +286,7 @@ const Login = () => {
                     placeholder="Địa chỉ"
                     type="text"
                     onChange={(e) => handleChangeInfo(e, "address")}
-                    value={logedUser.address}
+                    value={logedUser?.address}
                     readOnly={!isEditInfo}
                     className={isEditInfo ? "active" : ""}
                   />

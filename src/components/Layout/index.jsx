@@ -17,9 +17,8 @@ const Layout = () => {
   const [isShowCart, setIsShowCart] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const [userList, setUserList] = useState(
-    () => JSON.parse(localStorage.getItem("userList")) || []
+    JSON.parse(localStorage.getItem("userList")) || []
   );
-
   const [isLoged, setIsLoged] = useState({
     status: false,
     user: {},
@@ -51,10 +50,15 @@ const Layout = () => {
   };
 
   const deleteItem = (code) => {
-    const newList = [...cartList];
-    const index = newList.findIndex((product) => product.code == code);
-    newList.splice(index, 1);
-    setCartList(newList);
+    const confirm = confirm("Bạn có muốn xóa sản phẩm");
+    if (confirm) {
+      const newList = [...cartList];
+      const index = newList.findIndex((product) => product.code == code);
+      newList.splice(index, 1);
+      setCartList(newList);
+    } else {
+      return;
+    }
   };
   const totalPrice = cartList.reduce((acc, cur) => {
     return acc + cur.quantity * cur.price[cur.size];

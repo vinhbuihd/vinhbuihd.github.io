@@ -75,6 +75,8 @@ const Header = () => {
     (user) => user.signupEmail == isLoged.user.signupEmail
   );
 
+  console.log(userList);
+
   return (
     <header>
       <div className="container ">
@@ -122,7 +124,7 @@ const Header = () => {
             <div className="user-icon">
               <NavLink to="/login">
                 {isLoged.status ? (
-                  <Avatar avartar={userLoged.avartar} />
+                  <Avatar avartar={userLoged?.avartar} />
                 ) : (
                   <FaUser style={{ color: "#fff" }} />
                 )}
