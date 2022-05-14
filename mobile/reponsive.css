@@ -1,0 +1,36 @@
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+  .banner .text-box {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-content {
+    position: unset;
+    text-align: center;
+    width: 100%;
+    padding: 16px 48px;
+    background: var(--primary);
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+
+  .item {
+    padding: 16px 0;
+  }
+
+  .intro-content {
+    padding: 16px;
+  }
+
+  .intro-content.left {
+    padding: 16px;
+  }
+}

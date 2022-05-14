@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary: #1c1e1d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  background-color: var(--primary);
+}
+
+/* header */
+
+.banner {
+  padding: 36px 0;
+  background: var(--primary);
+}
+
+.banner .text-box {
+  text-align: right;
+}
+
+.banner h2 {
+  font-size: 4.8rem;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* intro */
+.item {
+  position: relative;
+  padding: 32px 0;
+}
+
+.item img {
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  padding-right: 60px;
+}
+
+.intro-content.left {
+  left: 0;
+  padding-left: 60px;
+}
+
+.heading {
+  font-size: 4rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.list-style {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.color-1 {
+  background-color: #1982a0;
+}
+.color-2 {
+  background-color: #4fbbaf;
+}
+
+.color-3 {
+  background-color: #4ab95c;
+}
+
+.color-4 {
+  background-color: #1f9976;
+}
+
+/* screen */
+.screen img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.specifications {
+  background-color: var(--primary);
+}
+
+.specifications h2 {
+  text-align: center;
+}
+
+/* Specifications */
+
+.box-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.border-line {
+  border-bottom: 1px solid #ffffff80;
+  padding: 8px 0px;
+}
+.detail-name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  min-width: 160px;
+}
+
+.detail-value {
+  font-size: 1.8rem;
+  font-weight: 200;
+  /* letter-spacing: 1px; */
+}
+
+.specifications .row {
+  margin-right: unset;
+  margin-left: unset;
+}
+
+.box {
+  margin: 38px 0;
+}
