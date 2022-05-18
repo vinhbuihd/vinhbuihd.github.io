@@ -1,0 +1,20 @@
+.outlet {
+  margin: 70px 330px 90px 240px;
+  background-color: var(--background);
+}
+
+.toastClassName {
+  color: var(--primary-color);
+}
+.grow-font-size {
+  background-color: #fff;
+}
+.fancy-progress-bar {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+  .outlet {
+    margin: 70px 0px 90px 70px;
+  }
+}

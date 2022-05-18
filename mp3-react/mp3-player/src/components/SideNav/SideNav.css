@@ -1,0 +1,148 @@
+.sideNav {
+  background-color: var(--sidenavBc);
+  position: fixed;
+  z-index: 11;
+
+  top: 0;
+  left: 0;
+  width: 240px;
+  bottom: 0;
+
+  transition: ease 0.5s;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+}
+
+.sideNav .logo {
+  height: 45px;
+  width: 120px;
+  display: block;
+  margin: 24px auto 24px 28px;
+
+  transition: ease 0.35s;
+  background: url(/svg/logo-dark.svg) no-repeat;
+  background-size: contain;
+}
+
+.sideNav .logo img {
+  width: 120px;
+  height: 40px;
+}
+
+.navigation {
+  overflow: hidden;
+}
+
+.navigation-item {
+  color: #dadada;
+  display: flex;
+  align-items: center;
+  padding: 8px 0px 8px 28px;
+
+  white-space: nowrap;
+}
+
+.navigation-item-icon {
+  fill: #dadada;
+  font-size: 24px;
+}
+
+.navigation-item-title {
+  font-size: 13px;
+  margin: 0 8px;
+  font-weight: 700;
+  transform: scale(1);
+  transition: ease 0.35s;
+}
+
+.navigation-item.active {
+  background-color: #170f23;
+  color: #fff;
+  border-left: 3px solid #7200a1;
+  padding: 8px 0px 8px 25px;
+}
+
+.navigation-item:hover {
+  color: #fff;
+}
+
+.side-line {
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+}
+
+.side-line span {
+  height: 1px;
+  display: inline-block;
+  width: 100%;
+  background: rgba(256, 256, 256, 0.5);
+}
+
+.sideNav.tablet .logo {
+  background: url(/svg/logo-tablet.svg) no-repeat;
+  height: 45px;
+  width: 45px;
+  margin: 24px auto;
+}
+.sideNav.tablet .navigation-item-title {
+  display: none;
+  transform: scale(0);
+}
+
+.sideNav.tablet {
+  width: 70px;
+}
+
+.sideNav.tablet .navigation-item {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.sideNav.tablet .navigation-item.active {
+  background-color: #170f23;
+  color: #fff;
+  border-left: 3px solid #7200a1;
+  border-right: 3px solid transparent;
+  padding: 8px 0;
+}
+
+.showNavBtn {
+  /* display: none; */
+  position: absolute;
+  bottom: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.showNav-icon {
+  font-size: 24px;
+  color: #fff;
+  padding: 8px;
+  margin: 0 auto;
+
+  cursor: pointer;
+  background: var(--background-white);
+  border-radius: 50%;
+
+  opacity: 0.8;
+}
+
+.showNav-icon:hover {
+  opacity: 1;
+}
+
+.sideNav .open {
+  display: none;
+}
+
+.sideNav .close {
+  display: flex;
+}
+
+.sideNav.tablet .open {
+  display: flex;
+}
+
+.sideNav.tablet .close {
+  display: none;
+}

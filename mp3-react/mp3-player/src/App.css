@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --sidenavBc: #2a213a;
+  --background: #170f23;
+  --primary-color: #7200a1;
+  --primary-background: #432275;
+  --song-hover-color: #2a2139;
+  --background-white: #ffffff1a;
+  --text-decs-color: #ffffff80;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.h3-heading {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+
+  margin-bottom: 16px;
+}
+
+.small-btn {
+  padding: 4px 12px;
+  display: inline-block;
+  border-radius: 16px;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+}
+
+.small-btn {
+  margin-right: 16px;
+}
+
+.small-btn.primary {
+  background-color: var(--primary-color);
+}
+
+.small-btn.default {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #fff;
+}
+
+.small-btn.default:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.icon-button {
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  margin: 0 2px;
+  border-radius: 50%;
+}
+
+.icon-button:hover {
+  background: var(--background-white);
+}
+
+/* scrool bar */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}

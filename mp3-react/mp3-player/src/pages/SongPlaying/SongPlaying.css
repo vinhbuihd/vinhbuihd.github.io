@@ -1,0 +1,27 @@
+.song-playing {
+  padding: 60px;
+}
+
+.song-playing .card-list {
+  text-align: center;
+}
+
+.song-playing .card-list-image {
+  border-radius: 50%;
+  position: relative;
+}
+
+.song-playing .card-list-title {
+  font-size: 18px;
+  margin: 16px 0 8px;
+}
+
+.song-playing .rhythm-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0;
+  transform: translate(-50%, -50%);
+}

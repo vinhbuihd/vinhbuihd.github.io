@@ -1,0 +1,38 @@
+.mymusic {
+  color: #fff;
+  padding: 60px;
+  color: #fff;
+}
+
+.mymusic ul {
+  list-style: none;
+  display: flex;
+  width: 360px;
+  justify-content: space-between;
+}
+
+.mymusic ul li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+
+  padding: 12px 0;
+}
+
+.mymusic-title-group {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #ffffff1a;
+  width: 100%;
+  position: relative;
+}
+
+.mymusic-title-border {
+  height: 2px;
+  width: 133px;
+  left: 0;
+  transition: all ease 0.35s;
+
+  background-color: var(--primary-color);
+  position: absolute;
+}

@@ -1,0 +1,65 @@
+.lyric-container {
+  padding: 0px 42px;
+}
+
+.lyric-container h4 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.lyric-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.lyric-left {
+  width: 144px;
+}
+
+.lyric-body {
+  height: 480px;
+  margin-top: 76px;
+}
+
+.lyric-text {
+  overflow-y: auto;
+  height: 480px;
+}
+
+.lyric-line {
+  font-size: 42px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.lyric-tab {
+  background-color: var(--background-white);
+  display: inline-block;
+  border-radius: 24px;
+  padding: 2px;
+  margin: 16px 0;
+}
+
+.lyric-tab .btn {
+  min-width: 140px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.lyric-button-group .icon-button {
+  font-size: 28px;
+}
+
+.lyric-cdThumb .card-list {
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

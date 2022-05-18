@@ -1,0 +1,208 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Scrollbar, Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./Home.css";
+import { Box } from "@mui/material";
+import CardList from "../../components/CardList";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
+const listSong = [
+  {
+    id: 1,
+    name: "US-UK EDM",
+    singer: "Những bản EDM chất nhất đến từ US UK",
+    image: "/images/want-listen-1.jpg",
+  },
+  {
+    id: 2,
+    name: "Rap Việt mới nhất",
+    singer: "Sol7 và những track vừa ra mắt của làng Rap Việt Nam",
+    image: "/images/want-listen-2.jpg",
+  },
+
+  {
+    id: 3,
+    name: "Catchy tune",
+    singer: "Dễ nghiện dễ nhớ, dễ bắt tai ngay từ lần nghe đầu tiên",
+    image: "/images/want-listen-3.jpg",
+  },
+  {
+    id: 4,
+    name: "Girl Krush",
+    singer: "Concept Girl Krush chưa bao giờ hết hot với các fan K-Pop",
+    image: "/images/want-listen-4.jpg",
+  },
+];
+const top100 = [
+  {
+    id: 1,
+    name: "Top 100 Pop Âu Mỹ",
+    singer: "Adele, Justin Bieber, The kid LAROI",
+    image: "/images/top100-1.jpg",
+  },
+  {
+    id: 2,
+    name: "Top 100 nhạc EDM",
+    singer: "Alan Walker, K-319, Emelie Hollow",
+    image: "/images/top100-2.jpg",
+  },
+
+  {
+    id: 3,
+    name: "Top 100 V-Pop hay nhất",
+    singer: "ERIK, Thiều Bảo Trâm, Đinh Tùng Huy",
+    image: "/images/top100-3.jpg",
+  },
+  {
+    id: 4,
+    name: "Top 100 nhạc dance Việt",
+    singer: "CUKAK, Phát Hồ, Đinh Long",
+    image: "/images/top100-4.jpg",
+  },
+];
+
+const newSong = [
+  {
+    id: 1,
+    name: "V-Pop Tháng 5/2022",
+    singer: "Đông Nhi, Chillies, K-ICM",
+    image: "/images/newsong-1.jpg",
+  },
+  {
+    id: 2,
+    name: "US-UK Tháng 5/2022",
+    singer: "Justin Bieber, Sam Smith, Khalid",
+    image: "/images/newsong-2.jpg",
+  },
+
+  {
+    id: 3,
+    name: "K-Pop Tháng 5/2022",
+    singer: "Jessi, iKON, MoonByul",
+    image: "/images/newsong-3.jpg",
+  },
+  {
+    id: 4,
+    name: "C-Pop Tháng 5/2022",
+    singer: "Châu Thâm, Đào Tử, Tô Tinh Tiệp",
+    image: "/images/newsong-4.jpg",
+  },
+];
+
+const Home = () => {
+  // useEffect(() => {
+  //   document.title = "Zing Mp3 | Nghe nhạc chất";
+  // }, []);
+  return (
+    <div className="home">
+      <Swiper
+        loop
+        className="home-slider"
+        spaceBetween={10}
+        slidesPerView={3}
+        modules={[Autoplay, Navigation, Pagination]}
+        autoplay={{
+          delay: 3000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        pagination={{ clickable: true }}
+      >
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-1.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-2.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-3.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-4.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-5.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="home-slider-item">
+            <img src="/images/slider-6.jpg" alt="slider" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
+      <div className="card-list-group">
+        <h3 className="h3-heading">Có thể bạn muốn nghe</h3>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 3,
+          }}
+        >
+          {listSong.map((list) => (
+            <CardList listSong={list} key={list.id} />
+          ))}
+        </Box>
+      </div>
+      <div className="card-list-group">
+        <h3 className="h3-heading">Top 100</h3>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 3,
+          }}
+        >
+          {top100.map((list) => (
+            <CardList listSong={list} key={list.id} />
+          ))}
+        </Box>
+      </div>
+      <div className="card-list-group">
+        <h3 className="h3-heading">Nhạc mới mỗi ngày</h3>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 3,
+          }}
+        >
+          {newSong.map((list) => (
+            <CardList listSong={list} key={list.id} />
+          ))}
+        </Box>
+      </div>
+      <div className="card-list-group">
+        <h3 className="h3-heading">Nghệ sĩ Yêu Thích</h3>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 3,
+          }}
+        >
+          {newSong.map((list) => (
+            <CardList listSong={list} key={list.id} />
+          ))}
+        </Box>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

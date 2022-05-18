@@ -1,0 +1,115 @@
+.threedot {
+  position: relative;
+  .threedot-detail {
+    position: absolute;
+    right: 30%;
+    z-index: 10;
+    padding: 15px 0;
+    border-radius: 4px;
+
+    bottom: 46px;
+    width: 280px;
+    height: 396px;
+    background-color: var(--primary-background);
+
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    .song-info {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      .song-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+      }
+
+      .song-text {
+        margin-left: 8px;
+
+        .song-name {
+          font-size: 14px;
+          margin-bottom: 4px;
+          font-weight: 600;
+        }
+
+        .song-count {
+          color: #a0a0a0;
+          font-size: 12px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+
+          .detail {
+            font-size: 12px;
+
+            display: flex;
+            align-items: center;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--background-white);
+      height: 50px;
+      border-radius: 8px;
+      margin: 16px;
+
+      .action-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 80px;
+        border-radius: 8px;
+        height: 100%;
+
+        &:hover {
+          background-color: #654b8d;
+        }
+
+        .icon {
+          font-size: 16px;
+        }
+
+        .name {
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+    .menu {
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 16px;
+
+        .menu-icon {
+          font-size: 14px;
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+        }
+
+        .menu-name {
+          font-size: 14px;
+          color: #dadada;
+        }
+
+        &:hover {
+          background-color: var(--background-white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+import { createContext, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Header from "../Header";
+import PlayerControl from "../PlayerControl";
+import SideNav from "../SideNav";
+import SidePlayList from "../SidePlayList";
+import "./Layout.css";
+
+export const LayoutContext = createContext();
+
+const Layout = () => {
+  const [songs, setSongs] = useState([]);
+
+  const [showPlaylist, setShowPlayList] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case "/": {
+        document.title = "Zing Mp3 | Nghe nhạc chất";
+      }
+      case "/mymusic": {
+        document.title = "Nhạc cá nhân | Xem bài hát, album";
+      }
+
+      default:
+        break;
+    }
+  }, [window.location.pathname]);
+
+  useEffect(() => {
+    fetch("/songs")
+      .then((res) => res.json())
+      .then((res) => {
+        setSongs(res);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  const nextSong = () => {
+    // let currentIndex = songs.findIndex((song) => song.id == currentSong.id);
+    if (currentIndex == songs.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+  const prevSong = () => {
+    // let currentIndex = songs.findIndex((song) => song.id == currentSong.id);
+    if (currentIndex == 0) {
+      setCurrentIndex(songs.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const randomSong = () => {
+    // let currentIndex = songs.findIndex((song) => song.id == currentSong.id);
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * songs.length);
+    } while (randomIndex == currentIndex);
+    setCurrentIndex(randomIndex);
+  };
+
+  useEffect(() => {
+    let currentItems = document.querySelectorAll(".song-item.active");
+
+    currentItems.forEach((currentItem) => {
+      currentItem.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    });
+  }, [currentIndex]);
+
+  if (songs.length == 0) {
+    return <div className="">Loading...</div>;
+  }
+
+  return (
+    <LayoutContext.Provider
+      value={{
+        currentIndex,
+        setCurrentIndex,
+        nextSong,
+        prevSong,
+        randomSong,
+        songs,
+        setSongs,
+      }}
+    >
+      <SideNav />
+      <Header />
+      <SidePlayList
+        songs={songs}
+        showPlaylist={showPlaylist}
+        setShowPlayList={setShowPlayList}
+      />
+      <div className="outlet">
+        <Outlet />
+      </div>
+      <PlayerControl
+        setShowPlayList={setShowPlayList}
+        showPlaylist={showPlaylist}
+        songs={songs}
+      />
+
+      <ToastContainer
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        autoClose={1000}
+        position="bottom-right"
+        toastClassName="toastClassName"
+        bodyClassName="grow-font-size"
+        progressClassName="fancy-progress-bar"
+      />
+    </LayoutContext.Provider>
+  );
+};
+
+export default Layout;
