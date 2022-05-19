@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .card-list-image img {

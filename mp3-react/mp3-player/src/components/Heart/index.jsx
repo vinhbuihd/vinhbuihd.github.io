@@ -5,8 +5,9 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { addSong, removeSong } from "../../store/reducers/favoriteSong.slice";
 import { LayoutContext } from "../Layout";
+import "./Heart.css";
 
-const Heart = ({ favorite, heartColor = "var(--primary-color)" }) => {
+const Heart = ({ favorite }) => {
   const dispatch = useDispatch();
   const { favoriteSong } = useSelector((state) => state);
 
@@ -49,7 +50,7 @@ const Heart = ({ favorite, heartColor = "var(--primary-color)" }) => {
           onClick={handleClickLikeSong}
         >
           {favorite ? (
-            <AiFillHeart style={{ color: heartColor }} />
+            <AiFillHeart className="fill-heart" />
           ) : (
             <AiOutlineHeart />
           )}

@@ -10,7 +10,8 @@
   padding-bottom: 100px;
   transform: translateX(0);
   transition: ease-in 0.35s;
-  background-color: #120822;
+  background-color: transparent;
+  border-left: 1px solid var(--border-primary);
 }
 
 .side-playList.hide {
@@ -24,7 +25,7 @@
 }
 
 .change-playlist {
-  background-color: #2a2139;
+  background-color: var(--background-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +58,7 @@
 .side-playList-seemore {
   color: #fff;
   padding: 12px;
-  background-color: #2a2139;
+  background-color: var(--background-white);
   border-radius: 50%;
 
   display: flex;

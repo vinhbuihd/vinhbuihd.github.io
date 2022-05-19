@@ -40,7 +40,7 @@ const CdThumbnail = () => {
   return (
     <div className="card-list">
       <div className="card-list-image">
-        <div ref={ref}>
+        <div className="card-list-image-wrapper" ref={ref}>
           <img
             className="thumb"
             src={songs[currentIndex]?.bigThumbnail}

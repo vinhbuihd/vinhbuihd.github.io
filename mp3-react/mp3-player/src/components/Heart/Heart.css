@@ -1,0 +1,7 @@
+.fill-heart {
+  color: var(--primary-color);
+}
+
+.song-item.active .fill-heart {
+  color: #fff;
+}

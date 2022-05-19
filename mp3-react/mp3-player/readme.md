@@ -21,5 +21,12 @@ components
    - Phụ: Thanh âm lượng, nút hiện danh sách..
 
 5. Center:
+
    - Play list
    - Đĩa xoay,
+
+6. Thay đổi giao diện sáng tối- > ok
+7. search bài hát theo tên
+8. Làm các trang phụ
+9. Reponsive
+10. tool tip

@@ -1,56 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useContext, useEffect, useRef, useState } from "react";
-import {
-  BsThreeDots,
-  BsPlayCircle,
-  BsMusicNoteBeamed,
-  BsPauseCircle,
-} from "react-icons/bs";
-import { BiShuffle } from "react-icons/bi";
-import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
+import { Slider, Tooltip } from "@mui/material/";
+import { BsMusicNoteBeamed } from "react-icons/bs";
 import { RiVolumeUpLine, RiVolumeMuteLine } from "react-icons/ri";
 import { GiMicrophone } from "react-icons/gi";
-import { CgRepeat } from "react-icons/cg";
-import { Slider, Tooltip } from "@mui/material/";
+import Heart from "../Heart";
 
 import "./PlayerControl.css";
-import { playSong } from "../../store/reducers/isPlaying.slice";
-import { pauseSong } from "../../store/reducers/isPlaying.slice";
-import { changeRepeat } from "../../store/reducers/isRepeat.slice";
-import { changeRandom } from "../../store/reducers/isRandom.slice";
-import Heart from "../Heart";
 import { LayoutContext } from "../Layout";
-import ThreeDot, { ThreeDotDetail } from "../ThreeDot";
-import { Lrc } from "react-lrc";
+import ThreeDot from "../ThreeDot";
 import Lyric from "../Lyric";
-
-const convertTime = (time) => {
-  if (!time) return "00:00";
-  let minutes = Math.floor(time / 60);
-  let seconds = Math.floor(time - minutes * 60);
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-  return `${minutes}:${seconds}`;
-};
+import SongPlayerControl from "../SongPlayerControl";
+import { playSong } from "../../store/reducers/isPlaying.slice";
 
 const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
-  const { isPlaying, isRandom, isRepeat } = useSelector((state) => state);
+  const { isPlaying, isRepeat } = useSelector((state) => state);
   const [isMute, setIsMute] = useState(false);
 
-  const { currentIndex, nextSong, prevSong, randomSong, songs } =
-    useContext(LayoutContext);
+  const { currentIndex, songs } = useContext(LayoutContext);
 
   const [detailShow, setDetailShow] = useState(false);
 
   const dispatch = useDispatch();
   const [songDuration, setSongDuration] = useState(0);
-  const [volume, setVolume] = useState(100);
   const [songCurrentTime, setSongCurrentTime] = useState(0);
+  const [volume, setVolume] = useState(100);
   const [isShowLyric, setIsShowLyric] = useState(false);
   const audioRef = useRef();
   const navigate = useNavigate();
@@ -77,40 +52,6 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
 
   const loadSong = () => {
     setSongDuration(audioRef.current.duration);
-  };
-  const handleChangeCurrentTime = (e) => {
-    console.log(e.target.value);
-    let currentTime = (songDuration * e.target.value) / 100;
-    audioRef.current.currentTime = currentTime;
-    if (!isPlaying) {
-      dispatch(playSong());
-    }
-  };
-
-  const handlePrevSong = () => {
-    if (isRandom) {
-      randomSong();
-    } else {
-      prevSong();
-    }
-    dispatch(playSong());
-  };
-
-  const handleNextSong = () => {
-    if (isRandom) {
-      randomSong();
-    } else {
-      nextSong();
-    }
-    dispatch(playSong());
-  };
-
-  const handleClickPlayBtn = () => {
-    if (isPlaying) {
-      dispatch(pauseSong());
-    } else {
-      dispatch(playSong());
-    }
   };
 
   const onEndedSong = () => {
@@ -154,6 +95,14 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
     setIsShowLyric(true);
   };
 
+  const handleChangeCurrentTime = (e) => {
+    let currentTime = (songDuration * e.target.value) / 100;
+    audioRef.current.currentTime = currentTime;
+    if (!isPlaying) {
+      dispatch(playSong());
+    }
+  };
+
   return (
     <div
       to="/songplaying"
@@ -161,9 +110,12 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
       onClick={showIsPlayingSong}
     >
       <Lyric
-        currentTime={songCurrentTime}
         isShowLyric={isShowLyric}
         setIsShowLyric={setIsShowLyric}
+        lyric={songs[currentIndex]?.lyric}
+        songCurrentTime={songCurrentTime}
+        songDuration={songDuration}
+        handleChangeCurrentTime={handleChangeCurrentTime}
       />
 
       <audio
@@ -190,63 +142,13 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
           <ThreeDot song={songs[currentIndex]} />
         </div>
       </div>
-      <div className="song-player">
-        <div className="song-player-control" onClick={stopPropagation}>
-          <div className="song-player-button-group">
-            <div
-              className={`shuffle song-player-button small ${
-                isRandom ? "active" : ""
-              }`}
-              onClick={() => dispatch(changeRandom())}
-              style={{ fontSize: "24px" }}
-            >
-              <BiShuffle />
-            </div>
-            <div
-              className="prev song-player-button small"
-              onClick={handlePrevSong}
-            >
-              <MdSkipPrevious />
-            </div>
-            <div
-              className="play song-player-button"
-              onClick={handleClickPlayBtn}
-            >
-              {isPlaying ? <BsPauseCircle /> : <BsPlayCircle />}
-            </div>
-            <div
-              className="next song-player-button small"
-              onClick={handleNextSong}
-            >
-              <MdSkipNext />
-            </div>
-            <div
-              onClick={() => dispatch(changeRepeat())}
-              className={`repeat song-player-button small ${
-                isRepeat ? "active" : ""
-              }`}
-              style={{ fontSize: "32px" }}
-            >
-              <CgRepeat />
-            </div>
-          </div>
-        </div>
-        <div className="song-player-slider" onClick={stopPropagation}>
-          <div className="song-player-slider-current-time">
-            {convertTime(songCurrentTime) || "00:00"}
-          </div>
-          <div className="song-player-slider-bar">
-            <Slider
-              size="small"
-              value={(songCurrentTime / songDuration) * 100 || 0}
-              onChange={handleChangeCurrentTime}
-            />
-          </div>
-          <div className="song-player-slider-duration-time">
-            {convertTime(songDuration)}
-          </div>
-        </div>
-      </div>
+
+      <SongPlayerControl
+        songCurrentTime={songCurrentTime}
+        songDuration={songDuration}
+        handleChangeCurrentTime={handleChangeCurrentTime}
+      />
+
       <div className="song-subcontrol" onClick={stopPropagation}>
         <Tooltip title="Xem lời bài hát" placement="top">
           <div className="song-mic icon-button" onClick={handleShowLyric}>

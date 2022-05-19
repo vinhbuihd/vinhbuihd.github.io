@@ -30,3 +30,8 @@
 .card-list-group {
   margin: 32px 0;
 }
+
+.home-singer img {
+  width: 100%;
+  height: auto;
+}

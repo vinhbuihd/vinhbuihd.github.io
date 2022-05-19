@@ -1,6 +1,6 @@
 .outlet {
-  margin: 70px 330px 90px 240px;
-  background-color: var(--background);
+  padding: 70px 330px 90px 240px;
+  min-height: 100vh;
 }
 
 .toastClassName {
@@ -15,6 +15,25 @@
 
 @media (max-width: 1200px) {
   .outlet {
-    margin: 70px 0px 90px 70px;
+    padding: 70px 0px 90px 70px;
   }
+  .side-playList {
+    background-color: var(--sidePlayList);
+  }
+}
+
+.wrapper {
+  background-color: var(--background);
+}
+
+.wrapper.zingAwards {
+  background: url("https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme-background/zma.svg");
+  background-size: 1920px auto;
+  background-attachment: fixed;
+}
+
+.wrapper.jack {
+  background: url("/images/jack.jpg");
+  background-size: 1920px auto;
+  background-attachment: fixed;
 }

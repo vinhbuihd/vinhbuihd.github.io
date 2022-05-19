@@ -19,6 +19,7 @@
     "react": "^18.0.0",
     "react-chartjs-2": "^4.1.0",
     "react-dom": "^18.0.0",
+    "react-full-screen": "^1.1.0",
     "react-icons": "^4.3.1",
     "react-lrc": "^2.1.5",
     "react-redux": "^8.0.1",

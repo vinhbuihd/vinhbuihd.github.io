@@ -6,12 +6,27 @@ import { GiTShirt } from "react-icons/gi";
 import { FiUpload, FiSettings } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
 import { FormControlLabel, FormGroup, Switch, Tooltip } from "@mui/material";
+import { useEffect, useRef } from "react";
 
 const cx = classNames.bind(styles);
 
-const Header = () => {
+const Header = ({ setIsShowPlayList }) => {
+  const headerRef = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const yPosition = window.scrollY;
+      if (yPosition > 80) {
+        headerRef.current.style.backgroundColor = "var(--header)";
+        headerRef.current.style.boxShadow = "0 0px 4px 0 rgba(0, 0, 0, 0.35)";
+      } else {
+        headerRef.current.style.backgroundColor = "transparent";
+        headerRef.current.style.boxShadow = "unset";
+      }
+    });
+  }, []);
+
   return (
-    <div className={cx("header")}>
+    <div ref={headerRef} className={cx("header")}>
       <div className={cx("header-left")}>
         <div className={cx("header-changePage")}>
           <button className={cx("header-backPage")}>
@@ -35,7 +50,10 @@ const Header = () => {
       </div>
       <div className={cx("header-right")}>
         <Tooltip title="Chủ đề">
-          <div className={cx("header-icon")}>
+          <div
+            className={cx("header-icon", "header-theme")}
+            onClick={() => setIsShowPlayList(true)}
+          >
             <GiTShirt />
           </div>
         </Tooltip>

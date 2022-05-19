@@ -6,14 +6,41 @@
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
 
+.wrapper {
   --sidenavBc: #2a213a;
+  --sidePlayList: #120822;
+  --header: #170f23;
   --background: #170f23;
   --primary-color: #7200a1;
   --primary-background: #432275;
   --song-hover-color: #2a2139;
   --background-white: #ffffff1a;
   --text-decs-color: #ffffff80;
+  --border-primary: #ffffff1a;
+  --modal: #432275;
+}
+
+.zingAwards {
+  --primary-color: #ed2b91;
+  --background-color: #37075d;
+  --sidenavBc: #411465;
+  --sidePlayList: #5d218c;
+  --header: #37075d;
+  --modal: #6a39af;
+  --primary-background: #333550;
+}
+
+.jack {
+  --primary-color: #ac8e77;
+  --background-color: #77736a;
+  --sidenavBc: rgba(255, 255, 255, 0.05);
+  --sidePlayList: #726c5e;
+  --playerControl: #5e5b54;
+  --header: #77736a;
+  --modal: #565147;
+  --primary-background: #565147;
 }
 
 html {
@@ -31,6 +58,10 @@ a {
 }
 .align-items-center {
   align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 .h3-heading {

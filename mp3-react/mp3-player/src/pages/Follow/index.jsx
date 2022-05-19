@@ -1,5 +1,5 @@
 const Follow = () => {
-  return <div>cate</div>;
+  return <div>follew</div>;
 };
 
 export default Follow;

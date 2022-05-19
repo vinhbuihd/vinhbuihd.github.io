@@ -6,15 +6,18 @@ import Header from "../Header";
 import PlayerControl from "../PlayerControl";
 import SideNav from "../SideNav";
 import SidePlayList from "../SidePlayList";
+import Theme from "../Theme";
 import "./Layout.css";
 
 export const LayoutContext = createContext();
 
 const Layout = () => {
   const [songs, setSongs] = useState([]);
-
   const [showPlaylist, setShowPlayList] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isShowThemeList, setIsShowPlayList] = useState(false);
+  const [themeId, setThemeId] = useState(1);
+
   useEffect(() => {
     switch (window.location.pathname) {
       case "/": {
@@ -76,7 +79,9 @@ const Layout = () => {
   }, [currentIndex]);
 
   if (songs.length == 0) {
-    return <div className="">Loading...</div>;
+    return (
+      <div style={{ textAlign: "center", fontSize: "48px" }}>Loading...</div>
+    );
   }
 
   return (
@@ -89,38 +94,50 @@ const Layout = () => {
         randomSong,
         songs,
         setSongs,
+        themeId,
+        setThemeId,
       }}
     >
-      <SideNav />
-      <Header />
-      <SidePlayList
-        songs={songs}
-        showPlaylist={showPlaylist}
-        setShowPlayList={setShowPlayList}
-      />
-      <div className="outlet">
-        <Outlet />
-      </div>
-      <PlayerControl
-        setShowPlayList={setShowPlayList}
-        showPlaylist={showPlaylist}
-        songs={songs}
-      />
+      <div
+        className={`wrapper ${
+          themeId == 1 ? "" : themeId == 2 ? "zingAwards" : "jack"
+        }`}
+      >
+        <SideNav />
+        <Header setIsShowPlayList={setIsShowPlayList} />
+        <Theme
+          isShowThemeList={isShowThemeList}
+          setIsShowPlayList={setIsShowPlayList}
+        />
+        <SidePlayList
+          songs={songs}
+          showPlaylist={showPlaylist}
+          setShowPlayList={setShowPlayList}
+        />
+        <div className="outlet">
+          <Outlet />
+        </div>
+        <PlayerControl
+          setShowPlayList={setShowPlayList}
+          showPlaylist={showPlaylist}
+          songs={songs}
+        />
 
-      <ToastContainer
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        autoClose={1000}
-        position="bottom-right"
-        toastClassName="toastClassName"
-        bodyClassName="grow-font-size"
-        progressClassName="fancy-progress-bar"
-      />
+        <ToastContainer
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          autoClose={1000}
+          position="bottom-right"
+          toastClassName="toastClassName"
+          bodyClassName="grow-font-size"
+          progressClassName="fancy-progress-bar"
+        />
+      </div>
     </LayoutContext.Provider>
   );
 };

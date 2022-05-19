@@ -55,9 +55,9 @@
 }
 
 .navigation-item.active {
-  background-color: #170f23;
+  background-color: var(--background-white);
   color: #fff;
-  border-left: 3px solid #7200a1;
+  border-left: 3px solid var(--primary-color);
   padding: 8px 0px 8px 25px;
 }
 
@@ -99,9 +99,8 @@
 }
 
 .sideNav.tablet .navigation-item.active {
-  background-color: #170f23;
+  background-color: var(--background-white);
   color: #fff;
-  border-left: 3px solid #7200a1;
   border-right: 3px solid transparent;
   padding: 8px 0;
 }

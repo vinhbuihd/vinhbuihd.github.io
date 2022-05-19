@@ -6,12 +6,21 @@
 
   z-index: 12;
   height: 90px;
-  background-color: #120c1c;
+  background: #120c1c;
   display: flex;
 
   border-top: 1px solid #ffffff1a;
   align-items: center;
   cursor: pointer;
+}
+
+.zingAwards .player-control {
+  background: url("/images/zAwards.png");
+  background-size: cover;
+}
+
+.jack .player-control {
+  background: var(--playerControl);
 }
 
 .player-control .song-info {
@@ -189,6 +198,7 @@
 
 .song-karaoke .card-list-image {
   border-radius: 50%;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1200px) {

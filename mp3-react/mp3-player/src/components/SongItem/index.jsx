@@ -56,7 +56,7 @@ const SongItem = ({ song }) => {
       </div>
 
       <div className="song-item-btn d-flex align-items-center">
-        <Heart favorite={song.favorite} heartColor="#fff" />
+        <Heart favorite={song.favorite} />
         <ThreeDot
           song={song}
           detailShow={detailShow}

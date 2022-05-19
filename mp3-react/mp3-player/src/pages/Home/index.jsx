@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Scrollbar, Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
@@ -7,8 +7,6 @@ import "swiper/css/pagination";
 import "./Home.css";
 import { Box } from "@mui/material";
 import CardList from "../../components/CardList";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
 
 const listSong = [
   {
@@ -94,9 +92,6 @@ const newSong = [
 ];
 
 const Home = () => {
-  // useEffect(() => {
-  //   document.title = "Zing Mp3 | Nghe nhạc chất";
-  // }, []);
   return (
     <div className="home">
       <Swiper
@@ -173,6 +168,7 @@ const Home = () => {
           ))}
         </Box>
       </div>
+
       <div className="card-list-group">
         <h3 className="h3-heading">Nhạc mới mỗi ngày</h3>
         <Box
@@ -187,8 +183,83 @@ const Home = () => {
           ))}
         </Box>
       </div>
+
       <div className="card-list-group">
         <h3 className="h3-heading">Nghệ sĩ Yêu Thích</h3>
+
+        <Swiper
+          loop
+          spaceBetween={40}
+          slidesPerView={3}
+          modules={[Autoplay, Navigation, Pagination]}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+            },
+            992: {
+              slidesPerView: 5,
+            },
+
+            1200: {
+              slidesPerView: 4,
+            },
+
+            1300: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-chi-dan.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-huong-ly.png" alt="huong-ly" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-jack.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-justatee.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-karik.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-mr-siro.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-trinh-thang-binh.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home-singer">
+              <img src="/images/ns-erik.png" alt="chi-dan" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+
+      <div className="card-list-group">
+        <h3 className="h3-heading">Nhạc Hot tháng</h3>
         <Box
           sx={{
             display: "grid",
