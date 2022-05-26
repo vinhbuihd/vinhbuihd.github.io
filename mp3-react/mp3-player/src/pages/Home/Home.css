@@ -35,3 +35,15 @@
   width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding: 24px 24px 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 16px 16px 48px;
+  }
+}

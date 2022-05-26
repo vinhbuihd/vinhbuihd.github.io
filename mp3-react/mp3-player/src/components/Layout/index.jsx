@@ -17,6 +17,8 @@ const Layout = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isShowThemeList, setIsShowPlayList] = useState(false);
   const [themeId, setThemeId] = useState(1);
+  const [searchResult, setSearchResult] = useState({});
+  const [suggestList, setSuggestList] = useState([]);
 
   useEffect(() => {
     switch (window.location.pathname) {
@@ -96,6 +98,10 @@ const Layout = () => {
         setSongs,
         themeId,
         setThemeId,
+        searchResult,
+        setSearchResult,
+        suggestList,
+        setSuggestList,
       }}
     >
       <div

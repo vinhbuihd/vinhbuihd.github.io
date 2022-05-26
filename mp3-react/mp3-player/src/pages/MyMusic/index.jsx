@@ -13,7 +13,7 @@ const MyMusic = () => {
     document.title = "Nhạc cá nhân | Xem bài hát, Album";
   }, []);
   return (
-    <div className="mymusic">
+    <div className="mymusic home">
       <h2 className="">Thư Viện</h2>
       <div className="mymusic-title-group">
         <ul>

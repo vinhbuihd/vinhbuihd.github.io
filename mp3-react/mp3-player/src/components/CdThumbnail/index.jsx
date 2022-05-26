@@ -6,9 +6,9 @@ import { pauseSong, playSong } from "../../store/reducers/isPlaying.slice";
 import { useContext, useEffect } from "react";
 import { LayoutContext } from "../Layout";
 
-const CdThumbnail = () => {
+const CdThumbnail = ({ song }) => {
   const { isPlaying } = useSelector((state) => state);
-  const { currentIndex, songs } = useContext(LayoutContext);
+  const { songs, currentIndex } = useContext(LayoutContext);
   const dispatch = useDispatch();
 
   const { ref, animate, getAnimation } = useWebAnimations({
@@ -29,7 +29,8 @@ const CdThumbnail = () => {
     }
   }, [isPlaying]);
 
-  const handleClickPlaySong = () => {
+  const handleClickPlaySong = (song) => {
+    // setCurrentIndex(song.id)
     if (isPlaying) {
       dispatch(pauseSong());
     } else {

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@
   --background: #170f23;
   --primary-color: #7200a1;
   --primary-background: #432275;
+  --background-color: #432275;
   --song-hover-color: #2a2139;
   --background-white: #ffffff1a;
   --text-decs-color: #ffffff80;

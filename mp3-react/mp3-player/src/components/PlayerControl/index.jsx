@@ -7,12 +7,12 @@ import { RiVolumeUpLine, RiVolumeMuteLine } from "react-icons/ri";
 import { GiMicrophone } from "react-icons/gi";
 import Heart from "../Heart";
 
-import "./PlayerControl.css";
 import { LayoutContext } from "../Layout";
 import ThreeDot from "../ThreeDot";
 import Lyric from "../Lyric";
 import SongPlayerControl from "../SongPlayerControl";
 import { playSong } from "../../store/reducers/isPlaying.slice";
+import "./PlayerControl.css";
 
 const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
   const { isPlaying, isRepeat } = useSelector((state) => state);
@@ -20,13 +20,13 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
 
   const { currentIndex, songs } = useContext(LayoutContext);
 
-  const [detailShow, setDetailShow] = useState(false);
-
   const dispatch = useDispatch();
   const [songDuration, setSongDuration] = useState(0);
   const [songCurrentTime, setSongCurrentTime] = useState(0);
   const [volume, setVolume] = useState(100);
   const [isShowLyric, setIsShowLyric] = useState(false);
+  const [isPlayListTab, setIsPlayListTab] = useState(false);
+
   const audioRef = useRef();
   const navigate = useNavigate();
 
@@ -78,7 +78,8 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
   };
 
   const showIsPlayingSong = () => {
-    navigate("/songplaying");
+    setIsShowLyric(true);
+    setIsPlayListTab(true);
   };
 
   const showSongDetail = (e) => {
@@ -93,6 +94,7 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
   const handleShowLyric = (e) => {
     e.stopPropagation();
     setIsShowLyric(true);
+    setIsPlayListTab(false);
   };
 
   const handleChangeCurrentTime = (e) => {
@@ -116,6 +118,8 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
         songCurrentTime={songCurrentTime}
         songDuration={songDuration}
         handleChangeCurrentTime={handleChangeCurrentTime}
+        isPlayListTab={isPlayListTab}
+        setIsPlayListTab={setIsPlayListTab}
       />
 
       <audio
@@ -125,7 +129,10 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
         onLoadedMetadata={loadSong}
         onEnded={onEndedSong}
       ></audio>
-      <div className="song-item song-info" dataset={songs[currentIndex]?.id}>
+      <div
+        className="song-item song-info play-control-song-info"
+        dataset={songs[currentIndex]?.id}
+      >
         <div className="song-info-img">
           <img src={songs[currentIndex]?.thumbnail} alt="images" />
         </div>
@@ -156,25 +163,18 @@ const PlayerControl = ({ showPlaylist, setShowPlayList }) => {
           </div>
         </Tooltip>
         <div className="song-volume">
-          <Tooltip title={isMute ? "No Mute" : "Mute"} placement="top">
-            <div
-              className="song-volume-btn icon-button"
-              onClick={handleMuteSong}
-            >
-              {volume == 0 || isMute ? (
-                <RiVolumeMuteLine />
-              ) : (
-                <RiVolumeUpLine />
-              )}
-            </div>
-          </Tooltip>
+          <div className="song-volume-btn icon-button" onClick={handleMuteSong}>
+            {volume == 0 || isMute ? <RiVolumeMuteLine /> : <RiVolumeUpLine />}
+          </div>
 
-          <Slider
-            size="small"
-            style={{ color: "#fff" }}
-            value={volume}
-            onChange={handleChangeVolume}
-          />
+          <div className="song-volume-slider">
+            <Slider
+              size="small"
+              style={{ color: "#fff" }}
+              value={volume}
+              onChange={handleChangeVolume}
+            />
+          </div>
         </div>
         <div className="line"></div>
         <div

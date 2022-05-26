@@ -1,7 +1,6 @@
 import "./CardList.css";
 import { BsThreeDots, BsPlayCircle } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-import { Box } from "@mui/material";
 
 const CardList = ({ listSong }) => {
   return (

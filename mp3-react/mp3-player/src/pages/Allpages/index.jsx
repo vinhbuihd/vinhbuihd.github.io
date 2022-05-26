@@ -12,6 +12,7 @@ import Song from "../MyMusic/Song";
 import PodCast from "../MyMusic/Podcast";
 import Album from "../MyMusic/Album";
 import MyMusicMv from "../MyMusic/MyMusicMv";
+import Search from "../Search";
 
 export {
   Category,
@@ -28,4 +29,5 @@ export {
   PodCast,
   Album,
   MyMusicMv,
+  Search,
 };

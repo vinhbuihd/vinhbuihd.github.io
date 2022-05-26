@@ -25,7 +25,7 @@ const SongItem = ({ song }) => {
   return (
     <div
       className={`song-item ${
-        song.id == songs[currentIndex].id ? "active" : ""
+        song.id == songs[currentIndex]?.id ? "active" : ""
       }`}
       dataset={song.id}
     >

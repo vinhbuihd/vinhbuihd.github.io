@@ -13,12 +13,24 @@
   background-color: var(--primary-color);
 }
 
+@media (max-width: 1300px) {
+  .outlet {
+    padding: 70px 0px 90px 240px;
+  }
+  .side-playList {
+    background-color: var(--sidePlayList);
+  }
+}
+
 @media (max-width: 1200px) {
   .outlet {
     padding: 70px 0px 90px 70px;
   }
-  .side-playList {
-    background-color: var(--sidePlayList);
+}
+
+@media (max-width: 768px) {
+  .outlet {
+    padding: 70px 0px 90px 0px;
   }
 }
 
@@ -27,7 +39,7 @@
 }
 
 .wrapper.zingAwards {
-  background: url("https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme-background/zma.svg");
+  background: url("/svg/zma.svg");
   background-size: 1920px auto;
   background-attachment: fixed;
 }

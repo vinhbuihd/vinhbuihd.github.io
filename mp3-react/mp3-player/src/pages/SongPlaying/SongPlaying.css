@@ -25,3 +25,17 @@
   border-radius: 0;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 768px) {
+  .song-playing {
+    padding: 16px;
+  }
+  .song-playing-playlist {
+    /* display: none; */
+  }
+
+  .song-playing .card-list {
+    width: 220px;
+    margin: 0 auto;
+  }
+}

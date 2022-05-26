@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import "./Radio.scss";
 import CardList from "../../components/CardList";
 
@@ -116,64 +116,52 @@ const singers = [
 
 const Radio = () => {
   return (
-    <div className="radio">
+    <div className="radio home">
       <div className="card-list-group">
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container>
           {radio.map((list) => (
-            <div className="radio-box" key={list.id}>
-              <div className="radio-top">
-                <img
-                  className="radio-top-img"
-                  src="/svg/radio-1.svg"
-                  alt="radio"
-                />
-                <img
-                  className="radio-top-live-icon"
-                  src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/live-tag.svg"
-                  alt="live"
-                />
-                <CardList listSong={list} />
+            <Grid item xs={4} sm={2.4} key={list.id}>
+              <div className="radio-box" key={list.id}>
+                <div className="radio-top">
+                  <img
+                    className="radio-top-img"
+                    src="/svg/radio-1.svg"
+                    alt="radio"
+                  />
+                  <img
+                    className="radio-top-live-icon"
+                    src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/live-tag.svg"
+                    alt="live"
+                  />
+                  <CardList listSong={list} />
+                </div>
+                <div className="radio-bottom">{list.title}</div>
               </div>
-              <div className="radio-bottom">{list.title}</div>
-            </div>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
 
       <div className="card-list-group">
         <h3 className="h3-heading">On Air</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {airRadio.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
 
       <div className="card-list-group">
         <h3 className="h3-heading">Chương Trình Mới</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {newRadio.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
     </div>
   );

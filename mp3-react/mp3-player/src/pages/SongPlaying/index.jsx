@@ -8,19 +8,17 @@ import CdThumbnail from "../../components/CdThumbnail";
 
 const SongPlaying = () => {
   const { isPlaying } = useSelector((state) => state);
-  const { currentIndex, songs } = useContext(LayoutContext);
+  const { currentIndex, songs, searchResult } = useContext(LayoutContext);
   const dispatch = useDispatch();
 
   return (
     <div className="song-playing">
       <Grid container spacing={5}>
         <Grid item md={4} sm={12}>
-          <CdThumbnail />
+          <CdThumbnail song={searchResult} />
         </Grid>
-        <Grid item md={8} sm={12}>
-          {songs.map((song) => (
-            <SongItem key={song.id} song={song} />
-          ))}
+        <Grid item md={8} sm={12} className="song-playing-playlist">
+          <SongItem key={searchResult.id} song={searchResult} />
         </Grid>
       </Grid>
     </div>

@@ -1,0 +1,14 @@
+.follow {
+  .follow-tab {
+    background-color: var(--background-white);
+    display: inline-block;
+    border-radius: 16px;
+    padding: 3px;
+
+    & .btn {
+      padding: 6px 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

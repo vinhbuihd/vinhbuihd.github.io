@@ -32,6 +32,10 @@
   margin-top: 76px;
 }
 
+.lyric-body.playlist .card-list-image {
+  border-radius: 8px;
+}
+
 .lyric-text {
   overflow-y: auto;
   height: 480px;
@@ -79,7 +83,7 @@
   left: 0;
   right: 0;
 
-  padding: 32px 0;
+  padding: 20px 0 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -89,6 +93,10 @@
 .lyric-player-control .song-player {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.lyric-player-control .song-player-slider {
+  width: 460px;
 }
 
 .playlist .card-list-image {
@@ -103,4 +111,88 @@
 .playlist .swiperAactive {
   width: 400px;
   height: 400px;
+}
+
+.lyric-player-song-name {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1200px) {
+  .lyric-line {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 18px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .lyric-line {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 12px 0;
+  }
+
+  .lyric-text {
+    height: 434px;
+  }
+
+  .playlist .swiper-slide {
+    width: 300px;
+    height: 300px;
+  }
+
+  .playlist .swiperAactive {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 900px) {
+  .lyric-cdThumb {
+    display: none;
+  }
+
+  .lyric-text {
+    text-align: center;
+  }
+
+  .lyric-body-tab-lyric {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lyric-top {
+    padding: 0 16px;
+  }
+  .lyric-button-group .icon-button {
+    font-size: 22px;
+  }
+
+  .lyric-left {
+    width: 114px;
+  }
+
+  .lyric-tab .btn {
+    min-width: 100px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lyric-player-control .song-player-slider {
+    width: 100%;
+  }
+
+  .lyric-button-group .icon-button {
+    padding: 4px;
+  }
+
+  .lyric-left {
+    display: none;
+  }
 }

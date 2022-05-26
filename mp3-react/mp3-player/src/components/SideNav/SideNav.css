@@ -145,3 +145,56 @@
 .sideNav.tablet .close {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .sideNav.tablet {
+    top: unset;
+    height: 62px;
+    width: 100%;
+  }
+  .sideNav .logo {
+    display: none;
+  }
+
+  .showNavBtn {
+    display: none !important;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sideNav.tablet .navigation-item {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .sideNav.tablet .navigation-item-title {
+    display: block;
+    transform: scale(1);
+  }
+  .side-line,
+  .subSideNav {
+    display: none;
+  }
+
+  .navigation-item.active {
+    border-top: 3px solid var(--primary-color);
+    border-left: none;
+    color: var(--primary-color);
+  }
+
+  .navigation-item-title {
+    font-size: 12px;
+  }
+
+  .navigation-item-icon {
+    font-size: 20px;
+  }
+
+  .wrapper.jack {
+    --sidenavBc: #77736a;
+  }
+}

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const SidePlayList = ({ songs, showPlaylist, setShowPlayList }) => {
   useEffect(() => {
     window.onresize = () => {
-      if (window.innerWidth > 1200) {
+      if (window.innerWidth > 1300) {
         setShowPlayList(true);
       } else {
         setShowPlayList(false);

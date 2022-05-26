@@ -1,5 +1,4 @@
 .zing-chart {
-  padding: 60px;
   .zing-chart-heading {
     font-size: 40px;
   }
@@ -16,5 +15,70 @@
     color: #fff;
     border-radius: 50%;
     margin-left: 8px;
+  }
+}
+
+.zing-chart-playlist {
+  margin: 32px 0;
+  .playlist-item {
+    border-bottom: 1px solid #ffffff0d;
+
+    &:hover {
+      // background-color: var(--background-white);
+    }
+    .playlist-position {
+      font-weight: 900;
+      font-family: "Roboto", sans-serif;
+      font-size: 32px;
+      -webkit-text-stroke: 1.5px #fff;
+      color: rgba(74, 144, 266, 0);
+      white-space: nowrap;
+      min-width: 92px;
+      text-align: center;
+
+      &.top-1 {
+        -webkit-text-stroke: 1px rgb(74 144 226);
+      }
+      &.top-2 {
+        -webkit-text-stroke: 1px #50e3c2;
+      }
+      &.top-3 {
+        -webkit-text-stroke: 1px #e35050;
+      }
+    }
+
+    .playlist-line {
+      margin-right: 18px;
+    }
+  }
+
+  & .song-item {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .zing-chart-playlist {
+    .playlist-item {
+      .playlist-position {
+        min-width: 54px;
+      }
+
+      .playlist-line {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .follow {
+    .follow-tab {
+      padding: 2px;
+      .btn {
+        padding: 4px 12px;
+        font-size: 11px;
+      }
+    }
   }
 }

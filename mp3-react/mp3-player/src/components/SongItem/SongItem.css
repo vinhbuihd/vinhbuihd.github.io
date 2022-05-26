@@ -7,7 +7,7 @@
 }
 
 .song-item:hover {
-  background-color: var(--song-hover-color);
+  background-color: var(--background-white);
 }
 
 .song-item.active {

@@ -33,10 +33,11 @@ const Lyric = ({
   lyric,
   songDuration,
   handleChangeCurrentTime,
+  isPlayListTab,
+  setIsPlayListTab,
 }) => {
   const { songs, currentIndex } = useContext(LayoutContext);
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [isShowPlayList, setIsShowPlayList] = useState(false);
   const handle = useFullScreenHandle();
   const [mySwiper, setMySwiper] = useState();
   const nextSlideRef = useRef();
@@ -73,14 +74,14 @@ const Lyric = ({
             <div className="lyric-left"></div>
             <div className="lyric-tab">
               <button
-                className={`btn ${isShowPlayList ? "active" : ""}`}
-                onClick={() => setIsShowPlayList(true)}
+                className={`btn ${isPlayListTab ? "active" : ""}`}
+                onClick={() => setIsPlayListTab(true)}
               >
                 Danh sách phát
               </button>
               <button
-                className={`btn ${isShowPlayList ? "" : "active"}`}
-                onClick={() => setIsShowPlayList(false)}
+                className={`btn ${isPlayListTab ? "" : "active"}`}
+                onClick={() => setIsPlayListTab(false)}
               >
                 Lời bài hát
               </button>
@@ -123,7 +124,7 @@ const Lyric = ({
           </div>
 
           <div
-            style={{ display: `${isShowPlayList ? "" : "none"}` }}
+            style={{ display: `${isPlayListTab ? "" : "none"}` }}
             className="lyric-body playlist d-flex align-items-center"
           >
             <Swiper
@@ -163,8 +164,8 @@ const Lyric = ({
           </div>
 
           <div
-            style={{ display: `${isShowPlayList ? "none" : ""}` }}
-            className="lyric-body"
+            style={{ display: `${isPlayListTab ? "none" : ""}` }}
+            className="lyric-body lyric-body-tab-lyric"
           >
             <Grid container spacing={8}>
               <Grid item md={4} sm={12}>
@@ -200,13 +201,7 @@ const Lyric = ({
 
           <div className="lyric-player-control d-flex">
             <div className="lyric-player-song">
-              <h5
-                style={{
-                  textAlign: "center",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                }}
-              >
+              <h5 className="lyric-player-song-name">
                 {songs[currentIndex].name} - {songs[currentIndex].artists_names}
               </h5>
             </div>

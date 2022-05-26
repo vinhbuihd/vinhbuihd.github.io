@@ -4,12 +4,12 @@
     position: absolute;
     right: 30%;
     z-index: 10;
-    padding: 15px 0;
+    padding-top: 15px;
     border-radius: 4px;
 
     bottom: 46px;
     width: 280px;
-    height: 396px;
+    height: 401px;
     background-color: var(--primary-background);
 
     display: none;
@@ -62,7 +62,7 @@
       background-color: var(--background-white);
       height: 50px;
       border-radius: 8px;
-      margin: 16px;
+      margin: 16px 16px 8px;
 
       .action-item {
         display: flex;

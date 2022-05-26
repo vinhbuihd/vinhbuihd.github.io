@@ -105,7 +105,7 @@ const LineChart = () => {
       responsive: true,
       plugins: {
         legend: {
-          display: true,
+          display: false,
           position: "left",
         },
         tooltip: {

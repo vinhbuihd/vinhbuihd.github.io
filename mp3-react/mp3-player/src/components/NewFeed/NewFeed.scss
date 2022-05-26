@@ -1,0 +1,76 @@
+.new-feed {
+  border-radius: 8px;
+  padding: 20px;
+  background-color: var(--border-primary);
+  display: inline-block;
+  box-shadow: 0 2px 10px 0 #42424266;
+
+  margin-top: 16px;
+  width: 100%;
+
+  .feed-header {
+    .feed-header-avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .feed-header-text {
+      & .name {
+        font-size: 14px;
+
+        .dot {
+          font-size: 22px;
+        }
+
+        .follow-btn {
+          color: #c662ef;
+          cursor: pointer;
+        }
+      }
+
+      & .date {
+        color: var(--text-decs-color);
+        font-size: 12px;
+      }
+    }
+  }
+
+  .feed-caption {
+    margin: 12px 0;
+    font-size: 14px;
+  }
+
+  .feed-image {
+    margin-bottom: 16px;
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  .feed-footer {
+    & .like {
+      margin-right: 32px;
+    }
+
+    .feed-footer-icon {
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .new-feed {
+    .feed-image {
+      height: 330px;
+    }
+  }
+}

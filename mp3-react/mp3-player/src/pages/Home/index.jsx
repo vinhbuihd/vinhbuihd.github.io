@@ -5,7 +5,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Home.css";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import CardList from "../../components/CardList";
 
 const listSong = [
@@ -142,46 +142,34 @@ const Home = () => {
 
       <div className="card-list-group">
         <h3 className="h3-heading">Có thể bạn muốn nghe</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {listSong.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
       <div className="card-list-group">
         <h3 className="h3-heading">Top 100</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {top100.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
 
       <div className="card-list-group">
         <h3 className="h3-heading">Nhạc mới mỗi ngày</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {newSong.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
 
       <div className="card-list-group">
@@ -260,17 +248,13 @@ const Home = () => {
 
       <div className="card-list-group">
         <h3 className="h3-heading">Nhạc Hot tháng</h3>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 3,
-          }}
-        >
+        <Grid container spacing={3}>
           {newSong.map((list) => (
-            <CardList listSong={list} key={list.id} />
+            <Grid item xs={6} sm={3} key={list.id}>
+              <CardList listSong={list} />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </div>
     </div>
   );

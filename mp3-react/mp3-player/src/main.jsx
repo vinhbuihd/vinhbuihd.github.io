@@ -18,6 +18,7 @@ import {
   PodCast,
   Album,
   MyMusicMv,
+  Search,
 } from "./pages/Allpages";
 import store from "./store/index";
 import { Provider } from "react-redux";
@@ -49,7 +50,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/topmusic" element={<TopMusic />} />
             <Route path="/category" element={<Category />} />
             <Route path="/mv" element={<Mv />} />
-            <Route path="/songplaying" element={<SongPlaying />} />
+            <Route path="/search" element={<Search />} />
           </Route>
         </Routes>
       </BrowserRouter>
