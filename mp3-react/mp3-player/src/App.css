@@ -54,6 +54,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .d-flex {
   display: flex;
 }

@@ -19,6 +19,10 @@ import {
   Album,
   MyMusicMv,
   Search,
+  MVVietNam,
+  MVUSUk,
+  MVHoaTau,
+  MVKpop,
 } from "./pages/Allpages";
 import store from "./store/index";
 import { Provider } from "react-redux";
@@ -49,8 +53,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/newmusic" element={<NewMusic />} />
             <Route path="/topmusic" element={<TopMusic />} />
             <Route path="/category" element={<Category />} />
-            <Route path="/mv" element={<Mv />} />
+            <Route path="/mv" element={<Mv />}>
+              <Route index path="/mv/vn" element={<MVVietNam />} />
+              <Route path="/mv/usuk" element={<MVUSUk />} />
+              <Route path="/mv/hoatau" element={<MVHoaTau />} />
+              <Route path="/mv/kpop" element={<MVKpop />} />
+            </Route>
+
             <Route path="/search" element={<Search />} />
+            <Route path="/songplaying" element={<SongPlaying />} />
           </Route>
         </Routes>
       </BrowserRouter>

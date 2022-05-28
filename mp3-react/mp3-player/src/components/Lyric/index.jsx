@@ -2,11 +2,12 @@ import { Lrc } from "react-lrc";
 import { Grid, Tooltip } from "@mui/material";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { useContext, useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { MdOpenInFull, MdCloseFullscreen } from "react-icons/md";
 import { HiOutlineChevronDown } from "react-icons/hi";
-import { AiOutlineSetting, AiOutlineHeart } from "react-icons/ai";
-import { BsPlayCircle, BsThreeDots } from "react-icons/bs";
+import { AiOutlineSetting } from "react-icons/ai";
+import { BsPlayCircle, BsPauseCircle } from "react-icons/bs";
 import "./Lyric.css";
 import "swiper/css";
 import CdThumbnail from "../CdThumbnail";
@@ -41,7 +42,6 @@ const Lyric = ({
   const handle = useFullScreenHandle();
   const [mySwiper, setMySwiper] = useState();
   const nextSlideRef = useRef();
-
   const previousState = usePrevious(currentIndex);
 
   const handleChangeFullScreen = () => {
@@ -145,11 +145,7 @@ const Lyric = ({
                   <div className="card-list">
                     <div className="card-list-image">
                       <img src={song.bigThumbnail} alt="image" />
-                      <div className="card-list-image-hover">
-                        <AiOutlineHeart className="card-list-icon small" />
-                        <BsPlayCircle className="card-list-icon big" />
-                        <BsThreeDots className="card-list-icon small" />
-                      </div>
+                      <div className="card-list-image-hover"></div>
                     </div>
                   </div>
                 </SwiperSlide>

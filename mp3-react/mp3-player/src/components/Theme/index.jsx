@@ -78,7 +78,7 @@ const Theme = ({ isShowThemeList, setIsShowPlayList }) => {
         <div className="theme-container-main d-flex align-items-center">
           <Grid container spacing={4}>
             {themeList.map((theme) => (
-              <Grid item xs={4} key={theme.id}>
+              <Grid item xs={6} sm={4} key={theme.id}>
                 <ThemeItem
                   theme={theme}
                   setIsShowPlayList={setIsShowPlayList}

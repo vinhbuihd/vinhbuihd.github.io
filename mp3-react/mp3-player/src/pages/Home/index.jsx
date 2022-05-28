@@ -7,6 +7,12 @@ import "swiper/css/pagination";
 import "./Home.css";
 import { Grid } from "@mui/material";
 import CardList from "../../components/CardList";
+import { useNavigate, NavLink } from "react-router-dom";
+
+import { FiMusic } from "react-icons/fi";
+import { BiCategoryAlt } from "react-icons/bi";
+import { AiOutlineStar } from "react-icons/ai";
+import { MdOndemandVideo } from "react-icons/md";
 
 const listSong = [
   {
@@ -92,6 +98,11 @@ const newSong = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const clickPlaylist = () => {
+    navigate("/songplaying");
+  };
   return (
     <div className="home">
       <Swiper
@@ -140,12 +151,39 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
 
+      <div className="home-category d-flex align-items-center">
+        <NavLink to="/newmusic" className="navigation-item" title="Nhạc mới">
+          <div className="navigation-item-icon">
+            <FiMusic />
+          </div>
+          <div className="navigation-item-title">Nhạc mới</div>
+        </NavLink>
+        <NavLink to="/category" className="navigation-item" title="Thể loại">
+          <div className="navigation-item-icon">
+            <BiCategoryAlt />
+          </div>
+          <div className="navigation-item-title">Thể loại</div>
+        </NavLink>
+        <NavLink to="/topmusic" className="navigation-item" title="Top 100">
+          <div className="navigation-item-icon">
+            <AiOutlineStar />
+          </div>
+          <div className="navigation-item-title">Top 100</div>
+        </NavLink>
+        <NavLink to="/mv" className="navigation-item" title="MV">
+          <div className="navigation-item-icon">
+            <MdOndemandVideo />
+          </div>
+          <div className="navigation-item-title">MV</div>
+        </NavLink>
+      </div>
+
       <div className="card-list-group">
         <h3 className="h3-heading">Có thể bạn muốn nghe</h3>
         <Grid container spacing={3}>
           {listSong.map((list) => (
             <Grid item xs={6} sm={3} key={list.id}>
-              <CardList listSong={list} />
+              <CardList listSong={list} onClick={clickPlaylist} />
             </Grid>
           ))}
         </Grid>
@@ -155,7 +193,7 @@ const Home = () => {
         <Grid container spacing={3}>
           {top100.map((list) => (
             <Grid item xs={6} sm={3} key={list.id}>
-              <CardList listSong={list} />
+              <CardList listSong={list} onClick={clickPlaylist} />
             </Grid>
           ))}
         </Grid>
@@ -166,7 +204,7 @@ const Home = () => {
         <Grid container spacing={3}>
           {newSong.map((list) => (
             <Grid item xs={6} sm={3} key={list.id}>
-              <CardList listSong={list} />
+              <CardList listSong={list} onClick={clickPlaylist} />
             </Grid>
           ))}
         </Grid>
@@ -251,7 +289,7 @@ const Home = () => {
         <Grid container spacing={3}>
           {newSong.map((list) => (
             <Grid item xs={6} sm={3} key={list.id}>
-              <CardList listSong={list} />
+              <CardList listSong={list} onClick={clickPlaylist} />
             </Grid>
           ))}
         </Grid>

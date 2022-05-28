@@ -36,9 +36,28 @@
   height: auto;
 }
 
+.home-category {
+  display: none;
+  margin-top: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.home-category .navigation-item {
+  flex-direction: column;
+  width: 22%;
+  border-radius: 8px;
+  background: var(--primary-color);
+  padding: 12px;
+}
+
 @media (max-width: 768px) {
   .home {
     padding: 24px 24px 48px;
+  }
+
+  .home-category {
+    display: flex;
   }
 }
 

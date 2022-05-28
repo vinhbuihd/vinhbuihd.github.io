@@ -15,10 +15,12 @@ const SongPlaying = () => {
     <div className="song-playing">
       <Grid container spacing={5}>
         <Grid item md={4} sm={12}>
-          <CdThumbnail song={searchResult} />
+          <CdThumbnail song={songs[currentIndex]} />
         </Grid>
         <Grid item md={8} sm={12} className="song-playing-playlist">
-          <SongItem key={searchResult.id} song={searchResult} />
+          {songs.map((song) => (
+            <SongItem key={song.id} song={song} />
+          ))}
         </Grid>
       </Grid>
     </div>

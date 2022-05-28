@@ -36,6 +36,7 @@
 
 .wrapper {
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 .wrapper.zingAwards {

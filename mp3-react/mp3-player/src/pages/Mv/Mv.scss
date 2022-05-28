@@ -1,0 +1,138 @@
+.mv-title {
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.mv-title-main {
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 20px;
+  border-right: 1px solid var(--border-primary);
+}
+
+.mv-title-group {
+  height: 52px;
+
+  position: relative;
+  .mv-title-list {
+    height: 100%;
+
+    .mv-title-item {
+      margin: 0 20px;
+      & a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 15px 0;
+      }
+    }
+  }
+
+  .mv-title-border {
+    height: 2px;
+    width: 68px;
+    left: 20px;
+    bottom: 0;
+    transition: all ease 0.35s;
+
+    background-color: var(--primary-color);
+    position: absolute;
+  }
+}
+
+.mv-filter {
+  margin: 24px 0;
+  .btn {
+    display: inline-block;
+    background-color: var(--background-white);
+    color: #fff;
+    margin-right: 16px;
+    position: relative;
+
+    .mv-select {
+      .mv-select-icon {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin: 0 4px;
+      }
+      .mv-select-title {
+        font-size: 14px;
+        margin-right: 8px;
+      }
+    }
+
+    &:hover .mv-select-title {
+      color: #ccc;
+    }
+
+    .mv-filter-options {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      top: calc(100% + 12px);
+
+      border-radius: 8px;
+      padding: 5px;
+      width: 400px;
+      background-color: var(--primary-background);
+
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      &.small {
+        width: 162px;
+
+        .mv-filter-items {
+          width: 100%;
+        }
+      }
+
+      .mv-filter-items {
+        padding: 10px;
+        font-size: 12px;
+        width: 50%;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: -16px;
+        left: 16px;
+
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-bottom-color: var(--primary-background);
+      }
+    }
+  }
+}
+
+.mv-list {
+  .card-list-bottom {
+    padding: 10px 0;
+
+    .card-list-bottom-avatar {
+      margin-right: 12px;
+      & img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .card-list-description {
+      font-size: 12px;
+    }
+    .card-list-title {
+      font-weight: 500;
+    }
+  }
+}

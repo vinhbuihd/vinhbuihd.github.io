@@ -13,6 +13,10 @@ import PodCast from "../MyMusic/Podcast";
 import Album from "../MyMusic/Album";
 import MyMusicMv from "../MyMusic/MyMusicMv";
 import Search from "../Search";
+import MVVietNam from "../Mv/VietNam";
+import MVUSUk from "../Mv/Usuk";
+import MVHoaTau from "../Mv/HoaTau";
+import MVKpop from "../Mv/Kpop";
 
 export {
   Category,
@@ -30,4 +34,8 @@ export {
   Album,
   MyMusicMv,
   Search,
+  MVVietNam,
+  MVUSUk,
+  MVHoaTau,
+  MVKpop,
 };

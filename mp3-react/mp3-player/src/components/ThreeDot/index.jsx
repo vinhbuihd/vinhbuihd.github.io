@@ -110,7 +110,6 @@ const ThreeDot = ({ song }) => {
     e.stopPropagation();
     let parentEle = e.target.closest(".song-item-btn");
     if (e.clientY < 400) {
-      console.log(e.clientY);
       parentEle.querySelector(".threedot-detail").style.top =
         -e.clientY + 110 + "px";
     }

@@ -19,20 +19,9 @@ const Layout = () => {
   const [themeId, setThemeId] = useState(1);
   const [searchResult, setSearchResult] = useState({});
   const [suggestList, setSuggestList] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
-  useEffect(() => {
-    switch (window.location.pathname) {
-      case "/": {
-        document.title = "Zing Mp3 | Nghe nhạc chất";
-      }
-      case "/mymusic": {
-        document.title = "Nhạc cá nhân | Xem bài hát, album";
-      }
-
-      default:
-        break;
-    }
-  }, [window.location.pathname]);
+  document.title = "Zing Mp3 | Nghe nhạc chất";
 
   useEffect(() => {
     fetch("/songs")
@@ -102,6 +91,8 @@ const Layout = () => {
         setSearchResult,
         suggestList,
         setSuggestList,
+        searchKeyword,
+        setSearchKeyword,
       }}
     >
       <div
